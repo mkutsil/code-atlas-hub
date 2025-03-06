@@ -1,3 +1,3 @@
-import { someFunction } from "./test";
+import { someFunction } from "./test"
 
 someFunction(3);
