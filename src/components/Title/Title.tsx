@@ -1,8 +1,8 @@
 import classes from './Title.module.scss'
 
-const Title = () => (
+const Title = ({text}: {text: string}) => (
   <div className={classes.titleWrap}> 
-    <h1 className={classes.title}>CodeAtlasHub</h1>
+    <h1 className={classes.title}>{text}</h1>
 	</div>
 );
 
