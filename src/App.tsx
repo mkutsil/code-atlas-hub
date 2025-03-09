@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import { Link, Route, Routes } from "react-router-dom"
+import { classNames } from './helpers/classNames/classNames'
 import { AboutPageAsync } from './pages/AboutPage/AboutPage.async'
 import { HomePageAsync } from './pages/HomePage/HomePage.async'
 import './styles/index.scss'
@@ -10,7 +11,7 @@ const App = () => {
 	const {theme, toggleTheme} = useTheme();
 
 	return (
-		<div className={`app ${theme}`}>
+		<div className={classNames('app', {}, [theme])}>
 			<Suspense fallback={<div>Loading...</div>}>
 				<Routes>
 					<Route path='/' element={<HomePageAsync/>}/>
