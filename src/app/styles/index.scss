@@ -7,17 +7,5 @@
 .app {
 	font: var(--font-m);
 	background: var(--bg-color);
-	color: var(--primary-color);
 	min-height: 100vh;
-	margin: 50px;
-}
-
-.link-wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
-.link {
-	font-size: 20px;
 }
