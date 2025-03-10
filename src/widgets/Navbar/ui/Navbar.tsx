@@ -1,9 +1,11 @@
 import { useTheme } from 'app/providers/ThemeProvider/lib/useTheme'
 import { FC } from 'react'
+import LocalesIcon from 'shared/assets/icons/locales.svg'
+import ThemeSwitcherIcon from 'shared/assets/icons/theme-switcher.svg'
 import { classNames } from 'shared/lib/classNames/classNames'
 import AppLink from 'shared/ui/AppLink/AppLink'
+import Button, { ThemeButton } from 'shared/ui/Button/Button'
 import classes from './Navbar.module.scss'
-
 
 interface NavbarProps {
 	
@@ -21,8 +23,12 @@ const Navbar: FC<NavbarProps> = () => {
 				</div>
 
 				<div className={classNames(classes.buttonWrapper)}>
-						<button onClick={toggleTheme}>Change language</button>
-						<button onClick={toggleTheme}>Change theme</button>
+						
+					<Button><LocalesIcon/></Button>
+					<Button theme={ThemeButton.OUTLINED}>Outlined</Button>
+					<Button theme={ThemeButton.CONTAINED}>Outlined</Button>
+					<Button onClick={toggleTheme}><ThemeSwitcherIcon/></Button>
+						
 				</div>
 		</div>
 	 );

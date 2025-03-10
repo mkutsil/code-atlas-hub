@@ -1,0 +1,47 @@
+.button {
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 700;
+}
+
+.clear {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+}
+
+.button:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease-in-out;
+}
+
+
+.outlined {
+	padding: 15px 20px;
+	border: 2px solid #3574DE;
+	color: #3574DE;
+	background: none;
+	border-radius: 15px;
+	
+	&:hover {
+			background: #3573de2b;
+	}
+}
+
+
+
+.contained {
+	padding: 15px 20px;
+	background-color: #5867DD;
+	color: white;
+	border-radius: 15px;
+	border: none;
+
+	&:hover {
+		background: #3f52e0;
+}
+}
+
