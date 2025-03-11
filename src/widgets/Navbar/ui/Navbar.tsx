@@ -6,24 +6,21 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import Button, { ThemeButton } from 'shared/ui/Button/Button'
 import classes from './Navbar.module.scss'
 
-interface NavbarProps {
-	
-}
+//! TODO create toggle theme component in widgets
 
+const Navbar: FC = () => {
+    const {toggleTheme} = useTheme();
 
-const Navbar: FC<NavbarProps> = () => {
-	const {theme, toggleTheme} = useTheme();
-
-	return ( 
-		<div className={classNames(classes.navbar)}>
-				<p>Breadcrumbs</p>
-				<div className={classNames(classes.buttonWrapper)}>
-					<Button><LocalesIcon/></Button>
-					<Button theme={ThemeButton.OUTLINED}>Outlined</Button>
-					<Button theme={ThemeButton.CONTAINED}>Outlined</Button>
-					<Button onClick={toggleTheme}><ThemeSwitcherIcon/></Button>
-				</div>
-		</div>
+    return ( 
+        <div className={classNames(classes.navbar)}>
+            <p>Breadcrumbs</p>
+            <div className={classNames(classes.buttonWrapper)}>
+                <Button><LocalesIcon/></Button>
+                <Button theme={ThemeButton.OUTLINED}>Outlined</Button>
+                <Button theme={ThemeButton.CONTAINED}>Outlined</Button>
+                <Button onClick={toggleTheme}><ThemeSwitcherIcon/></Button>
+            </div>
+        </div>
 	 );
 }
  

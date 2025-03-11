@@ -8,23 +8,23 @@ import './styles/index.scss'
 
 const App = () => {
  
-	const {theme} = useTheme();
+    const { theme } = useTheme();
 
-	return (
-		<div className={classNames('app', {}, [theme])}>
-			<Suspense fallback="...loading">
-					<Sidebar/>
+    return (
+        <div className={classNames('app', {}, [theme])}>
+            <Suspense fallback="...loading">
+                <Sidebar/>
 					
 					
-					<div className='content-page'>
-						<Navbar/>
-						<AppRouter/>
-					</div>
-			</Suspense>	
-		</div>
+                <div className='content-page'>
+                    <Navbar/>
+                    <AppRouter/>
+                </div>
+            </Suspense>	
+        </div>
 
 		
-	)
+    )
 };
 
 export default App;

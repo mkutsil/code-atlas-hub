@@ -15,15 +15,15 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  
 const Button: FC<ButtonProps> = (props) => {
 
-	const {label, theme = ThemeButton.CLEAR, children, ...otherProps} = props;
+    const { theme = ThemeButton.CLEAR, children, ...otherProps} = props;
 
-	return ( 
-		<button 
-			className={classNames(classes.button, {}, [classes[theme]])}
-			{...otherProps}
-		>
-			{children}
-		</button>
+    return ( 
+        <button 
+            className={classNames(classes.button, {}, [classes[theme]])}
+            {...otherProps}
+        >
+            {children}
+        </button>
 	 );
 }
  
