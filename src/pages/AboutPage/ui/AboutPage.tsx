@@ -4,22 +4,22 @@ import { useTranslation } from 'react-i18next'
 
 const AboutPage = () => {
 	
-	const {t, i18n} = useTranslation();
-
-	const toggleLanguage = () => {
-		i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en')
-	}
+    const {t, i18n} = useTranslation();
+  
+    const toggleLanguage = () => {
+        i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en')
+    }
 	
-	return (
-			<>
-				<h1 onClick={toggleLanguage}>{t('title')}</h1>
-				<p>
-					{t('description.text')}
-				</p>
+    return (
+        <>
+            <h1 onClick={toggleLanguage}>{t('title')}</h1>
+            <p>
+                {t('description.text')}
+            </p>
 
-				<span>{t('description.name')}</span>
-			</>
-	)
+            <span>{t('description.name')}</span>
+        </>
+    )
 }
 
 export default AboutPage;
