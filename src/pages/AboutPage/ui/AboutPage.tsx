@@ -1,14 +1,25 @@
-const AboutPage = () => (
-	<>
-		<h1>About</h1>
+import { useTranslation } from 'react-i18next'
 
-		<p>
-			AId amet id ut Lorem consequat. Fugiat minim eu do proident labore ea mollit adipisicing consectetur. Occaecat id enim deserunt labore minim dolor est ex eu reprehenderit id deserunt. Nisi pariatur reprehenderit minim fugiat in. Cupidatat aliquip esse quis id sit proident Lorem consequat voluptate mollit dolore aute incididunt. Non mollit aliquip ipsum culpa nulla incididunt est ullamco aute cupidatat mollit esse excepteur eu. In fugiat enim minim excepteur.out
-		</p>
+// TODO create translation toggle component in widgets
 
-		<span>Wilfred</span>
-		<span>Sydnie</span>
-	</>
-)
+const AboutPage = () => {
+	
+	const {t, i18n} = useTranslation();
+
+	const toggleLanguage = () => {
+		i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en')
+	}
+	
+	return (
+			<>
+				<h1 onClick={toggleLanguage}>{t('title')}</h1>
+				<p>
+					{t('description.text')}
+				</p>
+
+				<span>{t('description.name')}</span>
+			</>
+	)
+}
 
 export default AboutPage;
