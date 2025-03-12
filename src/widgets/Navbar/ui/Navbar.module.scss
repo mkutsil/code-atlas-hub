@@ -1,11 +1,11 @@
 .navbar {
 	height: var(--navbar-height);
 	display: flex;
+	padding: 0 71px 0 27px;
+	background: var(--inverted-bg-color);
 	justify-content: space-between;
 	align-items: center;
 	gap: 50px;
-	background: var(--inverted-bg-color);
-	padding: 0 71px 0 27px;
 }
 
 .buttonWrapper {

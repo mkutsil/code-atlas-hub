@@ -13,7 +13,6 @@ const Sidebar = () => {
     const handleButtonClick = () => {
         setCollapsed((prev) => !prev);
     }; 
-
     return (  
         <div 
             className={classNames(classes.sidebar, {[classes.collapsed]: collapsed})}>
@@ -34,7 +33,6 @@ const Sidebar = () => {
 
                 <div>
                     <AppLink to="/"><HomeIcon/></AppLink>
-					
                 </div>
                 <AppLink to="/about"><HomeIcon/></AppLink>
             </div>
