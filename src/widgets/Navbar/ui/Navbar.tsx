@@ -1,10 +1,10 @@
-import { useTheme } from 'app/providers/ThemeProvider/lib/useTheme'
-import { FC } from 'react'
-import LocalesIcon from 'shared/assets/icons/locales.svg'
-import ThemeSwitcherIcon from 'shared/assets/icons/theme-switcher.svg'
-import { classNames } from 'shared/lib/classNames/classNames'
-import Button, { ThemeButton } from 'shared/ui/Button/Button'
-import classes from './Navbar.module.scss'
+import { useTheme } from 'app/providers/ThemeProvider/lib/useTheme';
+import { FC } from 'react';
+import LocalesIcon from 'shared/assets/icons/locales.svg';
+import ThemeSwitcherIcon from 'shared/assets/icons/theme-switcher.svg';
+import { classNames } from 'shared/lib/classNames/classNames';
+import Button, { ThemeButton } from 'shared/ui/Button/Button';
+import classes from './Navbar.module.scss';
 
 //! TODO create toggle theme component in widgets
 
@@ -22,6 +22,6 @@ const Navbar: FC = () => {
             </div>
         </div>
 	 );
-}
+};
  
 export default Navbar;
