@@ -1,5 +1,5 @@
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext'
-import { FC, ReactNode, useState } from 'react'
+import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import { FC, ReactNode, useState } from 'react';
 
 interface ThemeProviderProps  {
 	children: ReactNode;
@@ -15,7 +15,7 @@ const ThemeProvider: FC<ThemeProviderProps> = ({children}) => {
         <ThemeContext.Provider value={{theme, setTheme: setTheme}}>
             {children}
         </ThemeContext.Provider>
-    )
-} 
+    );
+}; 
 
 export default ThemeProvider;

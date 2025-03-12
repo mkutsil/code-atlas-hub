@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 
 // TODO create translation toggle component in widgets
 
@@ -7,8 +7,8 @@ const AboutPage = () => {
     const {t, i18n} = useTranslation();
   
     const toggleLanguage = () => {
-        i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en')
-    }
+        i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en');
+    };
 	
     return (
         <>
@@ -19,7 +19,7 @@ const AboutPage = () => {
 
             <span>{t('description.name')}</span>
         </>
-    )
-}
+    );
+};
 
 export default AboutPage;
