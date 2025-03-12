@@ -1,19 +1,39 @@
 .sidebar{
 	width: var(--sidebar-width);
 	height: calc(100vh);
-	background: var(--inverted-bg-color);
+	background: var(--layout-bg-color);
 	transition: width 0.3s;
 }
 
-.collapsed {
+.collapsed { 
 	width: var(--sidebar-width-collapsed);
 }
 
-.logoWrapper {
+.logoWrapper { 
 	svg { 
 		width: 200px;
 		height: 200px;
 		fill: #021b7e;
+	}
+}
+
+.menuButton {
+	color: var(--secondary-color);
+
+	svg {
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:hover{
+		color: var(--primary-color);
+		}
+	
+		transition: color 0.3s ease-in-out;
+}
+
+.menuButtonCollapsed {
+	svg {
+		transform: rotate(90deg);
 	}
 }
 
@@ -25,16 +45,15 @@
 		transition: width 0.3s ease-in-out;
 	}
 }
-
+ 
 .logo {
 	width: 100px;
 	border-radius: 50%;
-} 
-
-  
-.linkWrapper {
-	align-items: center;
+}  
+ 
+.linkWrapper { 
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	gap: 50px;
 	margin-top: 45px;

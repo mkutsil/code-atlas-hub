@@ -1,10 +1,10 @@
 .navbar {
 	height: var(--navbar-height);
 	display: flex;
-	padding: 0 71px 0 27px;
-	background: var(--inverted-bg-color);
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
+	padding: 0 71px 0 27px;
+	background: var(--layout-bg-color);
 	gap: 50px;
 }
 
@@ -12,4 +12,9 @@
 	display: flex;
 	align-items: center;
 	gap: 25px;
+}
+
+.breadcrumbs{
+	color: var(--secondary-color);
+	font-weight: 700;
 }

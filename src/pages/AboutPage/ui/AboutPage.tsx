@@ -1,24 +1,30 @@
 import { useTranslation } from 'react-i18next';
-
-// TODO create translation toggle component in widgets
+import classes from './AboutPage.module.scss';
+import Button, { ThemeButton } from 'shared/ui/Button/Button';
 
 const AboutPage = () => {
 	
-    const {t, i18n} = useTranslation();
-  
-    const toggleLanguage = () => {
-        i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en');
-    };
+    const { t } = useTranslation();
 	
     return (
-        <>
-            <h1 onClick={toggleLanguage}>{t('title')}</h1>
+        <div className={classes.aboutPage}>
+            <h1>{t('title')}</h1>
             <p>
                 {t('description.text')}
             </p>
 
             <span>{t('description.name')}</span>
-        </>
+
+            <div className={classes.card}>
+                <span>{t('description.name')}</span>
+
+            </div>
+
+            <div className={classes.buttonContainer}>
+                <Button theme={ThemeButton.OUTLINED}>Outlined</Button>
+                <Button theme={ThemeButton.CONTAINED}>Outlined</Button>
+            </div>
+        </div>
     );
 };
 
