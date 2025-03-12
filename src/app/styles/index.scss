@@ -5,18 +5,12 @@
 
 
 .app {
-	font: var(--font-m);
-	background: var(--bg-color);
 	min-height: 100vh;
 	display: flex;
+	background: var(--bg-color);
+	font: var(--font-m);
 }
 
-.content-page {
+.content-page { 
 	width: 100%;
-}
-
-.page-wrapper {
-	flex-grow: 1;
-	padding: 20px;
-	// background-color: aliceblue;
 }

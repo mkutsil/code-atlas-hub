@@ -6,8 +6,8 @@ import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import './styles/index.scss';
 
+
 const App = () => {
- 
     const { theme } = useTheme();
 
     return (
@@ -15,15 +15,12 @@ const App = () => {
             <Suspense fallback="...loading">
                 <Sidebar/>
 					
-					
-                <div className='content-page'>
+                <div className={'content-page'}>
                     <Navbar/>
                     <AppRouter/>
                 </div>
             </Suspense>	
         </div>
-
-		
     );
 };
 

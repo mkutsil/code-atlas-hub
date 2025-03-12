@@ -3,6 +3,7 @@ import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
+import pluginI18next from 'eslint-plugin-i18next';
 
 export default [
     {
@@ -16,10 +17,14 @@ export default [
         },
         plugins: {
             react: pluginReact,
-            'react-hooks': pluginReactHooks // Enable React Hooks plugin
+            'react-hooks': pluginReactHooks, 
+            'i18next': pluginI18next,
         },
     },
-    
+    //! enable when added translate for all text 
+    // {
+    //     rules: pluginI18next.configs.recommended.rules
+    // },
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     {

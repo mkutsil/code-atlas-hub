@@ -1,6 +1,6 @@
 .sidebar{
-	height: calc(100vh);
 	width: var(--sidebar-width);
+	height: calc(100vh);
 	background: var(--inverted-bg-color);
 	transition: width 0.3s;
 }
@@ -10,16 +10,16 @@
 }
 
 .logoWrapper {
-	svg {
+	svg { 
 		width: 200px;
 		height: 200px;
 		fill: #021b7e;
 	}
 }
 
-.logoCollapsed {
+.logoCollapsed { 
 	svg {
-		width: 80px;
+		width: 80px; 
 		height: 80px;
 		fill: #021b7e;
 		transition: width 0.3s ease-in-out;
@@ -29,12 +29,12 @@
 .logo {
 	width: 100px;
 	border-radius: 50%;
-}
+} 
 
-
+  
 .linkWrapper {
-	display: flex;
 	align-items: center;
+	display: flex;
 	flex-direction: column;
 	gap: 50px;
 	margin-top: 45px;
