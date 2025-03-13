@@ -4,8 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPluginInstance } from 'webpack';
 import { BuildOptions } from './types/config';
 
-
-export function buildPlugins({paths, isDev}: BuildOptions): WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
     return [
         new HtmlWebpackPlugin({
             template: paths.html
@@ -19,6 +18,6 @@ export function buildPlugins({paths, isDev}: BuildOptions): WebpackPluginInstanc
             IS_DEV: JSON.stringify(isDev),
         }),
         new HotModuleReplacementPlugin(),
-        ...(isDev ? [new ReactRefreshWebpackPlugin()] : []),
+        ...(isDev ? [ new ReactRefreshWebpackPlugin() ] : []),
     ];
 }

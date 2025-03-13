@@ -10,7 +10,7 @@ export default {
     ],
     overrides: [
         {
-            files: ['**/*.module.scss'], // Rules for .module.scss files
+            files: [ '**/*.module.scss' ], // Rules for .module.scss files
             rules: {
                 'selector-class-pattern': [
                     '^[a-z][a-zA-Z0-9]+$', // camelCase
@@ -21,7 +21,7 @@ export default {
             }
         },
         {
-            files: ['**/!(*.module).scss'], // Rules for all .scss files except .module.scss
+            files: [ '**/!(*.module).scss' ], // Rules for all .scss files except .module.scss
             rules: {
                 'selector-class-pattern': [
                     '^[a-z][a-z0-9-]+$', // kebab-case
@@ -39,7 +39,7 @@ export default {
         'order/properties-order': [
             'width', 'height',
             'max-width', 'min-width', 'max-height','min-height',
-            'display',
+            'display', 'align-items', 'justify-content',
             'position', 'top', 'right', 'bottom', 'left', 'z-index',
             'margin', 'padding',
             'border', 'border-radius', 'box-shadow',

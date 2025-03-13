@@ -1,0 +1,53 @@
+.navigationButtonContentWrap{
+	display: flex;
+	align-items: center; 
+	gap: 10px;
+}
+
+.navigationButtonContainer{
+	svg{
+		width: 32px;
+		height: 32px;
+	}
+
+	width: 100%;
+	display: flex;
+	position: relative;
+	padding: 5px 0;
+	color: var(--secondary-color);
+	transition: color 0.3s ease-in-out;
+	// background: var(--secondary-color);
+	padding-left: 20px;
+
+	&::after {
+		width: 2px; 
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: var(--primary-color);
+		content: "";
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+}
+
+	&:hover{
+	color: var(--primary-color);
+	}
+}
+
+.navigationButtonActiveContainer{
+	&::after{
+		opacity: 1;
+	}
+
+	color: var(--primary-color);
+}
+
+.navigationButtonCollapsedContainer{
+	padding-left: 0;
+	justify-content: center;
+}
+
+
+	

@@ -1,40 +1,44 @@
-import {  useState } from 'react';
-import HomeIcon from 'shared/assets/icons/home.svg';
+import { useState } from 'react';
 import LogoIcon from 'shared/assets/icons/logo.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
-import AppLink from 'shared/ui/AppLink/AppLink';
-import Button, { ThemeButton } from 'shared/ui/Button/Button';
+import Button from 'shared/ui/Button/Button';
 import classes from './Sidebar.module.scss';
+import { Menu, Newspaper, BookMarked } from 'lucide-react';
+import NavigationButton from '../components/NavigationButton/NavigationButton';
 
- 
 const Sidebar = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    const [ collapsed, setCollapsed ] = useState(false);
  
     const handleButtonClick = () => {
         setCollapsed((prev) => !prev);
     }; 
+    
     return (  
         <div 
-            className={classNames(classes.sidebar, {[classes.collapsed]: collapsed})}>
+            className={classNames(classes.sidebar, { [classes.collapsed]: collapsed })}>
             <div 
                 className={classNames(classes.logoWrapper, 
-                    {[classes.logoCollapsed]: collapsed})}
+                    { [classes.logoCollapsed]: collapsed })}
             >
                 <LogoIcon/>
             </div>
-				
+				 
             <div className={classes.linkWrapper}>
                 <Button 
-                    theme={ThemeButton.CONTAINED} 
+                    customClassNames={classNames(classes.menuButton, { [classes.menuButtonCollapsed]: collapsed })}
                     onClick={handleButtonClick}
                 >
-                    ||||
+                    <Menu/>
                 </Button>	
 
-                <div>
-                    <AppLink to="/"><HomeIcon/></AppLink>
-                </div>
-                <AppLink to="/about"><HomeIcon/></AppLink>
+                <NavigationButton label="About" to="/about" isCollapsed={collapsed}>
+                    <Newspaper/>
+                </NavigationButton>
+
+                <NavigationButton label="Home" to="/" isCollapsed={collapsed}>
+                    <BookMarked/>
+                </NavigationButton>
+
             </div>
 
         </div>
