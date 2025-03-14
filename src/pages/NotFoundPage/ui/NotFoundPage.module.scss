@@ -1,0 +1,14 @@
+.pageContainer {
+	width: 100%;
+	height: calc(100vh - var(--navbar-height));
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	justify-content: center;
+}
+
+.pageTitle {
+	font: var(--font-xl);
+	color: var(--primary-color);
+}
