@@ -1,4 +1,7 @@
 .homePageContainer {
-	color: var(--primary-color);
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 	padding: 40px;
+	color: var(--primary-color);
 } 	
