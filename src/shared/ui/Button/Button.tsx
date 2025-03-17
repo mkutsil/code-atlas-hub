@@ -3,10 +3,10 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import classes from './Button.module.scss';
 
 export enum ThemeButton {
-	CLEAR = 'clear',
+	CLEAR = 'clear', 
 	OUTLINED = 'outlined',
-	CONTAINED = 'contained',
-}
+	CONTAINED = 'contained', 
+}  
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	label?: string;
