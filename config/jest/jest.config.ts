@@ -4,12 +4,18 @@
  */
 
 import type { Config } from 'jest';
+import path from 'path';
 
 const config: Config = {
     preset: 'ts-jest',
 
     transform: {
-        '^.+\\.tsx?$': 'ts-jest',
+        '^.+\\.(ts|tsx)$': 'ts-jest',
+    },
+
+    moduleNameMapper: {
+        '\\.(css|scss)$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
 
     // The root directory that Jest should scan for tests and modules within
@@ -33,6 +39,12 @@ const config: Config = {
     moduleDirectories: [
         'node_modules'
     ],
+
+    modulePaths: [
+        '<rootDir>src',
+    ],
+
+    setupFilesAfterEnv: [ '<rootDir>config/jest/setupTest.ts' ],
 
     // An array of file extensions your modules use
     moduleFileExtensions: [

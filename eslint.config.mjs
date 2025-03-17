@@ -21,6 +21,9 @@ export default [
             'i18next': pluginI18next,
         },
     },
+    {
+        ignores: [ '**/build/**' ],
+    },
     //! enable when added translate for all text 
     // {
     //     rules: pluginI18next.configs.recommended.rules

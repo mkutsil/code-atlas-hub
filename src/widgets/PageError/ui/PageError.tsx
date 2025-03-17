@@ -1,10 +1,7 @@
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
-import { useTranslation } from 'react-i18next';
 import classes from './PageError.module.scss';
 
 const PageError = () => {
-    const { t } = useTranslation();
-      
     const onReloadPage = () => {
         location.reload();
     };

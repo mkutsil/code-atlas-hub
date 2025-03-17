@@ -13,8 +13,9 @@ const Sidebar = () => {
         setCollapsed((prev) => !prev);
     }; 
     
-    return (  
+    return (
         <div 
+            data-testid="sidebar"
             className={classNames(classes.sidebar, { [classes.collapsed]: collapsed })}>
             <div 
                 className={classNames(classes.logoWrapper, 
@@ -24,7 +25,8 @@ const Sidebar = () => {
             </div>
 				 
             <div className={classes.linkWrapper}>
-                <Button 
+                <Button
+                    data-testid="toggle-button" 
                     customClassNames={classNames(classes.menuButton, { [classes.menuButtonCollapsed]: collapsed })}
                     onClick={handleButtonClick}
                 >
