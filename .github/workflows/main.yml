@@ -19,10 +19,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install
-      - name: install dependencies with npm ci
-        run: npm ci
       - name: build production project
-        run: npm run build:prod
+        run: npm run build:dev
       - name: linting typescript
         run: npm run lint:ts
       - name: linting scss
