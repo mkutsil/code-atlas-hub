@@ -16,7 +16,7 @@
     "test:ui:ok": "npx loki approve",
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static/iframe.html",
     "storybook": "storybook dev -p 6006 --config-dir=config/storybook",
-    "storybook:build": "storybook build --config-dir=config/storybook -o storybook-static --ci"
+    "storybook:build": "storybook build --config-dir=config/storybook -o storybook-static"
   },
   "keywords": [],
   "author": "",
