@@ -10,17 +10,24 @@ jobs:
     strategy:
       matrix:
         node-version: [ 18.x ]
- 
     steps:
       - uses: actions/checkout@v2
       - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Check Node.js version
+        run: node --version
       - name: install modules
-        run: npm install
+        run: npm ci
+      - name: Check installed packages
+        run: |
+          npm list webpack
+          npm list storybook
+          npm list eslint
+          npm list stylelint
       - name: build production project
-        run: npm run build:dev
+        run: npm run build:prod
       - name: linting typescript
         run: npm run lint:ts
       - name: linting scss
@@ -29,9 +36,5 @@ jobs:
         run: npm run test:unit
       - name: build storybook
         run: npm run storybook:build
-      - name: start storybook server
-        run: npx http-server ./storybook-static -p 6006 &
       - name: screenshot testing
         run: npm run test:ui:ci
-      - name: stop storybook server
-        run: kill $!
