@@ -18,10 +18,10 @@ export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInsta
         new DefinePlugin({
             IS_DEV: JSON.stringify(isDev),
         }),
-        new HotModuleReplacementPlugin(),
+        ...(isDev ? [ new HotModuleReplacementPlugin() ] : []),
         ...(isDev ? [ new ReactRefreshWebpackPlugin() ] : []),
-        new BundleAnalyzerPlugin({
+        ...(isDev ? [ new BundleAnalyzerPlugin({
             openAnalyzer: false,
-        }),
+        }), ] : []),
     ];
 }
