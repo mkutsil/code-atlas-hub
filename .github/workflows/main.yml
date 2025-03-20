@@ -57,7 +57,7 @@ jobs:
         run: sleep 30
 
       - name: Screenshot testing
-        run: npx loki test --chromeTolerance=5 --url="http://localhost:6006"
+        run: npm run test:ui:ci
 
       - name: Stop Storybook server
         run: kill $(cat storybook.pid) || true
