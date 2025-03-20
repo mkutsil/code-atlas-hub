@@ -24,17 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Fonts
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ttf-mscorefonts-installer
-          sudo fc-cache -fv
-
-          # Manually install Archivo font using the correct URL
-          mkdir -p ~/.fonts
-          curl -L -o ~/.fonts/Archivo.zip https://github.com/google/fonts/archive/main.zip
-          unzip ~/.fonts/Archivo.zip -d ~/.fonts/ && fc-cache -fv
-
       - name: Build production project
         run: npm run build:prod
 
