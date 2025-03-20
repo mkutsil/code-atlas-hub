@@ -4,7 +4,6 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPluginInstance } from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
-  // test 
 
 export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
     return [
