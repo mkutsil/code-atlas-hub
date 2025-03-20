@@ -4,6 +4,7 @@ on:
     branches: [ dev ]
   pull_request:
     branches: [ dev ]
+
 jobs: 
   pipeline:
     runs-on: ubuntu-latest
@@ -13,25 +14,49 @@ jobs:
  
     steps:
       - uses: actions/checkout@v2
+
       - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
+
+      - name: Install modules
         run: npm install
-      - name: build production project
+
+      - name: Build production project
         run: npm run build:prod
-      - name: linting typescript
+
+      - name: Linting TypeScript
         run: npm run lint:ts
-      - name: linting scss
+
+      - name: Linting SCSS
         run: npm run lint:scss
-      - name: unit testing
+
+      - name: Unit testing
         run: npm run test:unit
-      - name: build storybook
+
+      - name: Build Storybook
         run: npm run storybook:build
-      - name: start storybook server
-        run: npx http-server ./storybook-static -p 6006 &
-      - name: screenshot testing
+
+      - name: Check if Chrome is installed
+        run: |
+          if ! command -v google-chrome-stable &> /dev/null
+          then
+            echo "Chrome is not installed. Installing..."
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable fonts-liberation
+          else
+            echo "Chrome is already installed."
+          fi
+
+      - name: Start Storybook server
+        run: npx http-server ./storybook-static -p 6006 & echo $! > storybook.pid
+
+      - name: Wait for Storybook to be ready
+        run: sleep 5
+
+      - name: Screenshot testing
         run: npm run test:ui:ci
-      - name: stop storybook server
-        run: kill $!
+
+      - name: Stop Storybook server
+        run: kill $(cat storybook.pid) || true
