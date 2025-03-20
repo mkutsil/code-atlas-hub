@@ -45,6 +45,9 @@ jobs:
       - name: Wait for Storybook to load
         run: sleep 10
 
+      - name: Screenshot testing update
+        run: npx loki update --reactUri="http://localhost:6006" --chromeTolerance=5
+
       - name: Screenshot testing
         run: npm run test:ui:ci
 
