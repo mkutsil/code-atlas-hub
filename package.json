@@ -105,7 +105,6 @@
         "preset": "iPhone 7"
       }
     },
-    "chromeFlags": ["--disable-gpu", "--no-sandbox", "--disable-setuid-sandbox"],
     "server": {
       "command": "npx http-server ./storybook-static -p 6006",
       "port": 6006
