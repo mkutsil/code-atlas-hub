@@ -24,15 +24,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install fonts
+      - name: Install Fonts
         run: |
           sudo apt-get update
           sudo apt-get install -y ttf-mscorefonts-installer
           sudo fc-cache -fv
+
+          # Manually install Archivo font using the correct URL
           mkdir -p ~/.fonts
-          wget -O ~/.fonts/Archivo.zip "https://fonts.google.com/download?family=Archivo"
-          unzip ~/.fonts/Archivo.zip -d ~/.fonts
-          fc-cache -fv
+          curl -L -o ~/.fonts/Archivo.zip https://github.com/google/fonts/archive/main.zip
+          unzip ~/.fonts/Archivo.zip -d ~/.fonts/ && fc-cache -fv
 
       - name: Build production project
         run: npm run build:prod
@@ -53,7 +54,7 @@ jobs:
         run: npx http-server ./storybook-static -p 6006 & echo $! > storybook.pid
 
       - name: Wait for Storybook to load
-        run: sleep 60
+        run: sleep 30
 
       - name: Screenshot testing
         run: npx loki test --reactUri="http://localhost:6006" --chromeTolerance=5
