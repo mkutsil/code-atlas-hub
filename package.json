@@ -98,12 +98,18 @@
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
-        "mobile": false
+        "mobile": false,
+        "waitForSelector": "body",
+        "delay": 500
       },
       "chrome.iphone7": {
         "target": "chrome.app",
-        "preset": "iPhone 7"
+        "preset": "iPhone 7",
+        "waitForSelector": "body",
+        "delay": 500
       }
-    }
+    },
+    "chromeSelector": "#storybook-root",
+    "diffingEngine": "pixelmatch"
   }
 }
