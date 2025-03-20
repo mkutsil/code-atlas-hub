@@ -39,22 +39,25 @@ jobs:
       - name: Build Storybook
         run: npm run storybook:build
 
-      - name: Install Chrome if missing
+      - name: Install Chrome & Fonts
         run: |
-          if ! command -v google-chrome-stable &> /dev/null
-          then
-            echo "Chrome is not installed. Installing..."
-            sudo apt-get update
-            sudo apt-get install -y google-chrome-stable fonts-liberation fonts-noto
-          else
-            echo "Chrome is already installed."
-          fi
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable fonts-liberation fonts-noto
+          mkdir -p ~/.fonts
+          curl -L -o ~/.fonts/Archivo-Regular.ttf "https://github.com/google/fonts/raw/main/ofl/archivo/Archivo-Regular.ttf"
+          fc-cache -f -v
+
+      - name: Check Chrome version
+        run: google-chrome-stable --version || echo "Chrome is not installed"
 
       - name: Start Storybook server
         run: npx http-server ./storybook-static -p 6006 & echo $! > storybook.pid
 
-      - name: Wait for Storybook to be ready
-        run: sleep 5
+      - name: Wait for Storybook
+        run: sleep 10
+
+      - name: Check Storybook server
+        run: curl -Is http://localhost:6006 | head -n 1
 
       - name: Screenshot testing (Debug)
         run: npx loki --verbose test --reactUri="http://localhost:6006"
