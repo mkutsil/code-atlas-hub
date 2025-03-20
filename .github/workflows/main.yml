@@ -12,9 +12,10 @@ jobs:
     strategy:
       matrix:
         node-version: [ 18.x ]
- 
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -39,14 +40,17 @@ jobs:
       - name: Build Storybook
         run: npm run storybook:build
 
-      - name: Start Storybook server
-        run: npx http-server ./storybook-static -p 6006 &
+      - name: Build Docker image
+        run: docker build -t my-app .
+
+      - name: Run Docker container
+        run: docker run -d -p 6006:6006 --name my-app-container my-app
 
       - name: Wait for Storybook to load
         run: sleep 10
 
       - name: Screenshot testing
-        run: npm run test:ui:ci
+        run: docker exec my-app-container npm run test:ui:ci
 
-      - name: Stop Storybook server
-        run: kill $(cat storybook.pid) || true
+      - name: Stop and remove container
+        run: docker stop my-app-container && docker rm my-app-container
