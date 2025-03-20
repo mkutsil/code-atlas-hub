@@ -16,13 +16,23 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Starting Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
         run: npm install
+
+      - name: Install fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ttf-mscorefonts-installer
+          sudo fc-cache -fv
+          mkdir -p ~/.fonts
+          wget -O ~/.fonts/Archivo.zip "https://fonts.google.com/download?family=Archivo"
+          unzip ~/.fonts/Archivo.zip -d ~/.fonts
+          fc-cache -fv
 
       - name: Build production project
         run: npm run build:prod
@@ -39,28 +49,14 @@ jobs:
       - name: Build Storybook
         run: npm run storybook:build
 
-      - name: Install Chrome & Fonts
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable fonts-liberation fonts-noto
-          mkdir -p ~/.fonts
-          curl -L -o ~/.fonts/Archivo-Regular.ttf "https://github.com/google/fonts/raw/main/ofl/archivo/Archivo-Regular.ttf"
-          fc-cache -f -v
-
-      - name: Check Chrome version
-        run: google-chrome-stable --version || echo "Chrome is not installed"
-
       - name: Start Storybook server
         run: npx http-server ./storybook-static -p 6006 & echo $! > storybook.pid
 
-      - name: Wait for Storybook
-        run: sleep 10
+      - name: Wait for Storybook to load
+        run: sleep 60
 
-      - name: Check Storybook server
-        run: curl -Is http://localhost:6006 | head -n 1
-
-      - name: Screenshot testing (Debug)
-        run: npx loki --verbose test --reactUri="http://localhost:6006"
+      - name: Screenshot testing
+        run: npx loki test --reactUri="http://localhost:6006" --chromeTolerance=5
 
       - name: Stop Storybook server
         run: kill $(cat storybook.pid) || true

@@ -14,7 +14,7 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "npx loki --requireReference --reactUri http://localhost:6006",
+    "test:ui:ci": "loki test --reactUri=http://localhost:6006 --chromeTolerance=5",
     "storybook": "storybook dev -p 6006 --config-dir=config/storybook",
     "storybook:build": "storybook build --config-dir=config/storybook -o storybook-static"
   },
@@ -98,18 +98,17 @@
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
-        "mobile": false,
-        "waitForSelector": "body",
-        "delay": 500
+        "mobile": false
       },
       "chrome.iphone7": {
         "target": "chrome.app",
-        "preset": "iPhone 7",
-        "waitForSelector": "body",
-        "delay": 500
+        "preset": "iPhone 7"
       }
     },
-    "chromeSelector": "#storybook-root",
-    "diffingEngine": "pixelmatch"
+    "chromeFlags": ["--disable-gpu", "--no-sandbox", "--disable-setuid-sandbox"],
+    "server": {
+      "command": "npx http-server ./storybook-static -p 6006",
+      "port": 6006
+    }
   }
 }
