@@ -43,10 +43,10 @@ jobs:
         run: npx http-server ./storybook-static -p 6006 & echo $! > storybook.pid
 
       - name: Wait for Storybook to load
-        run: sleep 30
+        run: sleep 10
 
       - name: Screenshot testing
-        run: npm run test:ui:ci
+        run: npm run test:ui
 
       - name: Stop Storybook server
         run: kill $(cat storybook.pid) || true
