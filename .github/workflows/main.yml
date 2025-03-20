@@ -40,7 +40,7 @@ jobs:
         run: npm run storybook:build
 
       - name: Start Storybook server
-        run: npx http-server ./storybook-static -p 6006
+        run: npx http-server ./storybook-static -p 6006 &
 
       - name: Wait for Storybook to load
         run: sleep 10
