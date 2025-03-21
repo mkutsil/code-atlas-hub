@@ -50,7 +50,8 @@ jobs:
         run: sleep 10
 
       - name: Screenshot testing
-        run: docker exec my-app-container npm run test:ui:ci
+        run: docker exec my-app-container env CHROME_PATH=/usr/bin/chromium npm run test:ui:ci
+
 
       - name: Stop and remove container
         run: docker stop my-app-container && docker rm my-app-container
