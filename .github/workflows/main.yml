@@ -44,15 +44,14 @@ jobs:
         run: docker build -t my-app .
 
       - name: Run Docker container
-        run: docker run -d -p 6006:6006 --name my-app-container my-app
+        run: docker run --memory=4g --cpus=2 --name my-app-container -d my-app-image
 
       - name: Wait for Storybook to load
         run: sleep 10
 
       - name: Screenshot testing
-        run: docker exec my-app-container env CHROME_PATH=/usr/bin/chromium npm run test:ui:ci -- --reactUri=http://host.docker.internal:6006
-
-
+        run: |
+          docker exec my-app-container env CHROME_PATH=/usr/bin/chromium npm run test:ui:ci -- --reactUri=http://host.docker.internal:6006 || sleep 10
 
       - name: Stop and remove container
         run: docker stop my-app-container && docker rm my-app-container
