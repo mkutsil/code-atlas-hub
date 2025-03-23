@@ -3,13 +3,16 @@
 @use 'themes/light';
 @use 'themes/dark';
 
+body {
+	font: var(--font-m);
+	color: var(--primary-color);
+}
 
 .app {
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	background: var(--bg-color);
-	font: var(--font-m);
 }
 
 .content-page { 
