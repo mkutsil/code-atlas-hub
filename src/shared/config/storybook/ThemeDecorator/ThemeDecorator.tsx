@@ -1,13 +1,15 @@
-import { Theme } from 'app/providers/ThemeProvider';
+import { Theme, ThemeProvider } from 'app/providers/ThemeProvider';
 import { ReactElement } from 'react';
 
 export const ThemeDecorator = (theme: Theme) => {
     const Decorator = (StoryComponent: () => ReactElement) => (
-        <div className={`app ${theme}`}>
-            <div className='content-page'>
-                <StoryComponent />
+        <ThemeProvider initialTheme={theme}>
+            <div className={`app ${theme}`}>
+                <div className='content-page'>
+                    <StoryComponent />
+                </div>
             </div>
-        </div>
+        </ThemeProvider>
     );
 
     Decorator.displayName = 'ThemeDecorator';
