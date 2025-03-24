@@ -1,29 +1,57 @@
 name: linting, testing, building
+
 on: 
   push:
     branches: [ dev ]
   pull_request:
     branches: [ dev ]
+
 jobs: 
   pipeline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 18.x ]
- 
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Starting Node.js ${{ matrix.node-version }}
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
+
+      - name: Install dependencies
         run: npm install
-      - name: build production project
+
+      - name: Build production project
         run: npm run build:prod
-      - name: linting typescript
+
+      - name: Linting TypeScript
         run: npm run lint:ts
-      - name: linting scss
+
+      - name: Linting SCSS
         run: npm run lint:scss
-      - name: unit testing
+
+      - name: Unit testing
         run: npm run test:unit
+
+      - name: Build Storybook
+        run: npm run storybook:build
+
+      - name: Build Docker image
+        run: docker build -t my-app .
+
+      - name: Run Docker container
+        run: docker run --memory=4g --cpus=2 --name my-app-container -d my-app-image
+
+      - name: Wait for Storybook to load
+        run: sleep 10
+
+      - name: Screenshot testing
+        run: |
+          docker exec my-app-container env CHROME_PATH=/usr/bin/chromium npm run test:ui:ci -- --reactUri=http://host.docker.internal:6006 || sleep 10
+
+      - name: Stop and remove container
+        run: docker stop my-app-container && docker rm my-app-container

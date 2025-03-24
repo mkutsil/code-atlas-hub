@@ -14,8 +14,9 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
+    "test:ui:ci": "loki test --reactUri=http://localhost:6006 --chromeTolerance=20",
     "storybook": "storybook dev -p 6006 --config-dir=config/storybook",
-    "storybook:build": "storybook build --config-dir=config/storybook"
+    "storybook:build": "storybook build --config-dir=config/storybook -o storybook-static"
   },
   "keywords": [],
   "author": "",
@@ -103,6 +104,10 @@
         "target": "chrome.app",
         "preset": "iPhone 7"
       }
+    },
+    "server": {
+      "command": "npx http-server ./storybook-static -p 6006",
+      "port": 6006
     }
   }
 }
