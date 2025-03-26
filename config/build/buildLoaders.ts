@@ -1,6 +1,6 @@
 import { RuleSetRule } from 'webpack';
 import { BuildOptions } from './types/config';
-import { buildCssLoader } from './loaders/buildCssLoader'
+import { buildCssLoaders } from './loaders/buildCssLoaders'
 
 export function buildLoaders(options: BuildOptions): RuleSetRule[] {
 	
@@ -26,12 +26,12 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
         exclude: /node_modules/,
     };
 
-    const cssLoader = buildCssLoader(isDev);
+    const cssLoaders = buildCssLoaders(isDev);
 	
     return [
         svgLoader,
         fileLoader,
         typescriptLoader,
-        cssLoader,
+        ...cssLoaders,
     ];
 }

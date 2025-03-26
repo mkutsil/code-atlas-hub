@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import classes from './AboutPage.module.scss';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import { Counter } from 'entities/Counter';
+import Chart from './components/Chart/Chart';
 
 const AboutPage = () => {
 	
@@ -22,6 +23,8 @@ const AboutPage = () => {
             </div>
 
             <Counter/>
+
+            <Chart/>
 
             <div className={classes.buttonContainer}>
                 <Button theme={ThemeButton.OUTLINED}>Outlined</Button>
