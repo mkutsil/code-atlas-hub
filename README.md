@@ -22,8 +22,8 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
    ```sh
-   git clone <your-repo-url>
-   cd codeatlashub
+   git clone git@github.com:mkutsil/code-atlas-hub.git
+   cd code-atlas-hub
    ```
 
 2. Install the dependencies:
