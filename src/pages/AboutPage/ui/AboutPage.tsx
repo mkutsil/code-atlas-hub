@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import classes from './AboutPage.module.scss';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
+import { Counter } from 'entities/Counter';
 
 const AboutPage = () => {
 	
@@ -19,6 +20,8 @@ const AboutPage = () => {
                 <span>{t('description.name')}</span>
 
             </div>
+
+            <Counter/>
 
             <div className={classes.buttonContainer}>
                 <Button theme={ThemeButton.OUTLINED}>Outlined</Button>
