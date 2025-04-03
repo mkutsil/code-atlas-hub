@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes, FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import classes from './Button.module.scss';
+import Loader from '../Loader/Loader';
 
 export enum ThemeButton {
 	CLEAR = 'clear', 
@@ -12,6 +13,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	label?: string;
 	theme?: ThemeButton;
     customClassNames?: string;
+    isButtonAnimation?: boolean;
+    isLoading?: boolean;
 }
   
 const Button: FC<ButtonProps> = (props) => {
@@ -20,15 +23,24 @@ const Button: FC<ButtonProps> = (props) => {
         theme = ThemeButton.CLEAR, 
         children, 
         customClassNames,
+        isLoading = false,
+        isButtonAnimation = true,
         ...otherProps
     } = props;
 
     return ( 
         <button 
-            className={classNames(classes.button, {}, [ classes[theme], customClassNames ])}
+            className={
+                classNames(classes.button, 
+                    { 
+                        [classes.activeButton]: isButtonAnimation,
+                        [classes.isLoading]: isLoading,
+                    }, 
+                    [ classes[theme], customClassNames ]
+                )}
             {...otherProps}
         >
-            {children}
+            {isLoading? <Loader/> : children}
         </button>
 	 );
 };
