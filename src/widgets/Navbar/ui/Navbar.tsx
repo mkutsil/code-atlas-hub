@@ -8,8 +8,18 @@ import Button, { ThemeButton } from 'shared/ui/Button/Button';
 
 const Navbar = () => {
     const [ isModalOpen, setIsModalOpen ] = useState(false);
+    const [ isLoading, setIsLoading ] = useState(false);
 
     const onToggleModal = () => setIsModalOpen(prev => !prev);
+
+    const handleLogin = () => {
+        setIsLoading(true);
+
+        setTimeout(() => {
+            onToggleModal();
+            setIsLoading(false);
+        }, 3000);
+    };
 
     return ( 
         <div className={classNames(classes.navbar)}>
@@ -20,11 +30,22 @@ const Navbar = () => {
 
                 <div>
                     <Button onClick={onToggleModal} theme={ThemeButton.OUTLINED}>
-                        setIsModalOpen
+                        Login
                     </Button>
                 </div>
                 <Modal isOpen={isModalOpen} onClose={onToggleModal}>
-                    Velit eiusmod aliqua sint dolore sit proident adipisicing excepteur sint id aliquip incididunt. Qui dolore aliqua Lorem sit deserunt velit. Nisi occaecat exercitation occaecat nisi aliquip nisi est nisi. Laborum amet occaecat eiusmod ea excepteur incididunt ullamco anim anim consequat excepteur. Dolor aliquip non laborum voluptate ex. Voluptate ullamco eu ea laborum.
+                    <div className={classes.formContainer}>
+                        <div className={classes.formContentContainer}>
+                            <h2>Login</h2>
+                        
+                            <div className={classes.inputsContainer}>
+                                <input className={classes.input} type="text" placeholder='Login' />
+                                <input className={classes.input} type="password" placeholder='Password' />
+                            </div>
+                        </div>
+
+                        <Button isLoading={isLoading} onClick={handleLogin} isButtonAnimation={false} theme={ThemeButton.CONTAINED}>Login</Button>
+                    </div>
                 </Modal>
             </div>
         </div>
