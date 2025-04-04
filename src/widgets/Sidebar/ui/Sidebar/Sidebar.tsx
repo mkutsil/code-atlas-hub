@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import LogoIcon from 'shared/assets/icons/logo.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
 import Button from 'shared/ui/Button/Button';
@@ -12,6 +12,29 @@ const Sidebar = () => {
     const handleButtonClick = () => {
         setCollapsed((prev) => !prev);
     }; 
+
+    async function getData() {
+        const url = 'http://localhost:8000/posts';
+        try {
+            const response = await fetch(url, {
+                headers: {
+                    'Authorization': 'ded',
+                },
+            });
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+      
+            const json = await response.json();
+            console.log(json);
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+
+    useEffect(() => {
+        getData();
+    }, []);
     
     return (
         <div 

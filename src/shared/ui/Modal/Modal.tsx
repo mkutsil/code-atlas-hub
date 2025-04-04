@@ -7,14 +7,15 @@ interface ModalProps {
 	children?: ReactNode
 	isOpen?: boolean;
 	onClose?: () => void;
+    lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
  
-const Modal: FC<ModalProps> = ({ children, isOpen = false, onClose }) => {
+const Modal: FC<ModalProps> = ({ children, isOpen = false, onClose, lazy=true }) => {
 	
     const [ isClosing, setIsClosing ] = useState(false);
-
+    const [ isMounted, setIsMounted ] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const mods: Record<string, boolean> = {
@@ -42,6 +43,12 @@ const Modal: FC<ModalProps> = ({ children, isOpen = false, onClose }) => {
             closeHandler();
         }
     }, [ closeHandler ]); 
+
+    useEffect(() => {
+        if(isOpen){
+            setIsMounted(true);
+        }
+    }, [ isOpen ]);
     
     useEffect(() => {
 
@@ -58,6 +65,10 @@ const Modal: FC<ModalProps> = ({ children, isOpen = false, onClose }) => {
         };
         
     }, [ isOpen, onKeyDown ]);
+
+    if(lazy && !isMounted){
+        return null;
+    }
 	
     return ( 
         <Portal>

@@ -1,0 +1,23 @@
+
+.formContainer{
+	width: 540px;
+	height: 379px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.formContentContainer{
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	gap: 28px;
+	color: #67666E;
+}
+
+.inputsContainer{
+	display: flex;	
+	flex-direction: column;
+	gap: 20px;
+}
