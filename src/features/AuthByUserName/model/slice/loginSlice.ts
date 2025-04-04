@@ -11,14 +11,7 @@ const initialState: LoginSchema = {
 export const loginSlice = createSlice({
     name: 'login',
     initialState,
-    reducers: {
-        setUserName: (state, action: PayloadAction<string>) => {
-            state.userName = action.payload;
-        },
-        setPassword: (state, action: PayloadAction<string>) => {
-            state.password = action.payload;
-        }
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(loginByUserName.pending, (state, action) => {

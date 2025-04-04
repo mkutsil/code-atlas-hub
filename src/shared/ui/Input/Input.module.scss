@@ -34,4 +34,9 @@
 		top: -15px;
 		transform: scale(.85);
 	}
+
+	.error {
+		color: rgb(188 41 41);
+		font: var(--font-xs);
+	}
 }
