@@ -26,13 +26,13 @@ server.use((req, res, next) => {
 
 // API Login
 server.post('/login', (req, res) => {
-    const { username, password } = req.body;
+    const { userName, password } = req.body;
     
     const dbPath = path.resolve(__dirname, 'db.json');
     const db = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
     const { users } = db;
 
-    const userFromDb = users.find(user => user.username === username && user.password === password);
+    const userFromDb = users.find(user => user.userName === userName && user.password === password);
 
     if (userFromDb) {
         return res.json(userFromDb);

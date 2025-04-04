@@ -1,4 +1,4 @@
-import webpack, { RuleSetRule } from 'webpack';
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 import path from 'path';
 
 import { BuildPaths } from '../build/types/config';
@@ -10,6 +10,16 @@ export default ({ config }: {config: webpack.Configuration}) => {
         html: '',
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src')
+    };
+
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+        ...config.resolve?.alias,
+        entities: path.resolve(paths.src, 'entities'),
+        features: path.resolve(paths.src, 'features'),
+        shared: path.resolve(paths.src, 'shared'),
+        app: path.resolve(paths.src, 'app'),
+        widgets: path.resolve(paths.src, 'widgets'),
     };
 
     config.resolve?.modules?.push(paths.src);
@@ -30,6 +40,10 @@ export default ({ config }: {config: webpack.Configuration}) => {
     });
 
     config.module?.rules?.push(buildCssLoader(true));
+
+    config.plugins?.push(new DefinePlugin({
+        IS_DEV: true
+    }));
 
     return config;
 };
