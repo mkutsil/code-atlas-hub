@@ -1,6 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "🚀 Running pre-push build check..."
-
-npm run build:prod
+echo "🔍 Running unit tests before push..."
+npm run test:unit

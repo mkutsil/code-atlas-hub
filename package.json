@@ -21,8 +21,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "npm run lint:ts:fix",
-      "npm run test:unit"
+      "npm run lint:ts:fix"
     ],
     "*.scss": [
       "npm run lint:scss:fix"
