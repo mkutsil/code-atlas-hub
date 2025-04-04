@@ -1,20 +1,31 @@
 import { AppRouter } from 'app/providers/router';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { PageLoader } from 'widgets/PageLoader';
+import { useAppDispatch } from './providers/StoreProvider/hooks/useAppDispatch';
+import { userActions } from 'entities/User';
 
-const App = () => (
-    <div className={classNames('app')}>
-        <Suspense fallback={<PageLoader/>}>
-            <Sidebar/>
-            <div className={'content-page'}>
-                <Navbar/>
-                <AppRouter/>
-            </div>
-        </Suspense>	
-    </div>
-);
+const App = () => {
+    
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(userActions.initAuthData());
+    }, [ dispatch ]);
+    
+    return (
+        <div className={classNames('app')}>
+            <Suspense fallback={<PageLoader/>}>
+                <Sidebar/>
+                <div className={'content-page'}>
+                    <Navbar/>
+                    <AppRouter/>
+                </div>
+            </Suspense>	
+        </div>
+    );
+};
 
 export default App;

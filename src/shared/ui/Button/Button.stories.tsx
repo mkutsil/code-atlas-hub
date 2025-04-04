@@ -40,3 +40,11 @@ export const Outlined: Story = {
         theme: ThemeButton.OUTLINED
     },
 };
+
+export const LoadingOutlined: Story = {
+    args: {
+        children: 'Loading Outlined',
+        theme: ThemeButton.OUTLINED,
+        isLoading: true
+    },
+};

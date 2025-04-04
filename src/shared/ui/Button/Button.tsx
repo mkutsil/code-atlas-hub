@@ -28,14 +28,16 @@ const Button: FC<ButtonProps> = (props) => {
         ...otherProps
     } = props;
 
+    const mods: Record<string, boolean> = {
+        [classes.activeButton]: isButtonAnimation,
+        [classes.loading]: isLoading,
+    };
+
     return ( 
         <button 
             className={
                 classNames(classes.button, 
-                    { 
-                        [classes.activeButton]: isButtonAnimation,
-                        [classes.isLoading]: isLoading,
-                    }, 
+                    mods, 
                     [ classes[theme], customClassNames ]
                 )}
             {...otherProps}
