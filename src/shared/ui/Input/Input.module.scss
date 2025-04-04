@@ -1,0 +1,37 @@
+.textField {
+	width: 100%;
+	position: relative;
+
+	.input {
+		width: 100%;
+		padding: 10px 0;
+		border: 0;
+		border-radius: 0;
+		background-color: transparent;
+		outline: none;
+		appearance: none;
+		border-bottom: 1px solid #E5E5E5;
+		transition: border-color .3s;
+		
+		&:focus {
+			border-color:#3F52E0;
+			outline: none;
+		}
+	}
+
+	.placeholder{
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		pointer-events: none;
+		transform-origin: left;
+		transition: top .3s, transform .3s, color .3s;
+	}
+
+	.input:focus + .placeholder,
+	.input:not(:focus):valid + .placeholder {
+		top: -15px;
+		transform: scale(.85);
+	}
+}

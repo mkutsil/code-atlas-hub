@@ -11,8 +11,8 @@ const Sidebar = () => {
  
     const handleButtonClick = () => {
         setCollapsed((prev) => !prev);
-    }; 
-    
+    };  
+
     return (
         <div 
             data-testid="sidebar"
