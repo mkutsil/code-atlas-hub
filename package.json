@@ -17,11 +17,18 @@
     "test:ui:ok": "npx loki approve",
     "storybook": "storybook dev -p 6006 --config-dir=config/storybook",
     "storybook:build": "storybook build --config-dir=config/storybook",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "lint-staged": {
-  "*.{ts,tsx,js,jsx}": "eslint --fix",
-  "*.scss": "stylelint --fix"
+    "*.{ts,tsx,js,jsx}": [
+      "npm run lint:ts:fix",
+      "npm run test:unit",
+      "git add"
+    ],
+    "*.scss": [
+      "npm run lint:scss:fix",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
