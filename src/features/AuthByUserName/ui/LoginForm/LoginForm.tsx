@@ -2,12 +2,8 @@ import { useState } from 'react';
 import classes from './LoginForm.module.scss';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import Input from 'shared/ui/Input/Input';
-
-interface LoginFormProps {
-	id?: string;
-}
  
-const LoginForm = ({ id } : LoginFormProps) => {
+const LoginForm = () => {
     const [ loginValue, setLoginValue ] = useState('');
     const [ passwordValue, setPasswordValue ] = useState('');
 
