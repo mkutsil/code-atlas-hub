@@ -3,7 +3,7 @@ import axios from 'axios';
 import { User, userActions } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 
-export interface LoginByUserNameProps {
+interface LoginByUserNameProps {
 	userName: string;
 	password: string;
 }
@@ -26,7 +26,7 @@ export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps>(
 
             return response.data; 
         } catch (e){
-            console.log(e);
+            console.error(e);
             return thunkAPI.rejectWithValue('error');
         }
     }
