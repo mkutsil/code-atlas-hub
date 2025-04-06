@@ -11,6 +11,7 @@ interface InputProps extends HTMLInputProps{
     isRequired?: boolean;
     type?: string;
     customClassNames?: string;
+    error?: string;
 }
   
 const Input  = (props: InputProps) => {
@@ -21,6 +22,7 @@ const Input  = (props: InputProps) => {
         isRequired = true,
         type = 'text',
         customClassNames,
+        error,
         ...otherProps
     } = props;
 
@@ -44,6 +46,8 @@ const Input  = (props: InputProps) => {
             >
                 {placeholder}
             </label>
+
+            {error && <span className={classes.error}>{error}</span>} 
         </div>
        
 	 );

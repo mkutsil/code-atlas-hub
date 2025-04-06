@@ -44,5 +44,5 @@ server.post('/login', (req, res) => {
 server.use(router);
 
 server.listen(8000, () => {
-    console.log('Server is running on port 8000');
+    console.warn('Server is running on port 8000');
 });
