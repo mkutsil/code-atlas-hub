@@ -4,7 +4,7 @@ import Input from 'shared/ui/Input/Input';
 import { useSelector } from 'react-redux';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
-import { useAppDispatch } from 'app/providers/StoreProvider/hooks/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import {  useForm, Controller } from 'react-hook-form';
 import { LoginFormSchema } from './schema';
 import { loginReducer } from '../../model/slice/loginSlice';
