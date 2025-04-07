@@ -39,6 +39,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "firstName": "Mykola",
+    "lastName": "Kutsil",
+    "age": "24",
+    "currency": "UA",
+    "country": "Ukraine",
+    "city": "Kyiv",
+    "userName": "admin",
+    "avatar": "null"
   }
 }

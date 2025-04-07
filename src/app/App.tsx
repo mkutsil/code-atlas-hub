@@ -4,7 +4,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { PageLoader } from 'widgets/PageLoader';
-import { useAppDispatch } from './providers/StoreProvider/hooks/useAppDispatch';
+import { useAppDispatch } from '../shared/lib/hooks/useAppDispatch';
 import { userActions } from 'entities/User';
 
 const App = () => {
