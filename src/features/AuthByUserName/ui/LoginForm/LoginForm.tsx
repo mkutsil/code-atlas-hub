@@ -3,21 +3,29 @@ import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import Input from 'shared/ui/Input/Input';
 import { useSelector } from 'react-redux';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { useAppDispatch } from 'app/providers/StoreProvider/hooks/useAppDispatch';
 import {  useForm, Controller } from 'react-hook-form';
 import { LoginFormSchema } from './schema';
+import { loginReducer } from '../../model/slice/loginSlice';
+import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
+import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
-interface LoginFormProps {
+export interface LoginFormProps {
     onModalClose: () => void;
 }
 
-const LoginForm = ({ onModalClose }: LoginFormProps) => {
+const initialReducers: ReducersList = {
+    loginForm: loginReducer,
+};
 
+const LoginForm = ({ onModalClose }: LoginFormProps) => {
     const dispatch = useAppDispatch();
-    const {  isLoading, error } = useSelector(getLoginState);
-        
+
+    const isLoading = useSelector(getLoginIsLoading);
+    const error = useSelector(getLoginError);
+
     const onSubmit = (data: { login: string; password: string }) => {
         dispatch(loginByUserName({ userName: data.login, password: data.password }))
             .then((result) => {
@@ -38,55 +46,58 @@ const LoginForm = ({ onModalClose }: LoginFormProps) => {
     });
 
     return ( 
-        <form noValidate onSubmit={handleSubmit(onSubmit)}>
-            <div className={classes.formContainer}>
-                <div className={classes.formContentContainer}>
-                    <h2>Login</h2>
+        <DynamicModuleLoader reducers={initialReducers}> 
+            <form noValidate onSubmit={handleSubmit(onSubmit)}>
+                <div className={classes.formContainer}>
+                    <div className={classes.formContentContainer}>
+                        <h2>Login</h2>
                 
-                    {error && (
-                        <div>{error}</div>
-                    )}
+                        {error && (
+                            <div>{error}</div>
+                        )}
 
-                    <div className={classes.inputsContainer}>
-                        <Controller
-                            name="login"
-                            control={control}  
-                            render={({ field, fieldState }) => (
-                                <Input
-                                    {...field} 
-                                    placeholder="Login"
-                                    isRequired={true}
-                                    error={fieldState?.error?.message}
-                                />
-                            )}
-                        />
+                        <div className={classes.inputsContainer}>
+                            <Controller
+                                name="login"
+                                control={control}  
+                                render={({ field, fieldState }) => (
+                                    <Input
+                                        {...field} 
+                                        placeholder="Login"
+                                        isRequired={true}
+                                        error={fieldState?.error?.message}
+                                    />
+                                )}
+                            />
 
-                        <Controller
-                            name="password"
-                            control={control} 
-                            render={({ field, fieldState }) => (
-                                <Input
-                                    {...field}
-                                    placeholder="Password" 
-                                    type="password" 
-                                    isRequired={true}
-                                    error={fieldState?.error?.message} 
-                                />
-                            )}
-                        />
+                            <Controller
+                                name="password"
+                                control={control} 
+                                render={({ field, fieldState }) => (
+                                    <Input
+                                        {...field}
+                                        placeholder="Password" 
+                                        type="password" 
+                                        isRequired={true}
+                                        error={fieldState?.error?.message} 
+                                    />
+                                )}
+                            />
+                        </div>
                     </div>
-                </div>
 
-                <Button 
-                    type='submit'
-                    isButtonAnimation={false} 
-                    theme={ThemeButton.CONTAINED}
-                    isLoading={isLoading}
-                >
-                    Login
-                </Button>
-            </div>
-        </form>
+                    <Button 
+                        type='submit'
+                        isButtonAnimation={false} 
+                        theme={ThemeButton.CONTAINED}
+                        isLoading={isLoading}
+                    >
+                        Login
+                    </Button>
+                </div>
+            </form>
+        </DynamicModuleLoader>
+        
 	 );
 };
  
