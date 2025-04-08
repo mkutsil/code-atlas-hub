@@ -8,7 +8,10 @@ import path from 'path';
 
 const config: Config = {
     // A set of global variables that need to be available in all test environments
-    globals: { 'IS_DEV' : true },
+    globals: { 
+        'IS_DEV' : true,
+        API_URL: '',
+    },
 
     preset: 'ts-jest',
 

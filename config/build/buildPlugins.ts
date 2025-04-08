@@ -5,7 +5,7 @@ import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPlugin
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev, apiUrl }: BuildOptions): WebpackPluginInstance[] {
     return [
         new HtmlWebpackPlugin({
             template: paths.html
@@ -17,6 +17,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInsta
         }),
         new DefinePlugin({
             IS_DEV: JSON.stringify(isDev),
+            API_URL: JSON.stringify(apiUrl),
         }),
         ...(isDev ? [ new HotModuleReplacementPlugin() ] : []),
         ...(isDev ? [ new ReactRefreshWebpackPlugin() ] : []),
