@@ -10,7 +10,7 @@ const config: Config = {
     // A set of global variables that need to be available in all test environments
     globals: { 
         'IS_DEV' : true,
-        API_URL: '',
+        'API_URL': '',
     },
 
     preset: 'ts-jest',
