@@ -1,5 +1,6 @@
 import { AsyncThunkAction } from '@reduxjs/toolkit';
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema, ThunkExtraArg } from 'app/providers/StoreProvider';
+import mockedAxios from 'axios';
 
 type ActionCreatorType<Return, Arg, RejectedValue> = (arg: Arg) => 
 	AsyncThunkAction<Return, Arg, {rejectValue: RejectedValue}>;
@@ -8,6 +9,7 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     dispatch: jest.MockedFn<any>;
     getState: () => StateSchema;
+    extra: ThunkExtraArg;
     actionCreator: ActionCreatorType<Return, Arg, RejectedValue>;
  
     constructor(
@@ -16,6 +18,10 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
         this.actionCreator = actionCreator;
         this.dispatch = jest.fn();
         this.getState = jest.fn();
+        this.extra = {
+            api: mockedAxios,
+            navigate: jest.fn(),
+        };
     }	
 
     async callThunk(arg: Arg) {
