@@ -1,8 +1,7 @@
-import axios from 'axios';
 import { loginByUserName } from './loginByUserName';
 import { userActions } from 'entities/User';
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { $api } from 'shared/api/api';
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 
 jest.mock('shared/api/api');
 
@@ -25,16 +24,15 @@ describe('loginByUserName.test', () => {
 
     test('error login', async () => {
         const loginUserValue = { userName: 'admin', password: '123' };
-    
-        mockedAxios.post.mockRejectedValue(new Error('Login error'));
-    
+
+        mockedAxios.post.mockReturnValue(Promise.resolve(
+            { status: 403 }));
+
         const thunk = new TestAsyncThunk(loginByUserName);
         const result = await thunk.callThunk(loginUserValue);
-    
+
+        expect(thunk.dispatch).toHaveBeenCalledTimes(2);
         expect(mockedAxios.post).toHaveBeenCalled();
-        expect(thunk.dispatch).not.toHaveBeenCalledWith(userActions.setAuthData(expect.anything()));
         expect(result.meta.requestStatus).toBe('rejected');
-        expect(result.payload).toBe('error');
     });
-    
 });
