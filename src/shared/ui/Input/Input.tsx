@@ -31,7 +31,7 @@ const Input  = (props: InputProps) => {
     };
 
     return ( 
-        <div className={classNames(classes.textField, {}, [ customClassNames ])}>
+        <div className={classNames(classes.textField, {}, [ customClassNames || '' ])}>
             <input 
                 className={classes.input} 
                 value={value || ''}

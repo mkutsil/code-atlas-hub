@@ -7,7 +7,11 @@ import 'app/styles/index.scss';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { StoreProvider } from 'app/providers/StoreProvider';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+    throw new Error('Root element not found');
+}
+const root = ReactDOM.createRoot(rootElement);
 
 root.render ( 
     <BrowserRouter>

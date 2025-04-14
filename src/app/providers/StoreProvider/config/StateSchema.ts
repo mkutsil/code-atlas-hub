@@ -1,4 +1,4 @@
-import { EnhancedStore } from '@reduxjs/toolkit';
+import { Dispatch, EnhancedStore } from '@reduxjs/toolkit';
 import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUserName';
@@ -30,10 +30,11 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 
 export interface ThunkExtraArg {
 	api: AxiosInstance;
-	navigate: (to: To, options?: NavigateOptions) => void
+	navigate?: (to: To, options?: NavigateOptions) => void
 }
 
 export interface ThunkConfig<T> {
 	rejectValue: T;
 	extra: ThunkExtraArg;
+	dispatch?: Dispatch;
 }
