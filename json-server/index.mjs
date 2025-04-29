@@ -2,6 +2,7 @@ import fs from 'fs';
 import jsonServer from 'json-server';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import jwt from 'jsonwebtoken';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,16 +19,23 @@ server.use(async (req, res, next) => {
 });
 
 server.use((req, res, next) => {
+    if (req.method === 'POST' && req.path === '/login') {
+        return next();
+    }
+    
     if (!req.headers.authorization) {
         return res.status(403).json({ message: 'AUTH ERROR' });
     }
+    
     next();
 });
 
 // API Login
+const SECRET_KEY = 'your-secret-key';
+
 server.post('/login', (req, res) => {
     const { userName, password } = req.body;
-    
+
     const dbPath = path.resolve(__dirname, 'db.json');
     const db = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
     const { users } = db;
@@ -35,7 +43,15 @@ server.post('/login', (req, res) => {
     const userFromDb = users.find(user => user.userName === userName && user.password === password);
 
     if (userFromDb) {
-        return res.json(userFromDb);
+        const token = jwt.sign(
+            { userId: userFromDb.id, userName: userFromDb.userName },
+            SECRET_KEY,
+            { expiresIn: '1h' }
+        );
+        
+        return res.json({
+            token, 
+        });
     }
 
     return res.status(403).json({ message: 'AUTH ERROR' });

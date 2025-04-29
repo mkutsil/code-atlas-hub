@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, FC } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import classes from './Button.module.scss';
 import Loader from '../Loader/Loader';
 
@@ -28,7 +28,7 @@ const Button: FC<ButtonProps> = (props) => {
         ...otherProps
     } = props;
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [classes.activeButton]: isButtonAnimation,
         [classes.loading]: isLoading,
     };

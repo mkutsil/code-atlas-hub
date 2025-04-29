@@ -1,4 +1,4 @@
-import {  ReactNode } from 'react';
+import { ReactNode, useRef } from 'react';
 import { Provider } from 'react-redux';
 import { createReduxStore } from '../index';
 import { StateSchema } from '../config/StateSchema';
@@ -10,21 +10,23 @@ interface StoreProviderProps {
 	initialState?: Partial<StateSchema>;
     asyncReducers?: Partial<ReducersMapObject<StateSchema>>;
 }
- 
-const StoreProvider = ({ children, initialState, asyncReducers }: StoreProviderProps) => {
 
+const StoreProvider = ({ children, initialState, asyncReducers }: StoreProviderProps) => {
     const navigate = useNavigate();
 
-    const store = createReduxStore(
-        initialState as StateSchema, 
-        asyncReducers as ReducersMapObject<StateSchema>,
-        navigate);
+    const storeRef = useRef(
+        createReduxStore(
+            initialState as StateSchema, 
+            asyncReducers as ReducersMapObject<StateSchema>,
+            navigate
+        )
+    );
 
     return (  
-        <Provider store={store}>
+        <Provider store={storeRef.current}>
             {children}
         </Provider>
     );
 };
- 
+
 export default StoreProvider;

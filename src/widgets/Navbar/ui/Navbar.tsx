@@ -6,12 +6,16 @@ import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUserName';
 import { useSelector } from 'react-redux';
-import { getUserAuthData, userActions } from 'entities/User';
+import { getUserAuthData, getUserData, userActions } from 'entities/User';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import Avatar, { AvatarSize } from 'shared/ui/Avatar/Avatar';
+import DropdownMenu from 'shared/ui/DropdownMenu/DropdownMenu';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [ isModalOpen, setIsModalOpen ] = useState(false);
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
 
     const onToggleModal = () => setIsModalOpen(prev => !prev);
 
@@ -19,6 +23,17 @@ const Navbar = () => {
         dispatch(userActions.logout());
     };
     const authData = useSelector(getUserAuthData);
+
+    const userData = useSelector(getUserData);
+
+    const handleRedirectToProfile = () => {
+        navigate('/profile');
+    };
+
+    const dropdownMenuConfig = [
+        { label: 'Profile', action: handleRedirectToProfile },
+        { label: 'Logout', action: onLogout }, 
+    ];
 
     return ( 
         <div className={classNames(classes.navbar)}>
@@ -29,9 +44,18 @@ const Navbar = () => {
 
                 <div>
                     {authData ? (
-                        <Button onClick={onLogout} theme={ThemeButton.OUTLINED}>
-                            Logout
-                        </Button>
+                        <div className={classNames(classes.loginElementContainer)}>
+                            <DropdownMenu
+                                dropdownMenuConfig={dropdownMenuConfig}
+                            >
+                                <Avatar 
+                                    size={AvatarSize.SMALL} 
+                                    src={ userData?.avatar || '' } 
+                                    alt={`${userData?.firstName.charAt(0) || ''} ${userData?.lastName.charAt(0) || ''}`}
+                                />
+                            </DropdownMenu>
+                        </div>
+                  
                     ) : (
                         <Button onClick={onToggleModal} theme={ThemeButton.OUTLINED}>
                             Login

@@ -23,21 +23,21 @@ const DynamicModuleLoader = (props:DynamicModuleLoaderProps)  => {
     const store = useStore() as ReduxStoreWithManager;
 
     useEffect(() => {
-        Object.entries(reducers).forEach(([ name, reducer ]: ReducerListEntry) => {
+        (Object.entries(reducers) as ReducerListEntry[]).forEach(([ name, reducer ]) => {
             store.reducerManager.add(name, reducer);
             dispatch({ type: `@INIT ${name} reducer` });
         });
         
         return () => {
             if (removeAfterUnmount) {
-                Object.entries(reducers).forEach(([ name ]: ReducerListEntry) => {
-                    store.reducerManager.remove('loginForm');
+                (Object.entries(reducers) as ReducerListEntry[]).forEach(([ name ]) => {
+                    store.reducerManager.remove(name);
                     dispatch({ type: `@DESTROY ${name} reducer` });
                 });
             }
         };
         // eslint-disable-next-line
-        }, [  ]);  
+        }, []);  
     
     return children;
 };

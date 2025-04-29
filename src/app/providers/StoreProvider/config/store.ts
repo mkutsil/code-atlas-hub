@@ -1,6 +1,6 @@
 import { ThunkAction } from 'redux-thunk';
-import { configureStore, ReducersMapObject, Action } from '@reduxjs/toolkit';
-import { StateSchema } from './StateSchema';
+import { configureStore, ReducersMapObject, Action, Reducer } from '@reduxjs/toolkit';
+import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
 import { createReducerManager } from './reducerManager';
@@ -20,17 +20,17 @@ export const createReduxStore = (
 
     const reducerManager = createReducerManager(rootReducer);
 
+    const extraArgument: ThunkExtraArg = {
+        api: $api,
+        navigate,
+    };
+
     const store = configureStore({
-        reducer: reducerManager.reduce,
+        reducer: reducerManager.reduce as Reducer<StateSchema>,
         devTools: IS_DEV,
         preloadedState: initialState,
         middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-            thunk: {
-                extraArgument: {
-                    api: $api,
-                    navigate,
-                },
-            }
+            thunk: { extraArgument }
         }),
     });
     // @ts-expect-error: Adding reducerManager property dynamically to the store

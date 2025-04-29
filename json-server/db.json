@@ -41,11 +41,16 @@
   "profile": {
     "firstName": "Mykola",
     "lastName": "Kutsil",
+    "avatar": "https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
+  },
+  "profileFull": {
+    "firstName": "Mykola",
+    "lastName": "Kutsil",
     "age": "24",
     "currency": "UA",
     "country": "Ukraine",
     "city": "Kyiv",
     "userName": "admin",
-    "avatar": "null"
+    "avatar": "https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
   }
 }
