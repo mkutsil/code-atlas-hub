@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Avatar from 'shared/ui/Avatar/Avatar';
 
 describe('Avatar', () => {

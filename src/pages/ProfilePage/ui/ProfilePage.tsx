@@ -1,6 +1,5 @@
 import { 
     fetchProfileFullData, 
-    getProfileError, 
     getProfileIsLoading,
     getProfileReadonly,
     profileActions,
@@ -29,7 +28,6 @@ const ProfilePage = (props: ProfilePageProps) => {
 
     const profileData = useSelector(getProfileData);
     const isLoading = useSelector(getProfileIsLoading);
-    const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
 
     const dispatch = useAppDispatch();
