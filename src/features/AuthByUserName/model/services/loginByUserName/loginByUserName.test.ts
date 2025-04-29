@@ -12,7 +12,7 @@ describe('loginByUserName', () => {
         const loginUserValue = { userName: 'm.kutsil.dev@gmail.com', password: '123' };
         const loginResponse = { token: '123' };
 
-        mockedApi.post.mockResolvedValue({ data: loginUserValue });
+        mockedApi.post.mockResolvedValue({ data: loginResponse });
 
         const thunk = new TestAsyncThunk(loginByUserName);
         const result = await thunk.callThunk(loginUserValue);
@@ -20,7 +20,7 @@ describe('loginByUserName', () => {
         expect(mockedApi.post).toHaveBeenCalledWith('/login', loginUserValue);
         expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(loginResponse));
         expect(result.meta.requestStatus).toBe('fulfilled');
-        expect(result.payload).toEqual(loginUserValue);
+        expect(result.payload).toEqual(loginResponse);
     });
 
     test('error login', async () => {
