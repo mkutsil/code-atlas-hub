@@ -9,10 +9,9 @@ const meta = {
     component: Navbar,
     decorators: [
         StoreDecorator({
-            user: {
+            user: { 
                 authData:{
-                    id: 1,
-                    userName: 'mkutsil.dev@gmail.com',
+                    token: '123',
                 }
             }
         }),

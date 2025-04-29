@@ -1,8 +1,9 @@
 import { 
-    fetchProfileData, 
+    fetchProfileFullData, 
     getProfileError, 
     getProfileIsLoading,
     getProfileReadonly,
+    profileActions,
     profileReducer 
 } from 'entities/Profile';
 import { getProfileData } from 'entities/Profile';
@@ -10,8 +11,11 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import Input from 'shared/ui/Input/Input';
 import Loader from 'shared/ui/Loader/Loader';
+import classes from './ProfilePage.module.scss';
+import Avatar, { AvatarSize } from 'shared/ui/Avatar/Avatar';
 
 interface ProfilePageProps {
 	id?: string
@@ -23,38 +27,93 @@ const reducers: ReducersList = {
 const ProfilePage = (props: ProfilePageProps) => {
     const { id } = props;
 
-    const profileData =useSelector(getProfileData);
+    const profileData = useSelector(getProfileData);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
 
     const dispatch = useAppDispatch();
     
+    const onChangeEditMode = (value: boolean) => {
+        dispatch(profileActions.setReadonly(value));
+    };
+
     useEffect(() => {   
-        dispatch(fetchProfileData());
+        dispatch(fetchProfileFullData());
     }, [ dispatch ]);
 
     return ( 
         <DynamicModuleLoader reducers={reducers}>
-           
             <div key={id}>
                 <h1>Profile Page</h1>
+
+                <Button 
+                    theme={ThemeButton.CONTAINED} 
+                    onClick={() => onChangeEditMode(!readonly)}
+                >
+                    Edit
+                </Button>
                
                 {isLoading ? <Loader/> : (
                     <>
                         {readonly ? (
-                            <div>
-                                <p>{profileData?.firstName}</p>
-                                <p>{profileData?.lastName}</p>
-                                <p>{profileData?.age}</p>
-                                <p>{profileData?.currency}</p>
-                                <p>{profileData?.country}</p>
-                                <p>{profileData?.city}</p>
-                                <p>{profileData?.userName}</p>
-                                <p>{profileData?.avatar}</p>
+                            <div className={classes.profileViewContainer}>
+                                <div className={classes.profileCardWrapper}>
+
+                                    <Avatar 
+                                        src={profileData?.avatar || ''}
+                                        alt="Avatar"
+                                        size={AvatarSize.LARGE}
+                                    />
+
+                                    <div>
+                                        <span>
+                                            {profileData?.firstName} {profileData?.lastName}
+                                        </span>
+                                        
+                                    </div>
+                                </div>
+                                <div className={classes.viewInputsContainer}>
+                                    <Input 
+                                        value={profileData?.firstName} 
+                                        placeholder="First Name" 
+                                        isViewMode 
+                                    />
+                                    <Input 
+                                        value={profileData?.lastName} 
+                                        placeholder="Last Name" 
+                                        isViewMode 
+                                    />
+                                    <Input 
+                                        value={profileData?.age.toString()} 
+                                        placeholder="Age" 
+                                        isViewMode 
+                                    />
+                                    <Input 
+                                        value={profileData?.currency} 
+                                        placeholder="Currency" 
+                                        isViewMode
+                                    />
+                                    <Input 
+                                        value={profileData?.country} 
+                                        placeholder="Country" 
+                                        isViewMode
+                                    />
+                                    <Input 
+                                        value={profileData?.city}
+                                        placeholder="City" 
+                                        isViewMode 
+                                    />
+                                    <Input 
+                                        value={profileData?.userName} 
+                                        placeholder="User Name" 
+                                        isViewMode 
+                                    />
+                                </div>
                             </div>
                         ) : (
-                            <div style={{ margin: '50px auto', display: 'flex', flexDirection: 'column', gap: '10px', width: '300px' }}>
+                
+                            <div className={classes.profileEditFormContainer}>
                                 <Input value={profileData?.firstName} placeholder="First Name" />
                                 <Input value={profileData?.lastName} placeholder="Last Name" />
                                 <Input value={profileData?.age.toString()} placeholder="Age" />
@@ -65,7 +124,6 @@ const ProfilePage = (props: ProfilePageProps) => {
                             </div>
                         )}
                     </>
-                    
                 )}
             </div>
         </DynamicModuleLoader> 

@@ -1,19 +1,36 @@
-.sidebar{
+.sidebar {
 	width: var(--sidebar-width);
 	height: calc(100vh);
 	background: var(--layout-bg-color);
 	transition: width 0.3s;
 }
-
+ 
 .collapsed { 
 	width: var(--sidebar-width-collapsed);
 }
-
+ 
 .logoWrapper { 
+	display: flex;
+	align-items: center;
+	transition: transform 0.3s ease-in-out;
+ 
 	svg { 
-		width: 200px;
-		height: 200px;
-		fill: #021b7e;
+		width: 80px;
+		height: 80px;
+		min-width: 80px;
+		min-height: 80px;
+		fill: var(--logo-color);
+	}
+
+	.logoText {
+		font: var(--font-m);
+		font-weight: 700;
+		transition: display 0.3s ease-in-out;
+	}
+
+	.logoTextCollapsed {
+		transition: display 0.3s ease-in-out;
+		display: none;
 	}
 }
 
@@ -45,7 +62,7 @@
 		transition: width 0.3s ease-in-out;
 	}
 }
- 
+  
 .logo {
 	width: 100px;
 	border-radius: 50%;

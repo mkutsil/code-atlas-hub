@@ -12,6 +12,7 @@ interface InputProps extends HTMLInputProps{
     type?: string;
     customClassNames?: string;
     error?: string;
+    isViewMode?: boolean;
 }
   
 const Input  = (props: InputProps) => {
@@ -23,6 +24,7 @@ const Input  = (props: InputProps) => {
         type = 'text',
         customClassNames,
         error,
+        isViewMode = false,
         ...otherProps
     } = props;
 
@@ -31,7 +33,7 @@ const Input  = (props: InputProps) => {
     };
 
     return ( 
-        <div className={classNames(classes.textField, {}, [ customClassNames || '' ])}>
+        <div className={classNames(classes.textField, { [classes.viewMode]: isViewMode }, [ customClassNames || '' ])}>
             <input 
                 className={classes.input} 
                 value={value || ''}

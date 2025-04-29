@@ -10,6 +10,7 @@ const mockedApi = jest.mocked($api);
 describe('loginByUserName', () => {
     test('success login', async () => {
         const loginUserValue = { userName: 'm.kutsil.dev@gmail.com', password: '123' };
+        const loginResponse = { token: '123' };
 
         mockedApi.post.mockResolvedValue({ data: loginUserValue });
 
@@ -17,7 +18,7 @@ describe('loginByUserName', () => {
         const result = await thunk.callThunk(loginUserValue);
 
         expect(mockedApi.post).toHaveBeenCalledWith('/login', loginUserValue);
-        expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(loginUserValue));
+        expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(loginResponse));
         expect(result.meta.requestStatus).toBe('fulfilled');
         expect(result.payload).toEqual(loginUserValue);
     });

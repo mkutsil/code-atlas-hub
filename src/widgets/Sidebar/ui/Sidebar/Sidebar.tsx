@@ -5,7 +5,7 @@ import Button from 'shared/ui/Button/Button';
 import classes from './Sidebar.module.scss';
 import { Menu, Newspaper, BookMarked } from 'lucide-react';
 import NavigationButton from '../components/NavigationButton/NavigationButton';
-
+   
 const Sidebar = () => {
     const [ collapsed, setCollapsed ] = useState(false);
  
@@ -18,12 +18,14 @@ const Sidebar = () => {
             data-testid="sidebar"
             className={classNames(classes.sidebar, { [classes.collapsed]: collapsed })}>
             <div 
-                className={classNames(classes.logoWrapper, 
-                    { [classes.logoCollapsed]: collapsed })}
+                className={classNames(classes.logoWrapper)}
             >
-                <LogoIcon/>
-            </div>
-				 
+                <LogoIcon />
+                <p className={classNames(classes.logoText, { [classes.logoTextCollapsed]: collapsed })}>
+                    CodeAtlasHub
+                </p>
+            </div>  
+
             <div className={classes.linkWrapper}>
                 <Button
                     data-testid="toggle-button" 

@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Profile, ProfileSchema } from '../types/profile';
-import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
+import { fetchProfileFullData } from '../services/fetchProfileFullData/fetchProfileFullData';
 
 const initialState: ProfileSchema = {
-    readonly: true,
+    readonly: false,
     isLoading: false,
     error: undefined,
     data: undefined,
@@ -12,18 +12,22 @@ const initialState: ProfileSchema = {
 export const profileSlice = createSlice({
     name: 'profile',
     initialState,
-    reducers: {},
+    reducers: {
+        setReadonly: (state, action: PayloadAction<boolean>) => {
+            state.readonly = action.payload;
+        },
+    },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchProfileData.pending, (state) => {
+            .addCase(fetchProfileFullData.pending, (state) => {
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(fetchProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
+            .addCase(fetchProfileFullData.fulfilled, (state, action: PayloadAction<Profile>) => {
                 state.isLoading = false;
                 state.data = action.payload;
             })
-            .addCase(fetchProfileData.rejected, (state, action) => {
+            .addCase(fetchProfileFullData.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload as string;
             });

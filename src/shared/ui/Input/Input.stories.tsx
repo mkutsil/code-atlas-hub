@@ -44,3 +44,22 @@ export const Dark: Story = {
         ThemeDecorator(Theme.DARK)
     ],
 };
+
+export const ViewMode: Story = {
+    parameters: {
+        layout: 'fullscreen',
+    },
+    args: {
+        placeholder: 'Login',
+        isViewMode: true,
+        value: 'test@gmail.com',
+    },
+    decorators: [
+        (Story) => (
+            <div style={{ width: '300px', margin: '30px' }}>
+                <Story />
+            </div>
+        ),
+        ThemeDecorator(Theme.LIGHT)
+    ],
+};

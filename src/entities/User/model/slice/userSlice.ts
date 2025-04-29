@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { UserSchema, User } from '../types/user';
-import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
+import { UserSchema, User, UserData } from '../types/user';
+import {  AUTH_TOKEN_KEY } from 'shared/const/localstorage';
+import { fetchUserData } from '../services/fetchUserData/fetchUserData';
 
 const initialState: UserSchema = {};
 
@@ -12,17 +13,25 @@ export const userSlice = createSlice({
             state.authData = action.payload;
         },
         initAuthData: (state) => {
-            const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
+            const authToken = localStorage.getItem(AUTH_TOKEN_KEY);
             
-            if(user){
-                state.authData = JSON.parse(user);
+            if(authToken){
+                state.authData = { token: JSON.parse(authToken) };
             }
         },
         logout: (state) => {
             state.authData = undefined;
-            localStorage.removeItem(USER_LOCALSTORAGE_KEY);
+            localStorage.removeItem(AUTH_TOKEN_KEY);
         }
     },
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchUserData.fulfilled, (state, action: PayloadAction<UserData>) => {
+                // state.isLoading = false;
+                state.userData = action.payload;
+            });
+            
+    }
 });
 
 export const { actions: userActions } = userSlice;
