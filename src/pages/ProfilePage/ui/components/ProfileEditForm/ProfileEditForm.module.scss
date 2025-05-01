@@ -1,0 +1,13 @@
+.profileEditFormContainer{
+	width: 800px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 30px;
+	gap: 20px;
+}
+
+.profileEditFormFooterContainer{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}

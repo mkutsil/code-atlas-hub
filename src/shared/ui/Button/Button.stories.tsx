@@ -48,3 +48,11 @@ export const LoadingOutlined: Story = {
         isLoading: true
     },
 };
+
+export const DisabledOutlined: Story = {
+    args: {
+        children: 'Loading Outlined',
+        theme: ThemeButton.OUTLINED,
+        isDisabled: true
+    },
+};

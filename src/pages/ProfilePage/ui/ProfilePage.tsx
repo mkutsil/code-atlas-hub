@@ -15,6 +15,7 @@ import Input from 'shared/ui/Input/Input';
 import Loader from 'shared/ui/Loader/Loader';
 import classes from './ProfilePage.module.scss';
 import Avatar, { AvatarSize } from 'shared/ui/Avatar/Avatar';
+import ProfileEditForm from './components/ProfileEditForm/ProfileEditForm';
 
 interface ProfilePageProps {
 	id?: string
@@ -45,12 +46,14 @@ const ProfilePage = (props: ProfilePageProps) => {
             <div key={id}>
                 <h1>Profile Page</h1>
 
-                <Button 
-                    theme={ThemeButton.CONTAINED} 
-                    onClick={() => onChangeEditMode(!readonly)}
-                >
-                    Edit
-                </Button>
+                {readonly && (
+                    <Button 
+                        theme={ThemeButton.CONTAINED} 
+                        onClick={() => onChangeEditMode(!readonly)}
+                    >
+                        Edit
+                    </Button>
+                )}
                
                 {isLoading ? <Loader/> : (
                     <>
@@ -110,16 +113,10 @@ const ProfilePage = (props: ProfilePageProps) => {
                                 </div>
                             </div>
                         ) : (
-                
-                            <div className={classes.profileEditFormContainer}>
-                                <Input value={profileData?.firstName} placeholder="First Name" />
-                                <Input value={profileData?.lastName} placeholder="Last Name" />
-                                <Input value={profileData?.age.toString()} placeholder="Age" />
-                                <Input value={profileData?.currency} placeholder="Currency" />
-                                <Input value={profileData?.country} placeholder="Country" />
-                                <Input value={profileData?.city} placeholder="City" />
-                                <Input value={profileData?.userName} placeholder="User Name" />
-                            </div>
+                            <ProfileEditForm 
+                                profileData={profileData}
+                                onChangeEditMode={onChangeEditMode}
+                            />
                         )}
                     </>
                 )}
