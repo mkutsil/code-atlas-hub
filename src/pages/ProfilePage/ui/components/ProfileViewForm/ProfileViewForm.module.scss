@@ -6,14 +6,20 @@
 	gap: 20px;
 
 	.profileCardWrapper{
-		display: flex;	
-		align-items: center;
+		display: flex;
+		align-items: center;	
+		justify-content: space-between;
 		padding: 20px;	
 		border: 1px solid var(--primary-color);
 		border-radius: 30px;
 		gap: 20px;
-	}
 
+		.profileCardLeftContent {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+	}
 
 	.viewInputsContainer{
 		display: grid;
