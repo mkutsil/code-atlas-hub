@@ -12,7 +12,8 @@
 		appearance: none;
 		border-bottom: 1px solid #E5E5E5;
 		transition: border-color .3s;
-		
+		color : var(--primary-color);
+
 		&:focus {
 			border-color:#3F52E0;
 			outline: none;

@@ -15,6 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     customClassNames?: string;
     isButtonAnimation?: boolean;
     isLoading?: boolean;
+    isDisabled?: boolean;
 }
   
 const Button: FC<ButtonProps> = (props) => {
@@ -24,6 +25,7 @@ const Button: FC<ButtonProps> = (props) => {
         children, 
         customClassNames,
         isLoading = false,
+        isDisabled = false,
         isButtonAnimation = true,
         ...otherProps
     } = props;
@@ -31,6 +33,7 @@ const Button: FC<ButtonProps> = (props) => {
     const mods: Mods = {
         [classes.activeButton]: isButtonAnimation,
         [classes.loading]: isLoading,
+        [classes.disabled]: isDisabled,
     };
 
     return ( 
