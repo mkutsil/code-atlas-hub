@@ -3,8 +3,8 @@ import LogoIcon from 'shared/assets/icons/logo.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
 import Button from 'shared/ui/Button/Button';
 import classes from './Sidebar.module.scss';
-import { Menu, Newspaper, BookMarked } from 'lucide-react';
-import NavigationButton from '../components/NavigationButton/NavigationButton';
+import { Menu } from 'lucide-react';
+import SidebarItemsList from '../components/SidebarItemsList/SidebarItemsList';
    
 const Sidebar = () => {
     const [ collapsed, setCollapsed ] = useState(false);
@@ -35,16 +35,8 @@ const Sidebar = () => {
                     <Menu/>
                 </Button>	
 
-                <NavigationButton label="About" to="/about" isCollapsed={collapsed}>
-                    <Newspaper/>
-                </NavigationButton>
-
-                <NavigationButton label="Home" to="/" isCollapsed={collapsed}>
-                    <BookMarked/>
-                </NavigationButton>
-
+                <SidebarItemsList collapsed={collapsed}/>
             </div>
-
         </div>
 	 );
 };
