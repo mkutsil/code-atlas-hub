@@ -19,7 +19,9 @@ const NavigationButton: FC<NavigationButtonProps> = (props) => {
             className={({ isActive }) => classNames(classes.navigationButtonContainer, 
                 { [classes.navigationButtonActiveContainer] : isActive, 
                     [classes.navigationButtonCollapsedContainer] : isCollapsed } )}
-            to={to}>
+            to={to}
+            end
+        >
             {
                 isCollapsed ? children 
                     : ( 

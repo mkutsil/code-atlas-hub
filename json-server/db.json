@@ -22,20 +22,29 @@
   "comments": [
     {
       "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
+      "body": "a comment about post 1",
+      "articleId": "1",
+      "userId": "1"
     },
     {
       "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
+      "body": "the comment about post 1",
+      "articleId": "1",
+      "userId": "2"
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "userName": "mkutsil.dev@gmail.com",
-      "password": "123"
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": "2",
+      "userName": "mukola.kutsil22@gmail.com",
+      "password": "1111",
+      "role": "USER"
     }
   ],
   "profile": {
@@ -52,5 +61,47 @@
     "age": 25,
     "lastName": "Kutsil",
     "firstName": "Mykola"
-  }
+  },
+  "articles": [
+    {
+      "id": "1",
+      "title": "Article 1",
+      "subtitle": "Content of article 1",
+      "image": "example.com/image1.jpg",
+      "views": 100,
+      "createdAt": "26.02.2025",
+      "type": ["IT", "Science"],
+      "blocks": [
+        {
+          "id": "1", 
+          "type": "TEXT",
+          "title": "Block 1",
+          "paragraphs": [
+            "Paragraph 1 of block 1",
+            "Paragraph 2 of block 1"
+          ]
+        },
+        {
+          "id": "2", 
+          "type": "CODE",
+          "code": "console.log('Hello, world!')"
+        },
+        {
+          "id": "3", 
+          "type": "TEXT",
+          "title": "Block 3",
+          "paragraphs": [
+            "Paragraph 1 of block 3",
+            "Paragraph 2 of block 3"
+          ]
+        },
+        {
+          "id": "4", 
+          "type": "IMAGE",
+          "src": "example.com/image2.jpg",
+          "title": "a title"
+        }
+      ]
+    }
+  ]
 }

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import classes from './ArticleDetailsPage.module.scss';
+import { ArticleDetails } from 'entities/Article';
 
 const ArticleDetailsPage = () => {
 	
@@ -7,7 +8,7 @@ const ArticleDetailsPage = () => {
 	
     return (
         <div className={classes.articleDetailsPage}>
-            ArticleDetailsPage
+            <ArticleDetails />
         </div>
     );
 };
