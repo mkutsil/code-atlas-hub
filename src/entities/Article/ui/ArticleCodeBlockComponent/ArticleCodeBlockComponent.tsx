@@ -1,11 +1,20 @@
+import classes from './ArticleCodeBlockComponent.module.scss';
 interface ArticleCodeBlockComponentProps {
-	id?: string;
+    code: string;
 }
  
 const ArticleCodeBlockComponent = (props : ArticleCodeBlockComponentProps) => {
-    const { id } = props;
+    const { code } = props;
 	
-    return ( <h1>ddd - {id || 'dw'}</h1> );
+    return ( 
+        <div className={classes.articleCodeBlockComponent}>
+            <pre>
+                <code>
+                    {code}
+                </code>
+            </pre>
+        </div>
+    );
 };
  
 export default ArticleCodeBlockComponent;

@@ -75,10 +75,10 @@
         {
           "id": "1", 
           "type": "TEXT",
-          "title": "Block 1",
+          "title": "Quas voluptates eveniet eligendi magni eaque.",
           "paragraphs": [
-            "Paragraph 1 of block 1",
-            "Paragraph 2 of block 1"
+            "Elit occaecat velit velit anim labore eu amet enim ea. Ad incididunt eu sint anim et ex enim consequat occaecat veniam. Aute do fugiat fugiat eu deserunt. Aute voluptate consequat anim ullamco consectetur. Aute magna dolore proident cupidatat elit ea esse consectetur.",
+            "Proident reprehenderit qui dolor adipisicing anim sint aute nisi culpa aliqua cupidatat. Velit ipsum eiusmod est cupidatat consectetur amet. Do fugiat et ea veniam commodo sunt nostrud duis laborum irure commodo incididunt."
           ]
         },
         {
@@ -89,17 +89,18 @@
         {
           "id": "3", 
           "type": "TEXT",
-          "title": "Block 3",
+          "title": "Pariatur repellendus delectus id non ex molestias velit.",
           "paragraphs": [
-            "Paragraph 1 of block 3",
-            "Paragraph 2 of block 3"
+            "Fugiat ut laboris sint veniam. Tempor amet occaecat quis ea nostrud pariatur consectetur esse proident. Ad aute eiusmod occaecat nulla. Velit officia adipisicing velit proident occaecat excepteur mollit. Labore deserunt commodo ad ad proident labore tempor ex dolor commodo Lorem aliquip tempor. Esse sit do velit in magna commodo nisi sit.",
+            "Velit velit eu sit aute eiusmod mollit non. Irure eu officia esse exercitation ad ex tempor. Labore culpa occaecat excepteur duis occaecat. Dolor velit aliqua duis aliqua cillum excepteur in nisi cillum consectetur nulla. Laboris id officia cupidatat elit."
           ]
         },
         {
           "id": "4", 
           "type": "IMAGE",
-          "src": "example.com/image2.jpg",
-          "title": "a title"
+          "src": "https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg",
+          "alt": "Image description",
+          "title": "Cumque et quo reiciendis laboriosam rerum at aspernatur qui repellendus."
         }
       ]
     }
