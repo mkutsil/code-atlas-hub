@@ -1,14 +1,20 @@
-import { useTranslation } from 'react-i18next';
 import classes from './ArticleDetailsPage.module.scss';
 import { ArticleDetails } from 'entities/Article';
+import { useParams } from 'react-router-dom';
 
 const ArticleDetailsPage = () => {
-	
-    const { t } = useTranslation();
-	
+
+    const { id } = useParams<{ id: string }>();
+
+    if(!id) {
+        <div className={classes.articleDetailsPage}>
+            <h1>Стаття не знайдена</h1>
+        </div>;
+    }
+
     return (
         <div className={classes.articleDetailsPage}>
-            <ArticleDetails />
+            <ArticleDetails id={id} />
         </div>
     );
 };

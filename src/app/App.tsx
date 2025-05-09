@@ -28,9 +28,11 @@ const App = () => {
         <div className={classNames('app')}>
             <Suspense fallback={<PageLoader/>}>
                 <Sidebar/>
-                <div className={'content-page'}>
+                <div className="content-page">
                     <Navbar/>
-                    <AppRouter/>
+                    <div className='page-wrapper'>
+                        <AppRouter/>
+                    </div>
                 </div>
             </Suspense>	
         </div>
