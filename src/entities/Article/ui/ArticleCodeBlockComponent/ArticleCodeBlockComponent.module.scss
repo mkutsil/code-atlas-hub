@@ -1,6 +1,14 @@
 .articleCodeBlockComponent{
+	position: relative;
 	margin: 16px 0;
 	padding: 40px;
 	border-radius: 12px;
 	background: var(--layout-bg-color);
+
+	.copyButton{
+		position: absolute;
+		top: 18px;
+		right: 18px;
+		color: var(--secondary-color);
+	}
 }

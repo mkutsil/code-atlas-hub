@@ -65,9 +65,9 @@
   "articles": [
     {
       "id": "1",
-      "title": "Article 1",
+      "title": "Autem aliquid cum veritatis.",
       "subtitle": "Content of article 1",
-      "image": "example.com/image1.jpg",
+      "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "views": 100,
       "createdAt": "26.02.2025",
       "type": ["IT", "Science"],
@@ -101,6 +101,29 @@
           "src": "https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg",
           "alt": "Image description",
           "title": "Cumque et quo reiciendis laboriosam rerum at aspernatur qui repellendus."
+        },
+        {
+          "id": "5", 
+          "type": "TEXT",
+          "title": "Quas voluptates eveniet eligendi magni eaque.",
+          "paragraphs": [
+            "Elit occaecat velit velit anim labore eu amet enim ea. Ad incididunt eu sint anim et ex enim consequat occaecat veniam. Aute do fugiat fugiat eu deserunt. Aute voluptate consequat anim ullamco consectetur. Aute magna dolore proident cupidatat elit ea esse consectetur.",
+            "Proident reprehenderit qui dolor adipisicing anim sint aute nisi culpa aliqua cupidatat. Velit ipsum eiusmod est cupidatat consectetur amet. Do fugiat et ea veniam commodo sunt nostrud duis laborum irure commodo incididunt."
+          ]
+        },
+        {
+          "id": "6", 
+          "type": "CODE",
+    "code": "if(isLoading) {\n        content = (\n            <div className={classes.skeletonContainer}>\n                <Skeleton \n                    width=\\\"200px\\\"\n                    height=\\\"200px\\\"\n                    border=\\\"50%\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"100px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"50px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"50px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"600px\\\"\n                />\n            </div>\n        );\n    } else if (error) {\n        content = <h1>Error</h1>;\n    }"
+        },
+        {
+          "id": "7", 
+          "type": "TEXT",
+          "title": "Pariatur repellendus delectus id non ex molestias velit.",
+          "paragraphs": [
+            "Fugiat ut laboris sint veniam. Tempor amet occaecat quis ea nostrud pariatur consectetur esse proident. Ad aute eiusmod occaecat nulla. Velit officia adipisicing velit proident occaecat excepteur mollit. Labore deserunt commodo ad ad proident labore tempor ex dolor commodo Lorem aliquip tempor. Esse sit do velit in magna commodo nisi sit.",
+            "Velit velit eu sit aute eiusmod mollit non. Irure eu officia esse exercitation ad ex tempor. Labore culpa occaecat excepteur duis occaecat. Dolor velit aliqua duis aliqua cillum excepteur in nisi cillum consectetur nulla. Laboris id officia cupidatat elit."
+          ]
         }
       ]
     }
