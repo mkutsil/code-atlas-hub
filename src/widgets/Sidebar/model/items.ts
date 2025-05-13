@@ -1,4 +1,4 @@
-import {  Newspaper, BookMarked, House, Book } from 'lucide-react';
+import {  Newspaper, House, Book } from 'lucide-react';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 export interface SidebarItemType {
@@ -27,11 +27,4 @@ export const sidebarItemsList: SidebarItemType[] = [
         Icon: Newspaper,
         authOnly: true,
     },
-    {
-        path: RoutePath.article_details,
-        text: 'Article Details',
-        Icon: BookMarked,
-        authOnly: true,
-    },
-
 ];

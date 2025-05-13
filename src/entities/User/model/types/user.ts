@@ -2,6 +2,7 @@ export interface User {
 	token: string;
 	id?: number;
 	userName?: string;
+	avatar?: string;
 }
 
 export interface UserData {

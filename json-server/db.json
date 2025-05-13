@@ -1,36 +1,22 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "a title",
-      "views": 100
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "views": 200
-    },
-    {
-      "username": "admin",
-      "password": "123",
-      "id": "WwBnpfF"
-    },
-    {
-      "id": "RIpigWF"
-    }
-  ],
   "comments": [
     {
       "id": "1",
-      "body": "a comment about post 1",
+      "text": "Quos et voluptatum praesentium molestiae et dolor corporis labore excepturi. Sapiente molestias culpa est totam voluptas laudantium adipisci. Nihil commodi voluptates. Rerum et possimus et natus inventore magni necessitatibus.",
       "articleId": "1",
       "userId": "1"
     },
     {
       "id": "2",
-      "body": "the comment about post 1",
+      "text": "Facilis autem consequatur non minus dolorem repudiandae. A non qui velit repellendus non et.",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "id": "3",
+      "text": "Hic quia ullam dolorem nihil optio quia odio. Aut vitae perferendis quia at quia voluptatibus quo. Delectus unde non nostrum accusamus ut blanditiis. Maiores consequatur ut fugit incidunt ipsam eaque voluptatem est. Qui sed sequi corporis.",
+      "articleId": "1",
+      "userId": "3"
     }
   ],
   "users": [
@@ -38,13 +24,22 @@
       "id": "1",
       "userName": "mkutsil.dev@gmail.com",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
     },
     {
       "id": "2",
       "userName": "mukola.kutsil22@gmail.com",
       "password": "1111",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_hybrid&w=740"
+    },
+    {
+      "id": "3",
+      "userName": "dev@gmail.com",
+      "password": "1111",
+      "role": "USER",
+      "avatar": "https://lh6.googleusercontent.com/proxy/ZLGihPRfkkerdJBqfRKKFRWQcXDCfMMuuK_6_IDH6Mfhu0VI3Du2L9eOTiz0yKsIftOesQQnj0whQCZFudjFH-cXgBKnebrpknuWtjKkDcRC5Ik"
     }
   ],
   "profile": {

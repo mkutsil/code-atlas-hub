@@ -1,0 +1,22 @@
+.commentCard{
+	display: flex;
+	padding: 16px;
+	border: 1px solid var(--primary-color);
+	border-radius: 8px;
+	// box-shadow: var(--shadow);
+	// background-color: var(--color-background);
+	flex-direction: column;
+	gap: 16px;
+	// transition: all 0.3s ease-in-out;
+
+	// &:hover{
+	// 	box-shadow: var(--shadow-hover);
+	// }
+
+	.header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+}
