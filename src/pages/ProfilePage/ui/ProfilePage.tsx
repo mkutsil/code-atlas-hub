@@ -13,17 +13,15 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import Loader from 'shared/ui/Loader/Loader';
 import ProfileEditForm from './components/ProfileEditForm/ProfileEditForm';
 import ProfileViewForm from './components/ProfileViewForm/ProfileViewForm';
-
-interface ProfilePageProps {
-	id?: string
-}
+import { useParams } from 'react-router-dom';
  
 const reducers: ReducersList = {
     profile: profileReducer
 }; 
-const ProfilePage = (props: ProfilePageProps) => {
-    const { id } = props;
 
+const ProfilePage = () => {
+
+    const { id } = useParams<{ id: string }>();
     const profileData = useSelector(getProfileData);
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
@@ -35,12 +33,15 @@ const ProfilePage = (props: ProfilePageProps) => {
     };
 
     useEffect(() => {   
-        dispatch(fetchProfileFullData());
-    }, [ dispatch ]);
+        if(id){
+            dispatch(fetchProfileFullData(id));
+        }
+        
+    }, [ dispatch, id ]);
 
     return ( 
         <DynamicModuleLoader reducers={reducers}>
-            <div key={id}>
+            <div>
                 {isLoading ? <Loader/> : (
                     <>
                         {readonly ? (

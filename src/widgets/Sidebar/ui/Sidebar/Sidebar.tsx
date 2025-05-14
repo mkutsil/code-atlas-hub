@@ -29,7 +29,7 @@ const Sidebar = () => {
             <div className={classes.linkWrapper}>
                 <Button
                     data-testid="toggle-button" 
-                    customClassNames={classNames(classes.menuButton, { [classes.menuButtonCollapsed]: collapsed })}
+                    className={classNames(classes.menuButton, { [classes.menuButtonCollapsed]: collapsed })}
                     onClick={handleButtonClick}
                 >
                     <Menu/>

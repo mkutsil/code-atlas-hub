@@ -12,7 +12,7 @@ export enum ThemeButton {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	label?: string;
 	theme?: ThemeButton;
-    customClassNames?: string;
+    className?: string;
     isButtonAnimation?: boolean;
     isLoading?: boolean;
     isDisabled?: boolean;
@@ -23,7 +23,7 @@ const Button: FC<ButtonProps> = (props) => {
     const { 
         theme = ThemeButton.CLEAR, 
         children, 
-        customClassNames,
+        className,
         isLoading = false,
         isDisabled = false,
         isButtonAnimation = true,
@@ -41,7 +41,7 @@ const Button: FC<ButtonProps> = (props) => {
             className={
                 classNames(classes.button, 
                     mods, 
-                    [ classes[theme], customClassNames ]
+                    [ classes[theme], className ]
                 )}
             {...otherProps}
         >

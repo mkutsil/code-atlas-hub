@@ -1,0 +1,66 @@
+.textContainer {
+	color: var(--secondary-color);
+
+
+	.title {
+		font-weight: 700 !important;
+		margin-bottom: 20px;
+
+		&.titleAlignCenter {
+			text-align: center;
+		}
+
+		&.titleAlignLeft {
+			text-align: left;
+		}
+
+		&.titleAlignRight {
+			text-align: right;
+		}
+	}
+
+	&.textSizeXs {
+		font: var(--font-xs);
+
+		.title {
+			font: var(--font-s);
+		}
+	}
+
+	&.textSizeS {
+		font: var(--font-s);
+
+		.title {
+			font: var(--font-m);
+		}
+	}
+
+	&.textSizeM {
+		font: var(--font-m);
+
+		.title {
+			font: var(--font-l);
+		}
+	}
+
+	&.textSizeL {
+		font: var(--font-l);
+
+		.title {
+			font: var(--font-xl);
+		}
+	}
+
+
+	&.textAlignCenter {
+		text-align: center;
+	}
+
+	&.textAlignLeft {
+		text-align: left;
+	}	
+
+	&.textAlignRight {
+		text-align: right;
+	}
+}	

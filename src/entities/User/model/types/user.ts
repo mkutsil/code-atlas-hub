@@ -1,15 +1,11 @@
 export interface User {
 	token: string;
-	id?: number;
-	userName?: string;
+	id: string;
+	userName: string;
+	avatar: string;
+	role: string
 }
 
-export interface UserData {
-	firstName: string;
-	lastName: string;
-	avatar: string;	
-}
 export interface UserSchema {
 	authData?: User;
-	userData?: UserData;
 }
