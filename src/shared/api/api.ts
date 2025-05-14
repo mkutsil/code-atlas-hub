@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AUTH_TOKEN_KEY } from 'shared/const/localstorage';
+import { AUTH_DATA_KEY } from 'shared/const/localstorage';
 
 const $api = axios.create({
     baseURL: API_URL,
@@ -7,10 +7,10 @@ const $api = axios.create({
 
 $api.interceptors.request.use(
     (config) => {
-        const authToken = localStorage.getItem(AUTH_TOKEN_KEY);
+        const authData = localStorage.getItem(AUTH_DATA_KEY);
 
-        if (authToken) {
-            config.headers['Authorization'] = `Bearer ${authToken}`;
+        if (authData) {
+            config.headers['Authorization'] = `Bearer ${JSON.parse(authData).token}`;
         }
 
         return config;

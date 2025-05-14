@@ -12,6 +12,10 @@ const meta = {
             user: { 
                 authData:{
                     token: '123',
+                    id: '1',
+                    userName: 'mkutsil.dev@gmail.com',
+                    role: 'ADMIN',
+                    avatar: 'https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png'
                 }
             }
         }),

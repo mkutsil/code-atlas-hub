@@ -10,6 +10,7 @@ import { getArticleCommentsIsLoading } from '../model/selectors/comments';
 import { useEffect } from 'react';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { AddCommentForm } from 'features/AddCommentForm';
 
 const reducers: ReducersList = {
     articleDetailsComments: articleDetailsCommentsReducer,
@@ -41,6 +42,7 @@ const ArticleDetailsPage = () => {
             <div className={classes.articleDetailsPage}>
                 <ArticleDetails id={id} />
                 <Text title="Comments:" />
+                <AddCommentForm />
                 <CommentList 
                     comments={comments}
                     isLoading={isCommentsLoading}

@@ -8,6 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { putProfileData } from 'entities/Profile/model/services/putProfileData/putProfileData';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
+import { getUserAuthData } from 'entities/User';
 
 interface ProfileEditFormProps {
 	profileData?: Profile;
@@ -21,8 +22,10 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
 
     const isLoading = useSelector(getProfileIsLoading);
 
+    const authData = useSelector(getUserAuthData);
+
     const onSubmit = (data: Profile) => {
-        dispatch(putProfileData(data))
+        dispatch(putProfileData({ profileData: data, profileId: authData?.id?.toString() || '' }))
         	.then((result) => {
         		if (putProfileData.fulfilled.match(result)) {
                     onChangeEditMode(true);

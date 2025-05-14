@@ -51,6 +51,10 @@ server.post('/login', (req, res) => {
         
         return res.json({
             token, 
+            id: userFromDb.id,
+            userName: userFromDb.userName,
+            role: userFromDb.role,
+            avatar: userFromDb.avatar
         });
     }
 

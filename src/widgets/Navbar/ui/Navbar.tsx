@@ -6,7 +6,7 @@ import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUserName';
 import { useSelector } from 'react-redux';
-import { getUserAuthData, getUserData, userActions } from 'entities/User';
+import { getUserAuthData, userActions } from 'entities/User';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import Avatar, { AvatarSize } from 'shared/ui/Avatar/Avatar';
 import DropdownMenu from 'shared/ui/DropdownMenu/DropdownMenu';
@@ -16,7 +16,8 @@ const Navbar = () => {
     const [ isModalOpen, setIsModalOpen ] = useState(false);
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
-
+    const userData = useSelector(getUserAuthData);
+    
     const onToggleModal = () => setIsModalOpen(prev => !prev);
 
     const onLogout = () => {
@@ -24,10 +25,8 @@ const Navbar = () => {
     };
     const authData = useSelector(getUserAuthData);
 
-    const userData = useSelector(getUserData);
-
     const handleRedirectToProfile = () => {
-        navigate('/profile');
+        navigate(`/profile/${userData?.id}`);
     };
 
     const dropdownMenuConfig = [
@@ -50,8 +49,8 @@ const Navbar = () => {
                             >
                                 <Avatar 
                                     size={AvatarSize.SMALL} 
-                                    src={ userData?.avatar || '' } 
-                                    alt={`${userData?.firstName.charAt(0) || ''} ${userData?.lastName.charAt(0) || ''}`}
+                                    src={ authData?.avatar || '' } 
+                                    alt={authData.userName}
                                 />
                             </DropdownMenu>
                         </div>
