@@ -10,7 +10,7 @@ interface ArticleListProps {
 	className?: string;
 }
  
-export const 	ArticleList = (props : ArticleListProps) => {
+export const ArticleList = (props : ArticleListProps) => {
     const { 
         articles, 
         isLoading, 
@@ -25,7 +25,7 @@ export const 	ArticleList = (props : ArticleListProps) => {
         />
     );
 
-		 const mods: Mods = {
+    const mods: Mods = {
         [classes.grid]: view === ArticleView.SMALL,
         [classes.list]: view === ArticleView.BIG,
     };
@@ -34,6 +34,6 @@ export const 	ArticleList = (props : ArticleListProps) => {
         <div className={classNames(classes.articleListContainer, mods, [ className ])}>
             {articles.length > 0 && !isLoading ? articles.map(renderArticle) : null}
         </div>
-		 );
+    );
 };
  

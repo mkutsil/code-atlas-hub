@@ -34,13 +34,13 @@ const ArticleSmallCard = (props: ArticleSmallCardProps) => {
             <Card className={classNames(classes.container, {}, [ className ])}>
                 <>
                     <Text className={classes.createdAtText} text={createdAt}/>
-
+   
                     <img 
                         className={classes.image} 
                         src={image}
-								 				alt={title} 
-								 		/>
-
+                        alt={title} 
+                    />
+ 
                     <div className={classes.infoContainer}>
                         <Text className={classes.typeText} text={type.join(', ')}/>
 

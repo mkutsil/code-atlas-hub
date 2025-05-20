@@ -4,6 +4,8 @@ import classes from './ArticleBigCard.module.scss';
 import Text from 'shared/ui/Text/Text';
 import { Eye } from 'lucide-react';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
+import { useNavigate } from 'react-router-dom';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 interface ArticleBigCardProps {
 	id: string;
@@ -25,9 +27,19 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
         createdAt,
         className
     } = props;
+
+    const navigate = useNavigate();
+
+    const onButtonClick = () => {
+        navigate(`${RoutePath.article_details}${id}`);
+    };
 	
     return (
-        <Card key={id} className={classNames(classes.container, {}, [ className ])}>
+        <Card 
+            key={id} 
+            isFullWidth
+            className={classNames(classes.container, {}, [ className ])}
+        >
             <>
                 <div className={classes.header}>
                     <Text className={classes.createdAtText} text={createdAt}/>
@@ -42,11 +54,16 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
                 <img 
                     className={classes.image} 
                     src={image}
-								 				alt={title} 
-								 		/>
+                    alt={title} 
+                />
 
                 <div className={classes.infoContainer}>
-                    <Button theme={ThemeButton.CONTAINED}>Reed more</Button>
+                    <Button 
+                        theme={ThemeButton.CONTAINED}
+                        onClick={onButtonClick}
+                    >
+                        Reed more
+                    </Button>
 
                     <div className={classes.viewsContainer}>
                         <Eye/>  
