@@ -1,10 +1,12 @@
 .textContainer {
 	color: var(--secondary-color);
-
+	
 
 	.title {
+		display: -webkit-box;
 		font-weight: 700 !important;
-		margin-bottom: 20px;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 
 		&.titleAlignCenter {
 			text-align: center;
@@ -17,6 +19,80 @@
 		&.titleAlignRight {
 			text-align: right;
 		}
+
+		&.clamp1 {
+			-webkit-line-clamp: 1;
+			line-clamp: 1;
+		}
+	
+		&.clamp2 {
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+		}
+	
+		&.clamp3 {
+			-webkit-line-clamp: 3;
+			line-clamp: 3;
+		}
+	
+		&.clamp4 {
+			-webkit-line-clamp: 4;
+			line-clamp: 4;
+		}
+	
+		&.clamp5 {
+			-webkit-line-clamp: 5;
+			line-clamp: 5;
+		}
+	
+		&.clamp6 {
+			-webkit-line-clamp: 6;
+			line-clamp: 6;
+		}
+	
+	}
+
+	.titleMarginBottom {
+		margin-bottom: 20px;
+	}
+
+	
+
+	.text {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		
+
+		&.clamp1 {
+			-webkit-line-clamp: 1;
+			line-clamp: 1;
+		}
+
+		&.clamp2 {
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+		}
+
+		&.clamp3 {
+			-webkit-line-clamp: 3;
+			line-clamp: 3;
+		}
+
+		&.clamp4 {
+			-webkit-line-clamp: 4;
+			line-clamp: 4;
+		}
+
+		&.clamp5 {
+			-webkit-line-clamp: 5;
+			line-clamp: 5;
+		}
+
+		&.clamp6 {
+			-webkit-line-clamp: 6;
+			line-clamp: 6;
+		}	
 	}
 
 	&.textSizeXs {

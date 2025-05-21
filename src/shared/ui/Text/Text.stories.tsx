@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Text, { TextAlign, TextSize } from './Text';
+import Text, { TextAlign, TextSize, TextMaxLines } from './Text';
 import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '../../../app/providers/ThemeProvider/lib/ThemeContext';
 
@@ -85,6 +85,26 @@ export const TitleAlignLeft: Story = {
 export const TitleAlignRight: Story = {
     args: {
         titleAlign: TextAlign.RIGHT,
+    },
+};
+
+export const TitleMaxLinesStory: Story = {
+    args: {
+        title: 'Nostrum rerum architecto praesentium asperiores vero quod tempore ut. Voluptate assumenda dicta qui sint. Exercitationem minus id omnis. Sed accusantium nisi autem dolor doloribus dolorem ipsum et. Eum perferendis aut.d omnis. Sed accusantium nisi autem dolor doloribus dolorem ipsum et. Eum perferendis aut.',
+        titleMaxLines: TextMaxLines.ONE,
+    },
+};
+
+export const TextMaxLinesStory: Story = {
+    args: {
+        textMaxLines: TextMaxLines.TWO,
+        size: TextSize.M,
+    },
+};
+
+export const TitleMarginBottom: Story = {
+    args: {
+        titleMarginBottom: false,
     },
 };
 

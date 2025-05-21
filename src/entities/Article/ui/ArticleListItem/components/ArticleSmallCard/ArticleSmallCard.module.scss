@@ -1,4 +1,6 @@
 .container {
+	width: 100%;
+	max-width: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -16,8 +18,8 @@
 
 	.image {
 		width: 100%;
-		height: auto;
-		max-width: 300px;
+		height: 250px;
+		object-fit: cover;
 		border-radius: 8px;
 	}
 

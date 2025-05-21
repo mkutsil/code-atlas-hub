@@ -1,19 +1,16 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import Card from 'shared/ui/Card/Card';
 import classes from './ArticleBigCard.module.scss';
-import Text from 'shared/ui/Text/Text';
+import Text, { TextMaxLines, TextSize } from 'shared/ui/Text/Text';
 import { Eye } from 'lucide-react';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { useBreakpoint } from 'shared/lib/hooks/useBreakpoint/useBreakpoint';
+import { Article } from 'entities/Article/model/types/article';
+import Avatar, { AvatarSize } from 'shared/ui/Avatar/Avatar';
 
-interface ArticleBigCardProps {
-	id: string;
-	image: string;
-	views: number;
-	title: string;
-	type: string[];
-	createdAt: string;
+interface ArticleBigCardProps extends Omit<Article, 'subtitle' | 'blocks'> {
 	className?: string;
 }
  
@@ -23,10 +20,14 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
         image,
         views,
         title,
+        description,
         type,
         createdAt,
+        author,
         className
     } = props;
+
+    const { isMobile } = useBreakpoint();
 
     const navigate = useNavigate();
 
@@ -37,24 +38,59 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
     return (
         <Card 
             key={id} 
-            isFullWidth
-            className={classNames(classes.container, {}, [ className ])}
+            className={classNames(classes.container, {}, [ className, classes.card ])}
         >
             <>
                 <div className={classes.header}>
-                    <Text className={classes.createdAtText} text={createdAt}/>
-                    <Text className={classes.createdAtText} text={createdAt}/>
+                    <div className={classes.headerLeftContent}>
+                        <div className={classes.headerAuthorInfo}>
+                            <Avatar 
+                                src={author.avatar} 
+                                alt="author avatar"
+                                size={AvatarSize.SMALL}
+                            />
+                            <Text 
+                                size={isMobile ? TextSize.S : TextSize.M} 
+                                text={author.userName}
+                            />
+                        </div>
+
+                        <div>
+                            <Text 
+                                titleMarginBottom={false}
+                                size={isMobile ? TextSize.S : TextSize.M} 
+                                title={title}
+                                titleMaxLines={TextMaxLines.TWO}
+                            />
+
+                            <Text 
+                                size={isMobile ? TextSize.S : TextSize.M} 
+                                className={classes.typeText} 
+                                text={type.join(', ')}
+                                textMaxLines={TextMaxLines.TWO}
+
+                            />
+                        </div>
+                    </div>
+                    
+                    <Text 
+                        size={isMobile ? TextSize.S : TextSize.M} 
+                        className={classes.createdAtText} 
+                        text={createdAt}
+                    />
 
                 </div>
-
-                <Text title={title}/>
-
-                <Text className={classes.typeText} text={type.join(', ')}/>
 
                 <img 
                     className={classes.image} 
                     src={image}
                     alt={title} 
+                />
+
+                <Text 
+                    size={isMobile ? TextSize.S : TextSize.M} 
+                    text={description} 
+                    textMaxLines={TextMaxLines.THREE}
                 />
 
                 <div className={classes.infoContainer}>
@@ -67,7 +103,10 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
 
                     <div className={classes.viewsContainer}>
                         <Eye/>  
-                        <Text text={String(views)}/>
+                        <Text 
+                            size={isMobile ? TextSize.S : TextSize.M} 
+                            text={String(views)}
+                        />
                     </div>
                 </div>
 

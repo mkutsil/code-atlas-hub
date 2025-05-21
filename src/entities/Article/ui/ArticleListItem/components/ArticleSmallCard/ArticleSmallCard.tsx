@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import Card from 'shared/ui/Card/Card';
 import classes from './ArticleSmallCard.module.scss';
-import Text from 'shared/ui/Text/Text';
+import Text, { TextMaxLines } from 'shared/ui/Text/Text';
 import { Eye } from 'lucide-react';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import AppLink from 'shared/ui/AppLink/AppLink';
@@ -50,7 +50,11 @@ const ArticleSmallCard = (props: ArticleSmallCardProps) => {
                         </div>
                     </div>
 
-                    <Text title={title}/>
+                    <Text 
+                        titleMarginBottom={false}
+                        title={title}
+                        titleMaxLines={TextMaxLines.THREE}
+                    />
                 </>
             </Card>
         </AppLink>
