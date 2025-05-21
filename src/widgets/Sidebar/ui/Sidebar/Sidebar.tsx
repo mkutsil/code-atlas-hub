@@ -1,17 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LogoIcon from 'shared/assets/icons/logo.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
 import Button from 'shared/ui/Button/Button';
 import classes from './Sidebar.module.scss';
 import { Menu } from 'lucide-react';
 import SidebarItemsList from '../components/SidebarItemsList/SidebarItemsList';
+import { useBreakpoint } from 'shared/lib/hooks/useBreakpoint/useBreakpoint';
    
 const Sidebar = () => {
-    const [ collapsed, setCollapsed ] = useState(false);
- 
+    const {  isMobileOrTablet } = useBreakpoint();
+
+    const [ collapsed, setCollapsed ] = useState(isMobileOrTablet ? true : true);
+
     const handleButtonClick = () => {
         setCollapsed((prev) => !prev);
     };  
+
+    useEffect(() => {
+        if(isMobileOrTablet) setCollapsed(true);
+        else setCollapsed(false);
+    }, [ isMobileOrTablet ]);
 
     return (
         <div 

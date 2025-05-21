@@ -1,0 +1,14 @@
+.articleListContainer {
+	display: flex;
+	gap: 24px;
+}
+
+.grid {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.list { 
+	width: 100%;
+	flex-direction: column;
+}

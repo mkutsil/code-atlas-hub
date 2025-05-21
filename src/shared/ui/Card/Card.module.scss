@@ -1,0 +1,18 @@
+.cardContainer {
+	max-width: max-content;
+	padding: 12px;
+	border-radius: 8px;
+	background-color: var(--tertiary-color);
+	transition: all 0.2s;
+	cursor: pointer;
+
+	&:hover{
+		background-color: var(--layout-bg-color);
+	}
+}
+
+.fullWidth {
+	max-width: 100%;
+}
+
+
