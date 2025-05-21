@@ -9,9 +9,9 @@ export const useBreakpoint = () => {
     });
 
     useEffect(() => {
-        const mobileQuery = window.matchMedia('(max-width: 768px)');
-        const tabletQuery = window.matchMedia('(min-width: 769px) and (max-width: 1024px)');
-        const desktopQuery = window.matchMedia('(min-width: 1025px)');
+        const mobileQuery = window?.matchMedia('(max-width: 768px)');
+        const tabletQuery = window?.matchMedia('(min-width: 769px) and (max-width: 1024px)');
+        const desktopQuery = window?.matchMedia('(min-width: 1025px)');
 
         const update = () => {
             const isMobile = mobileQuery.matches;
