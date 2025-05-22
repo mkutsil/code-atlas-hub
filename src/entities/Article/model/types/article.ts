@@ -59,5 +59,5 @@ export interface Article {
 	createdAt: string;
 	type: ArticleType[];
 	blocks: ArticleBlock[];
-	author: User;
+	user: User;
 }

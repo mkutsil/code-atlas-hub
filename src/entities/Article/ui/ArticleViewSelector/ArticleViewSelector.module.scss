@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 12px;
+	padding: 20px;
+
+	.viewButton{
+		color: var(--secondary-color);
+	}
+
+	.viewActiveButton{
+		color: var(--primary-color);
+	}
+}

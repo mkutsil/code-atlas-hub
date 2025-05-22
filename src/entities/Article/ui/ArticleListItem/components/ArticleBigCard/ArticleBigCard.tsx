@@ -10,6 +10,7 @@ import { useBreakpoint } from 'shared/lib/hooks/useBreakpoint/useBreakpoint';
 import { Article } from 'entities/Article/model/types/article';
 import Avatar, { AvatarSize } from 'shared/ui/Avatar/Avatar';
 
+// TODO add onError props to images, create general image component
 interface ArticleBigCardProps extends Omit<Article, 'subtitle' | 'blocks'> {
 	className?: string;
 }
@@ -23,7 +24,7 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
         description,
         type,
         createdAt,
-        author,
+        user,
         className
     } = props;
 
@@ -45,13 +46,13 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
                     <div className={classes.headerLeftContent}>
                         <div className={classes.headerAuthorInfo}>
                             <Avatar 
-                                src={author.avatar} 
+                                src={user.avatar} 
                                 alt="author avatar"
                                 size={AvatarSize.SMALL}
                             />
                             <Text 
                                 size={isMobile ? TextSize.S : TextSize.M} 
-                                text={author.userName}
+                                text={user.userName}
                             />
                         </div>
 
@@ -84,7 +85,7 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
                 <img 
                     className={classes.image} 
                     src={image}
-                    alt={title} 
+                    alt={title}
                 />
 
                 <Text 

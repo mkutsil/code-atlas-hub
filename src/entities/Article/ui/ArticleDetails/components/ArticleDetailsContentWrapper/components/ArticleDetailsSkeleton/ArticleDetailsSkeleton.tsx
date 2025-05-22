@@ -4,9 +4,8 @@ import classes from './ArticleDetailsSkeleton.module.scss';
 const ArticleDetailsSkeleton =  () => (
     <div className={classes.skeletonContainer}>
         <Skeleton 
-            width="200px"
-            height="200px"
-            border="50%"
+            width="100%"
+            height="500px"
         />
 
         <Skeleton 
