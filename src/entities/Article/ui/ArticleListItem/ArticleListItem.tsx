@@ -10,7 +10,7 @@ interface ArticleListItemProps {
 const ArticleListItem = (props : ArticleListItemProps) => {
     const { article, view } = props;
 
-    const { id, image, views, title, description, type, createdAt, author } = article;
+    const { id, image, views, title, description, type, createdAt, user } = article;
 
     const isSmallArticleCard = view === ArticleView.SMALL;
 
@@ -35,7 +35,7 @@ const ArticleListItem = (props : ArticleListItemProps) => {
                     description={description}
                     type={type}
                     createdAt={createdAt}
-                    author={author}
+                    user={user}
                 />
             )}
         </>
