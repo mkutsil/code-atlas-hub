@@ -35,7 +35,7 @@ const Navbar = () => {
     ];
 
     return ( 
-        <div className={classNames(classes.navbar)}>
+        <header className={classNames(classes.navbar)}>
             <p className={classes.breadcrumbs}>Breadcrumbs</p>
             <div className={classNames(classes.buttonWrapper)}>
                 <LanguageSwitcher/>
@@ -66,7 +66,7 @@ const Navbar = () => {
                     <LoginModal isOpen={isModalOpen} onClose={onToggleModal} />
                 )}
             </div>
-        </div>
+        </header>
     );
 };
  

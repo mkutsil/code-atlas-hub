@@ -20,13 +20,3 @@ body {
 	height: 100vh;
 	overflow: hidden;
 }
-
-.page-wrapper{
-	height: 100%;
-	overflow: auto;
-	padding: 40px 40px 100px;
-
-	@media (width <= 768px) {
-		padding: 20px 20px 100px;
-	}
-}

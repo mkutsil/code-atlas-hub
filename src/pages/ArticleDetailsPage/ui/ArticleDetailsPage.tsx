@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
+import Page from 'shared/ui/Page/Page';
 
 const reducers: ReducersList = {
     articleDetailsComments: articleDetailsCommentsReducer,
@@ -39,7 +40,7 @@ const ArticleDetailsPage = () => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classes.articleDetailsPage}>
+            <Page className={classes.articleDetailsPage}>
                 <ArticleDetails id={id} />
                 <Text title="Comments:" />
                 <AddCommentForm />
@@ -47,7 +48,7 @@ const ArticleDetailsPage = () => {
                     comments={comments}
                     isLoading={isCommentsLoading}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

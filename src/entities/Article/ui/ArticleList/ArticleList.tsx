@@ -51,10 +51,11 @@ export const ArticleList = (props : ArticleListProps) => {
 	
     return ( 
         <div className={classNames(classes.articleListContainer, mods, [ className ])}>
-            {articles.length > 0 && isLoading ? 
-                renderArticleSkeleton()
-                : articles.map(renderArticle)
+            {articles.length > 0 &&
+                articles.map(renderArticle)
             }
+
+            {isLoading && renderArticleSkeleton()}
         </div>
     );
 };
