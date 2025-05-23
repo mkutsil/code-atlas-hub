@@ -6,18 +6,20 @@ import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/f
 
 const commentsAdapter = createEntityAdapter<Comment>();
 
+const initialArticleDetailsCommentsState = commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>({
+    isLoading: false,
+    error: undefined,
+    ids: [],
+    entities: {}
+});
+
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsComments || commentsAdapter.getInitialState()
+    (state) => state.articleDetailsComments ?? initialArticleDetailsCommentsState   
 );
 
 export const articleDetailsCommentsSlice = createSlice({
     name: 'articleDetailsCommentsSlice',
-    initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>({
-        isLoading: false,
-        error: undefined,
-        ids: [],
-        entities: {}
-    }),
+    initialState: initialArticleDetailsCommentsState,
     reducers: {} ,
     extraReducers: (builder) => {
         builder

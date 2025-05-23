@@ -63,11 +63,9 @@ const DropdownMenu  = (props : DropdownMenuProps) => {
                         >
                             <span>{item.label}</span>
                         </div>
-                    )
-                    )}
+                    ))}
                 </div>
             )}
-            
         </div>
     );
 };

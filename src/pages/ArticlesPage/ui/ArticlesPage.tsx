@@ -4,12 +4,12 @@ import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/Dynamic
 import { articlesPageAction, articlesPageReducer, getArticles } from '../model/slices/articlesPageSlice';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import {  useEffect } from 'react';
-import { fetchArticlesList } from '../model/services/fetchArticlesList/fetchArticlesList';
 import { useSelector } from 'react-redux';
 import { getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView } from '../model/selectors/articlesPageSelectors';
 import Text, { TextSize } from 'shared/ui/Text/Text';
 import Page from 'shared/ui/Page/Page';
 import { fetchNextArticlePage } from '../model/services/fetchNextArticlePage/fetchNextArticlePage';
+import { initArticlesPage } from '../model/services/initArticlesPage/initArticlesPage';
 
 const reducers: ReducersList = {
     articlesPage: articlesPageReducer,
@@ -33,17 +33,14 @@ const ArticlesPage = () => {
     };
 
     useEffect(() => {
-        dispatch(articlesPageAction.initState());
-
-        dispatch(fetchArticlesList({
-            page: 1
-        }));
+        dispatch(initArticlesPage());
+        
     }, [ dispatch ]);
 
     if(error) return <Text title='Error' size={TextSize.L}/>;
 
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page 
                 className={classes.articlesPage}
                 onScrollEnd={onLoadNextPart}

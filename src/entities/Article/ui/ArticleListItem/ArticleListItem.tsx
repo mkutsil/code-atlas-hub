@@ -16,7 +16,6 @@ const ArticleListItem = (props : ArticleListItemProps) => {
 
     return (
         <>
-        
             {isSmallArticleCard ? (
                 <ArticleSmallCard
                     id={id}

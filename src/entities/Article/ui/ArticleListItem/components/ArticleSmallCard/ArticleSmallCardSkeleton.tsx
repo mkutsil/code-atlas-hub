@@ -23,20 +23,20 @@ const ArticleSmallCard = (props: ArticleSmallCardSkeletonProps) => {
                     <Skeleton 
                         className={classes.typeText}
                         width="100px"
-                        height="22px"
+                        height="24px"
                     />
 
                     <div className={classes.viewsContainer}>
                         <Skeleton 
                             width="55px"
-                            height="22px"
+                            height="24px"
                         />
                     </div>
                 </div>
 
                 <Skeleton 
                     width="100%"
-                    height="72px"
+                    height="24px"
                 />
             </>
         </Card>
