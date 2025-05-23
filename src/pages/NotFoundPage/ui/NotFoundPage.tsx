@@ -1,5 +1,6 @@
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import classes from './NotFoundPage.module.scss';
+import Page from 'shared/ui/Page/Page';
 
 const NotFoundPage = () => {
 
@@ -8,7 +9,7 @@ const NotFoundPage = () => {
     };
     
     return (
-        <div className={classes.pageContainer}>
+        <Page className={classes.pageContainer}>
             <h1 className={classes.pageTitle}>Not found page (</h1>
 
             <div>
@@ -16,7 +17,7 @@ const NotFoundPage = () => {
                     Go home
                 </Button>
             </div>
-        </div>
+        </Page>
     );
 };
 

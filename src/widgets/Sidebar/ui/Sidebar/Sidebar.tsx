@@ -22,7 +22,7 @@ const Sidebar = () => {
     }, [ isMobileOrTablet ]);
 
     return (
-        <div 
+        <menu 
             data-testid="sidebar"
             className={classNames(classes.sidebar, { [classes.collapsed]: collapsed })}>
             <div 
@@ -45,7 +45,7 @@ const Sidebar = () => {
 
                 <SidebarItemsList collapsed={collapsed}/>
             </div>
-        </div>
+        </menu>
 	 );
 };
  

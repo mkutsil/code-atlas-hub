@@ -14,6 +14,7 @@ import Loader from 'shared/ui/Loader/Loader';
 import ProfileEditForm from './components/ProfileEditForm/ProfileEditForm';
 import ProfileViewForm from './components/ProfileViewForm/ProfileViewForm';
 import { useParams } from 'react-router-dom';
+import Page from 'shared/ui/Page/Page';
  
 const reducers: ReducersList = {
     profile: profileReducer
@@ -41,7 +42,7 @@ const ProfilePage = () => {
 
     return ( 
         <DynamicModuleLoader reducers={reducers}>
-            <div>
+            <Page>
                 {isLoading ? <Loader/> : (
                     <>
                         {readonly ? (
@@ -57,7 +58,7 @@ const ProfilePage = () => {
                         )}
                     </>
                 )}
-            </div>
+            </Page>
         </DynamicModuleLoader> 
     );
 };
