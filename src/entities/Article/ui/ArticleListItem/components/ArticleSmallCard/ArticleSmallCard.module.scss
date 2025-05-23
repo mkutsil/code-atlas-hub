@@ -1,12 +1,14 @@
 .container {
 	width: 400px;
+	max-width: 400px;
 	min-width: 400px;
+	overflow: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 	flex-direction: column;
 	gap: 16px;
-	position: relative;
 	
 
 	.createdAtText{
@@ -14,6 +16,10 @@
 		top: 30px;
 		right: 30px;
 		opacity: 0;
+	}
+
+	.titleText{
+		width: 100%;
 	}
 
 	.image {

@@ -3,7 +3,7 @@ import { tableData } from './tableData';
 
 const GridTable = () => ( 
     <>
-        <h1>Table</h1>
+        <h1>Table</h1> 
 
         <div className={classes.gridContainer}>
             {tableData.headers.map((tableItem, index) => (
@@ -13,7 +13,7 @@ const GridTable = () => (
             ))}
             {tableData.rows.flatMap((row) => 
                 row.map((cell, colIndex) => (
-                    <div key={colIndex}>
+                    <div key={`${cell} - ${colIndex}`}>
                         {cell}
                     </div>
                 ))

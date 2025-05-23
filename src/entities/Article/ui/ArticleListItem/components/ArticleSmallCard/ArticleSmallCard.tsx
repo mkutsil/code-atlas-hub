@@ -51,9 +51,10 @@ const ArticleSmallCard = (props: ArticleSmallCardProps) => {
                     </div>
 
                     <Text 
+                        className={classes.titleText}
                         titleMarginBottom={false}
                         title={title}
-                        titleMaxLines={TextMaxLines.THREE}
+                        titleMaxLines={TextMaxLines.ONE}
                     />
                 </>
             </Card>

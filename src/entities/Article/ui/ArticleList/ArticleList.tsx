@@ -22,6 +22,7 @@ export const ArticleList = (props : ArticleListProps) => {
 
     const renderArticle = (article: Article) => (
         <ArticleListItem 
+            key={article.id}
             article={article} 
             view={view} 
         />

@@ -7,21 +7,24 @@ import { ARTICLE_VIEW_KEY } from 'shared/const/localstorage';
 
 const articlesAdapter = createEntityAdapter<Article>();
 
+const initialArticlesPageState = articlesAdapter.getInitialState<ArticlesPageSchema>({
+    isLoading: false,
+    error: undefined,
+    ids: [],
+    entities: {},
+    view: ArticleView.BIG,
+    page: 1,
+    hasMore: true,
+    inited: false,
+});
+
 export const getArticles = articlesAdapter.getSelectors<StateSchema>(
-    (state) => state.articlesPage || articlesAdapter.getInitialState()
+    (state) => state.articlesPage ?? initialArticlesPageState
 );
 
 export const articlesPageSlice = createSlice({
     name: 'articlesPageSlice',
-    initialState: articlesAdapter.getInitialState<ArticlesPageSchema>({
-        isLoading: false,
-        error: undefined,
-        ids: [],
-        entities: {},
-        view: ArticleView.BIG,
-        page: 1,
-        hasMore: true,
-    }),
+    initialState: initialArticlesPageState,
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
@@ -30,11 +33,12 @@ export const articlesPageSlice = createSlice({
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload;
         },
-        initState: state => {
+        initState: (state) => {
             const view = localStorage.getItem(ARTICLE_VIEW_KEY) as ArticleView;
             state.view = view;
             state.limit = view === ArticleView.BIG ? 4 : 9;
-        }    
+            state.inited = true;
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -51,7 +55,7 @@ export const articlesPageSlice = createSlice({
                 state.isLoading = false;
                 state.error = action.payload as string;
             });
-    }
+    },
 });
 
 export const { reducer: articlesPageReducer, actions: articlesPageAction } = articlesPageSlice;

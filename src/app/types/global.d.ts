@@ -18,3 +18,7 @@ declare module '*.jpeg';
 
 declare const IS_DEV: boolean;
 declare const API_URL: string;
+
+type OptionalRecord<K extends string, T> = {
+	[P in K]?: T;
+};
