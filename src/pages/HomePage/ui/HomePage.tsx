@@ -1,7 +1,7 @@
 import { BugButton } from 'app/providers/ErrorBoundary';
 import classes from './HomePage.module.scss';
 import GridTable from './components/GridTable/GridTable';
-import Page from 'shared/ui/Page/Page';
+import Page from 'widgets/Page/Page';
 
 const HomePage = () => (
     <Page className={classes.homePageContainer}>

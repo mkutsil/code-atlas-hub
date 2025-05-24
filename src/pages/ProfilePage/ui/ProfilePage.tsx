@@ -14,7 +14,7 @@ import Loader from 'shared/ui/Loader/Loader';
 import ProfileEditForm from './components/ProfileEditForm/ProfileEditForm';
 import ProfileViewForm from './components/ProfileViewForm/ProfileViewForm';
 import { useParams } from 'react-router-dom';
-import Page from 'shared/ui/Page/Page';
+import Page from 'widgets/Page/Page';
  
 const reducers: ReducersList = {
     profile: profileReducer

@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
-import Page from 'shared/ui/Page/Page';
+import Page from 'widgets/Page/Page';
 import Button from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { MoveLeft } from 'lucide-react';
