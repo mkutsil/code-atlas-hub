@@ -1,6 +1,6 @@
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import classes from './NotFoundPage.module.scss';
-import Page from 'shared/ui/Page/Page';
+import Page from 'widgets/Page/Page';
 
 const NotFoundPage = () => {
 

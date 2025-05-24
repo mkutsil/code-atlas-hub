@@ -7,7 +7,7 @@ import {  useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView } from '../model/selectors/articlesPageSelectors';
 import Text, { TextSize } from 'shared/ui/Text/Text';
-import Page from 'shared/ui/Page/Page';
+import Page from 'widgets/Page/Page';
 import { fetchNextArticlePage } from '../model/services/fetchNextArticlePage/fetchNextArticlePage';
 import { initArticlesPage } from '../model/services/initArticlesPage/initArticlesPage';
 
