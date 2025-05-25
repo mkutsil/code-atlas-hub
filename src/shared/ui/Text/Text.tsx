@@ -22,32 +22,31 @@ export enum TextMaxLines {
     FOUR = 4,
     FIVE = 5,
     SIX = 6,
-  }
+}
 
 interface TextProps {
-	className? : string;
+    className?: string;
     title?: string;
     text?: string;
     size?: TextSize;
     align?: TextAlign;
     titleAlign?: TextAlign;
     titleMarginBottom?: boolean;
-    titleMaxLines?: TextMaxLines; 
+    titleMaxLines?: TextMaxLines;
     textMaxLines?: TextMaxLines;
 }
- 
-const Text = (props: TextProps) => {
 
-    const { 
-        className, 
-        title, 
-        text, 
-        size = TextSize.S, 
-        align = TextAlign.LEFT, 
+const Text = (props: TextProps) => {
+    const {
+        className,
+        title,
+        text,
+        size = TextSize.S,
+        align = TextAlign.LEFT,
         titleAlign = align,
-        titleMarginBottom= true,
+        titleMarginBottom = true,
         titleMaxLines = undefined,
-        textMaxLines = undefined
+        textMaxLines = undefined,
     } = props;
 
     const mods: Record<string, boolean> = {
@@ -55,11 +54,10 @@ const Text = (props: TextProps) => {
         [classes.textSizeS]: size === TextSize.S,
         [classes.textSizeM]: size === TextSize.M,
         [classes.textSizeL]: size === TextSize.L,
-        
+
         [classes.textAlignCenter]: align === TextAlign.CENTER,
         [classes.textAlignLeft]: align === TextAlign.LEFT,
         [classes.textAlignRight]: align === TextAlign.RIGHT,
-        
     };
 
     const titleMods: Record<string, boolean> = {
@@ -86,14 +84,12 @@ const Text = (props: TextProps) => {
         [classes.clamp6]: textMaxLines === TextMaxLines.SIX,
     };
 
-    return (  
-        <div 
-            className={classNames(classes.textContainer, mods, [ className ])}
-        >
+    return (
+        <div className={classNames(classes.textContainer, mods, [className])}>
             {title && <p className={classNames(classes.title, titleMods, [])}>{title}</p>}
             {text && <p className={classNames(classes.text, textMods, [])}>{text}</p>}
         </div>
     );
 };
- 
+
 export default memo(Text);

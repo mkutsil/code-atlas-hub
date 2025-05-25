@@ -5,7 +5,7 @@ import { Theme } from '../../../app/providers/ThemeProvider/lib/ThemeContext';
 
 const dropdownMenuConfig = [
     { label: 'Profile', action: () => {} },
-    { label: 'Logout', action: () => {} }, 
+    { label: 'Logout', action: () => {} },
 ];
 
 const meta = {
@@ -16,7 +16,7 @@ const meta = {
     },
     args: {
         children: <button>Click me</button>,
-        dropdownMenuConfig:dropdownMenuConfig
+        dropdownMenuConfig: dropdownMenuConfig,
     },
 } satisfies Meta<typeof DropdownMenu>;
 
@@ -24,14 +24,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
-    decorators: [
-        ThemeDecorator(Theme.LIGHT)
-    ],
+    decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 
 export const Dark: Story = {
-    decorators: [
-        ThemeDecorator(Theme.DARK)
-    ],
+    decorators: [ThemeDecorator(Theme.DARK)],
 };
-

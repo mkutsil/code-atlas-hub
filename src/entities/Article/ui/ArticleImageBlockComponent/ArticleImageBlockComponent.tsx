@@ -7,16 +7,16 @@ interface ArticleImageBlockComponentProps {
     alt: string;
     title: string;
 }
- 
-const ArticleImageBlockComponent = (props : ArticleImageBlockComponentProps) => {
+
+const ArticleImageBlockComponent = (props: ArticleImageBlockComponentProps) => {
     const { className, src, alt, title } = props;
-	
-    return ( 
-        <div className={classNames(classes.articleImageBlockComponent, {}, [ className ])}>
+
+    return (
+        <div className={classNames(classes.articleImageBlockComponent, {}, [className])}>
             <img src={src} alt={alt} />
-            <Text text={title} size={TextSize.XS}/>
+            <Text text={title} size={TextSize.XS} />
         </div>
     );
 };
- 
+
 export default ArticleImageBlockComponent;

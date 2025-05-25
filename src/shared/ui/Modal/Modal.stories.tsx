@@ -7,9 +7,10 @@ const meta = {
     title: 'shared/Modal',
     component: Modal,
     args: {
-        children: 'Velit eiusmod aliqua sint dolore sit proident adipisicing excepteur sint id aliquip incididunt. Qui dolore aliqua Lorem sit deserunt velit. Nisi occaecat exercitation occaecat nisi aliquip nisi est nisi. Laborum amet occaecat eiusmod ea excepteur incididunt ullamco anim anim consequat excepteur. Dolor aliquip non laborum voluptate ex. Voluptate ullamco eu ea laborum.',
+        children:
+            'Velit eiusmod aliqua sint dolore sit proident adipisicing excepteur sint id aliquip incididunt. Qui dolore aliqua Lorem sit deserunt velit. Nisi occaecat exercitation occaecat nisi aliquip nisi est nisi. Laborum amet occaecat eiusmod ea excepteur incididunt ullamco anim anim consequat excepteur. Dolor aliquip non laborum voluptate ex. Voluptate ullamco eu ea laborum.',
         isOpen: true,
-    }
+    },
 } satisfies Meta<typeof Modal>;
 
 export default meta;
@@ -21,6 +22,5 @@ export const Dark: Story = {
 
 export const Light: Story = {
     args: {},
-    decorators: ThemeDecorator(Theme.LIGHT)
+    decorators: ThemeDecorator(Theme.LIGHT),
 };
-

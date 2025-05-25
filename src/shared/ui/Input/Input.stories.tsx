@@ -19,12 +19,12 @@ export const Light: Story = {
         placeholder: 'Login',
     },
     decorators: [
-        (Story) => (
+        Story => (
             <div style={{ width: '300px', margin: '30px' }}>
                 <Story />
             </div>
         ),
-        ThemeDecorator(Theme.LIGHT)
+        ThemeDecorator(Theme.LIGHT),
     ],
 };
 
@@ -36,12 +36,12 @@ export const Dark: Story = {
         placeholder: 'Login',
     },
     decorators: [
-        (Story) => (
+        Story => (
             <div style={{ width: '300px', margin: '30px' }}>
                 <Story />
             </div>
         ),
-        ThemeDecorator(Theme.DARK)
+        ThemeDecorator(Theme.DARK),
     ],
 };
 
@@ -55,11 +55,11 @@ export const ViewMode: Story = {
         value: 'test@gmail.com',
     },
     decorators: [
-        (Story) => (
+        Story => (
             <div style={{ width: '300px', margin: '30px' }}>
                 <Story />
             </div>
         ),
-        ThemeDecorator(Theme.LIGHT)
+        ThemeDecorator(Theme.LIGHT),
     ],
 };

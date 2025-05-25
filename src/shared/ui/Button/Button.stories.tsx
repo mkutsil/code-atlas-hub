@@ -15,29 +15,29 @@ type Story = StoryObj<typeof meta>;
 export const Clear: Story = {
     args: {
         children: 'Clear',
-        theme: ThemeButton.CLEAR
+        theme: ThemeButton.CLEAR,
     },
 };
 
 export const Contained: Story = {
     args: {
         children: 'Contained',
-        theme: ThemeButton.CONTAINED
+        theme: ThemeButton.CONTAINED,
     },
 };
 
 export const ContainedLight: Story = {
     args: {
         children: 'ContainedLight',
-        theme: ThemeButton.CONTAINED
+        theme: ThemeButton.CONTAINED,
     },
-    decorators: ThemeDecorator(Theme.LIGHT)
+    decorators: ThemeDecorator(Theme.LIGHT),
 };
 
 export const Outlined: Story = {
     args: {
         children: 'Outlined',
-        theme: ThemeButton.OUTLINED
+        theme: ThemeButton.OUTLINED,
     },
 };
 
@@ -45,7 +45,7 @@ export const LoadingOutlined: Story = {
     args: {
         children: 'Loading Outlined',
         theme: ThemeButton.OUTLINED,
-        isLoading: true
+        isLoading: true,
     },
 };
 
@@ -53,6 +53,6 @@ export const DisabledOutlined: Story = {
     args: {
         children: 'Loading Outlined',
         theme: ThemeButton.OUTLINED,
-        isDisabled: true
+        isDisabled: true,
     },
 };

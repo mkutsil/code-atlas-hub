@@ -4,14 +4,16 @@ import LocalesIcon from 'shared/assets/icons/locales.svg';
 
 const LanguageSwitcher = () => {
     const { i18n } = useTranslation();
-      
+
     const toggleLanguage = () => {
         i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en');
     };
-       
-    return ( 
-        <Button onClick={toggleLanguage}><LocalesIcon/></Button>
-	 );
+
+    return (
+        <Button onClick={toggleLanguage}>
+            <LocalesIcon />
+        </Button>
+    );
 };
- 
+
 export default LanguageSwitcher;

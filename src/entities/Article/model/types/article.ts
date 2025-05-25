@@ -1,63 +1,63 @@
 import { User } from 'entities/User';
 
 export enum ArticleBlockType {
-	CODE= 'CODE',
-	IMAGE= 'IMAGE',
-	TEXT= 'TEXT',
+    CODE = 'CODE',
+    IMAGE = 'IMAGE',
+    TEXT = 'TEXT',
 }
 
 export interface ArticleBlockBase {
-	id: string;
- 	type: ArticleBlockType;
+    id: string;
+    type: ArticleBlockType;
 }
 
 export interface ArticleCodeBlock extends ArticleBlockBase {
-	type: ArticleBlockType.CODE;
-	code: string;
+    type: ArticleBlockType.CODE;
+    code: string;
 }
 
 export interface ArticleImageBlock extends ArticleBlockBase {
-	type: ArticleBlockType.IMAGE;
-	title: string;
-	src: string;
-	alt: string;
+    type: ArticleBlockType.IMAGE;
+    title: string;
+    src: string;
+    alt: string;
 }
 
 export interface ArticleTextBlock extends ArticleBlockBase {
-	type: ArticleBlockType.TEXT;
-	paragraphs: string[];
-	title?: string;
+    type: ArticleBlockType.TEXT;
+    paragraphs: string[];
+    title?: string;
 }
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
 
 export enum ArticleType {
-	IT = 'IT',
-	ECONOMICS = 'Economics',
-	SCIENCE = 'Science',
-	SPORT = 'Sport',
-	HEALTH = 'Health',
-	ART = 'Art',
-	TRAVEL = 'Travel',
-	FOOD = 'Food',
-	ENTERTAINMENT = 'Entertainment',
-	OTHER = 'Other',
+    IT = 'IT',
+    ECONOMICS = 'Economics',
+    SCIENCE = 'Science',
+    SPORT = 'Sport',
+    HEALTH = 'Health',
+    ART = 'Art',
+    TRAVEL = 'Travel',
+    FOOD = 'Food',
+    ENTERTAINMENT = 'Entertainment',
+    OTHER = 'Other',
 }
 
 export enum ArticleView {
-	BIG = 'BIG',
-	SMALL = 'SMALL',
+    BIG = 'BIG',
+    SMALL = 'SMALL',
 }
 
 export interface Article {
-	id: string;
-	title: string;
-	subtitle: string;
-	description: string;
-	image: string;
-	views: number;
-	createdAt: string;
-	type: ArticleType[];
-	blocks: ArticleBlock[];
-	user: User;
+    id: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    image: string;
+    views: number;
+    createdAt: string;
+    type: ArticleType[];
+    blocks: ArticleBlock[];
+    user: User;
 }

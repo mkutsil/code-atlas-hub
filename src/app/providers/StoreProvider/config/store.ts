@@ -8,8 +8,8 @@ import { $api } from 'shared/api/api';
 import { scrollSaveReducer } from 'widgets/ScrollSave';
 
 export const createReduxStore = (
-    initialState?: StateSchema, 
-    asyncReducers?: ReducersMapObject<StateSchema>,
+    initialState?: StateSchema,
+    asyncReducers?: ReducersMapObject<StateSchema>
 ) => {
     const rootReducer: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
@@ -28,9 +28,10 @@ export const createReduxStore = (
         reducer: reducerManager.reduce as Reducer<StateSchema>,
         devTools: IS_DEV,
         preloadedState: initialState,
-        middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-            thunk: { extraArgument }
-        }),
+        middleware: getDefaultMiddleware =>
+            getDefaultMiddleware({
+                thunk: { extraArgument },
+            }),
     });
     // @ts-expect-error: Adding reducerManager property dynamically to the store
     store.reducerManager = reducerManager;
@@ -43,8 +44,8 @@ export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];
 export type RootState = ReturnType<ReturnType<typeof createReduxStore>['getState']>;
 
 export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
+    ReturnType,
+    RootState,
+    unknown,
+    Action<string>
 >;

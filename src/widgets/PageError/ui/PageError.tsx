@@ -5,14 +5,15 @@ const PageError = () => {
     const onReloadPage = () => {
         location.reload();
     };
-       
-    return ( 
+
+    return (
         <div className={classes.pageContainer}>
             <h2>Page Error</h2>
-            <Button onClick={onReloadPage} theme={ThemeButton.CONTAINED}>Reload page</Button>
+            <Button onClick={onReloadPage} theme={ThemeButton.CONTAINED}>
+                Reload page
+            </Button>
         </div>
-
-	 );
+    );
 };
- 
+
 export default PageError;

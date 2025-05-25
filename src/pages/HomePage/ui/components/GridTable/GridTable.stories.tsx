@@ -17,6 +17,5 @@ export const Dark: Story = {
 
 export const Light: Story = {
     args: {},
-    decorators: ThemeDecorator(Theme.LIGHT)
+    decorators: ThemeDecorator(Theme.LIGHT),
 };
-

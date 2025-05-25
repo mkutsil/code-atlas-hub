@@ -15,7 +15,7 @@ const meta = {
             loginForm: {
                 isLoading: false,
                 error: undefined,
-            }
+            },
         }),
     ],
 } satisfies Meta<typeof LoginForm>;
@@ -29,7 +29,7 @@ export const Dark: Story = {
 
 export const Light: Story = {
     args: {},
-    decorators: ThemeDecorator(Theme.LIGHT)
+    decorators: ThemeDecorator(Theme.LIGHT),
 };
 
 export const withError: Story = {
@@ -38,8 +38,8 @@ export const withError: Story = {
         loginForm: {
             error: 'error',
             isLoading: false,
-        },    
-    })
+        },
+    }),
 };
 
 export const Loading: Story = {
@@ -47,7 +47,6 @@ export const Loading: Story = {
     decorators: StoreDecorator({
         loginForm: {
             isLoading: true,
-        },    
-    })
+        },
+    }),
 };
-

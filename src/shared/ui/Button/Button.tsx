@@ -4,25 +4,24 @@ import classes from './Button.module.scss';
 import Loader from '../Loader/Loader';
 
 export enum ThemeButton {
-	CLEAR = 'clear', 
-	OUTLINED = 'outlined',
-	CONTAINED = 'contained', 
-}  
+    CLEAR = 'clear',
+    OUTLINED = 'outlined',
+    CONTAINED = 'contained',
+}
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-	label?: string;
-	theme?: ThemeButton;
+    label?: string;
+    theme?: ThemeButton;
     className?: string;
     isButtonAnimation?: boolean;
     isLoading?: boolean;
     isDisabled?: boolean;
 }
-  
-const Button: FC<ButtonProps> = (props) => {
 
-    const { 
-        theme = ThemeButton.CLEAR, 
-        children, 
+const Button: FC<ButtonProps> = props => {
+    const {
+        theme = ThemeButton.CLEAR,
+        children,
         className,
         isLoading = false,
         isDisabled = false,
@@ -36,18 +35,14 @@ const Button: FC<ButtonProps> = (props) => {
         [classes.disabled]: isDisabled,
     };
 
-    return ( 
-        <button 
-            className={
-                classNames(classes.button, 
-                    mods, 
-                    [ classes[theme], className ]
-                )}
+    return (
+        <button
+            className={classNames(classes.button, mods, [classes[theme], className])}
             {...otherProps}
         >
-            {isLoading? <Loader/> : children}
+            {isLoading ? <Loader /> : children}
         </button>
-	 );
+    );
 };
- 
+
 export default Button;

@@ -11,11 +11,11 @@ import { useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/User';
 
 interface ProfileEditFormProps {
-	profileData?: Profile;
-	onChangeEditMode: (value: boolean) => void;
+    profileData?: Profile;
+    onChangeEditMode: (value: boolean) => void;
 }
- 
-const ProfileEditForm = (props : ProfileEditFormProps) => {
+
+const ProfileEditForm = (props: ProfileEditFormProps) => {
     const { profileData, onChangeEditMode } = props;
 
     const dispatch = useAppDispatch();
@@ -25,12 +25,16 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
     const authData = useSelector(getUserAuthData);
 
     const onSubmit = (data: Profile) => {
-        dispatch(putProfileData({ profileData: data, profileId: authData?.id?.toString() || '' }))
-        	.then((result) => {
-        		if (putProfileData.fulfilled.match(result)) {
-                    onChangeEditMode(true);
-        		}
-        	});
+        dispatch(
+            putProfileData({
+                profileData: data,
+                profileId: authData?.id?.toString() || '',
+            })
+        ).then(result => {
+            if (putProfileData.fulfilled.match(result)) {
+                onChangeEditMode(true);
+            }
+        });
     };
 
     const {
@@ -42,16 +46,15 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
         resolver: yupResolver(ProfileEditFormSchema),
     });
 
-    return ( 
+    return (
         <form noValidate onSubmit={handleSubmit(onSubmit)}>
-
             <div className={classes.profileEditFormContainer}>
                 <Controller
                     name="firstName"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
+                            {...field}
                             placeholder="First Name"
                             isRequired={true}
                             error={fieldState?.error?.message}
@@ -61,10 +64,10 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
 
                 <Controller
                     name="lastName"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
+                            {...field}
                             placeholder="Last Name"
                             isRequired={true}
                             error={fieldState?.error?.message}
@@ -74,11 +77,11 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
 
                 <Controller
                     name="age"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
-                            type='number'
+                            {...field}
+                            type="number"
                             placeholder="Age"
                             isRequired={true}
                             error={fieldState?.error?.message}
@@ -88,10 +91,10 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
 
                 <Controller
                     name="currency"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
+                            {...field}
                             placeholder="currency"
                             isRequired={true}
                             error={fieldState?.error?.message}
@@ -100,10 +103,10 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
                 />
                 <Controller
                     name="country"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
+                            {...field}
                             placeholder="Country"
                             isRequired={true}
                             error={fieldState?.error?.message}
@@ -112,10 +115,10 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
                 />
                 <Controller
                     name="city"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
+                            {...field}
                             placeholder="City"
                             isRequired={true}
                             error={fieldState?.error?.message}
@@ -125,10 +128,10 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
 
                 <Controller
                     name="userName"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
+                            {...field}
                             placeholder="User Name"
                             isRequired={true}
                             error={fieldState?.error?.message}
@@ -138,36 +141,32 @@ const ProfileEditForm = (props : ProfileEditFormProps) => {
 
                 <Controller
                     name="avatar"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
+                            {...field}
                             placeholder="Avatar"
                             isRequired={true}
                             error={fieldState?.error?.message}
                         />
                     )}
                 />
-								
             </div>
             <div className={classes.profileEditFormFooterContainer}>
-                <Button 
-                    type='submit'
+                <Button
+                    type="submit"
                     theme={ThemeButton.CONTAINED}
                     isLoading={isLoading}
                     isDisabled={!isDirty}
                 >
                     Submit
                 </Button>
-                <Button 
-                    theme={ThemeButton.OUTLINED}
-                    onClick={() => onChangeEditMode(true)}
-                >
+                <Button theme={ThemeButton.OUTLINED} onClick={() => onChangeEditMode(true)}>
                     Cancel
                 </Button>
             </div>
         </form>
-	 );
+    );
 };
- 
+
 export default ProfileEditForm;

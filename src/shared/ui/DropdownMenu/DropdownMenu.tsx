@@ -5,26 +5,21 @@ import { useState, ReactElement, useRef, useEffect } from 'react';
 type dropdownMenuConfigType = {
     label: string;
     action: () => void;
-}
+};
 
 interface DropdownMenuProps {
     dropdownMenuConfig: dropdownMenuConfigType[];
     className?: string;
     children: ReactElement;
 }
- 
-const DropdownMenu  = (props : DropdownMenuProps) => {
-    const { 
-        dropdownMenuConfig,
-        className, 
-        children,
-        ...otherProps
-    } = props;
+
+const DropdownMenu = (props: DropdownMenuProps) => {
+    const { dropdownMenuConfig, className, children, ...otherProps } = props;
     const menuRef = useRef<HTMLDivElement>(null);
-    const [ isOpen, setIsOpen ] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
-        setIsOpen((prev) => !prev);
+        setIsOpen(prev => !prev);
     };
 
     useEffect(() => {
@@ -40,14 +35,18 @@ const DropdownMenu  = (props : DropdownMenuProps) => {
         };
     }, []);
 
-    return ( 
-        <div 
-            className={classNames(classes.dropdown, {}, [ className ])} 
+    return (
+        <div
+            className={classNames(classes.dropdown, {}, [className])}
             {...otherProps}
             ref={menuRef}
         >
             <div
-                style={{ cursor: 'pointer', width: 'max-content', height: 'max-content' }}
+                style={{
+                    cursor: 'pointer',
+                    width: 'max-content',
+                    height: 'max-content',
+                }}
                 onClick={toggleDropdown}
             >
                 {children}
@@ -56,11 +55,7 @@ const DropdownMenu  = (props : DropdownMenuProps) => {
             {isOpen && (
                 <div className={classes.dropdownMenu}>
                     {dropdownMenuConfig.map((item, index) => (
-                        <div 
-                            key={index} 
-                            className={classes.dropdownMenuItem}
-                            onClick={item.action}
-                        >
+                        <div key={index} className={classes.dropdownMenuItem} onClick={item.action}>
                             <span>{item.label}</span>
                         </div>
                     ))}
@@ -69,5 +64,5 @@ const DropdownMenu  = (props : DropdownMenuProps) => {
         </div>
     );
 };
- 
+
 export default DropdownMenu;

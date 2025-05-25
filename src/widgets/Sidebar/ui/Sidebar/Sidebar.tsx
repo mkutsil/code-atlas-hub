@@ -6,47 +6,54 @@ import classes from './Sidebar.module.scss';
 import { Menu } from 'lucide-react';
 import SidebarItemsList from '../components/SidebarItemsList/SidebarItemsList';
 import { useBreakpoint } from 'shared/lib/hooks/useBreakpoint/useBreakpoint';
-   
-const Sidebar = () => {
-    const {  isMobileOrTablet } = useBreakpoint();
 
-    const [ collapsed, setCollapsed ] = useState(isMobileOrTablet ? true : true);
+const Sidebar = () => {
+    const { isMobileOrTablet } = useBreakpoint();
+
+    const [collapsed, setCollapsed] = useState(isMobileOrTablet ? true : true);
 
     const handleButtonClick = () => {
-        setCollapsed((prev) => !prev);
-    };  
+        setCollapsed(prev => !prev);
+    };
 
     useEffect(() => {
-        if(isMobileOrTablet) setCollapsed(true);
+        if (isMobileOrTablet) setCollapsed(true);
         else setCollapsed(false);
-    }, [ isMobileOrTablet ]);
+    }, [isMobileOrTablet]);
 
     return (
-        <menu 
+        <menu
             data-testid="sidebar"
-            className={classNames(classes.sidebar, { [classes.collapsed]: collapsed })}>
-            <div 
-                className={classNames(classes.logoWrapper)}
-            >
+            className={classNames(classes.sidebar, {
+                [classes.collapsed]: collapsed,
+            })}
+        >
+            <div className={classNames(classes.logoWrapper)}>
                 <LogoIcon />
-                <p className={classNames(classes.logoText, { [classes.logoTextCollapsed]: collapsed })}>
+                <p
+                    className={classNames(classes.logoText, {
+                        [classes.logoTextCollapsed]: collapsed,
+                    })}
+                >
                     CodeAtlasHub
                 </p>
-            </div>  
+            </div>
 
             <div className={classes.linkWrapper}>
                 <Button
-                    data-testid="toggle-button" 
-                    className={classNames(classes.menuButton, { [classes.menuButtonCollapsed]: collapsed })}
+                    data-testid="toggle-button"
+                    className={classNames(classes.menuButton, {
+                        [classes.menuButtonCollapsed]: collapsed,
+                    })}
                     onClick={handleButtonClick}
                 >
-                    <Menu/>
-                </Button>	
+                    <Menu />
+                </Button>
 
-                <SidebarItemsList collapsed={collapsed}/>
+                <SidebarItemsList collapsed={collapsed} />
             </div>
         </menu>
-	 );
+    );
 };
- 
+
 export default Sidebar;

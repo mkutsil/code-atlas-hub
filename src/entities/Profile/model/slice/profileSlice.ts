@@ -18,9 +18,9 @@ export const profileSlice = createSlice({
             state.readonly = action.payload;
         },
     },
-    extraReducers: (builder) => {
+    extraReducers: builder => {
         builder
-            .addCase(fetchProfileFullData.pending, (state) => {
+            .addCase(fetchProfileFullData.pending, state => {
                 state.error = undefined;
                 state.isLoading = true;
             })
@@ -33,7 +33,7 @@ export const profileSlice = createSlice({
                 state.error = action.payload as string;
             })
 
-            .addCase(putProfileData.pending, (state) => {
+            .addCase(putProfileData.pending, state => {
                 state.error = undefined;
                 state.isLoading = true;
             })
@@ -45,7 +45,7 @@ export const profileSlice = createSlice({
                 state.isLoading = false;
                 state.error = action.payload as string;
             });
-    }
+    },
 });
 
 export const { actions: profileActions } = profileSlice;

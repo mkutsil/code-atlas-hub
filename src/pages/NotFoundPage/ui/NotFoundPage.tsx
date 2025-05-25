@@ -3,11 +3,10 @@ import classes from './NotFoundPage.module.scss';
 import Page from 'widgets/Page/Page';
 
 const NotFoundPage = () => {
-
     const goHome = () => {
         window.location.href = '/';
     };
-    
+
     return (
         <Page className={classes.pageContainer}>
             <h1 className={classes.pageTitle}>Not found page (</h1>

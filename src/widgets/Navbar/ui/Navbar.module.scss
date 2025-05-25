@@ -1,27 +1,27 @@
 .navbar {
-	height: var(--navbar-height);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 71px 0 27px;
-	background: var(--layout-bg-color);
-	gap: 50px;
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 71px 0 27px;
+    background: var(--layout-bg-color);
+    gap: 50px;
 }
 
 .buttonWrapper {
-	display: flex;
-	align-items: center;
-	gap: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.loginElementContainer{
-	margin-left: 10px;
-	display: flex;
-	align-items: center;
-	gap: 20px;	
+.loginElementContainer {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.breadcrumbs{
-	color: var(--secondary-color);
-	font-weight: 700;
+.breadcrumbs {
+    color: var(--secondary-color);
+    font-weight: 700;
 }

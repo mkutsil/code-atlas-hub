@@ -6,36 +6,40 @@ import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/f
 
 const commentsAdapter = createEntityAdapter<Comment>();
 
-const initialArticleDetailsCommentsState = commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>({
-    isLoading: false,
-    error: undefined,
-    ids: [],
-    entities: {}
-});
+const initialArticleDetailsCommentsState =
+    commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>({
+        isLoading: false,
+        error: undefined,
+        ids: [],
+        entities: {},
+    });
 
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsComments ?? initialArticleDetailsCommentsState   
+    state => state.articleDetailsComments ?? initialArticleDetailsCommentsState
 );
 
 export const articleDetailsCommentsSlice = createSlice({
     name: 'articleDetailsCommentsSlice',
     initialState: initialArticleDetailsCommentsState,
-    reducers: {} ,
-    extraReducers: (builder) => {
+    reducers: {},
+    extraReducers: builder => {
         builder
-            .addCase(fetchCommentsByArticleId.pending, (state) => {
+            .addCase(fetchCommentsByArticleId.pending, state => {
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(fetchCommentsByArticleId.fulfilled, (state, action: PayloadAction<Comment[]>) => {
-                state.isLoading = false;
-                commentsAdapter.setAll(state, action.payload);
-            })
+            .addCase(
+                fetchCommentsByArticleId.fulfilled,
+                (state, action: PayloadAction<Comment[]>) => {
+                    state.isLoading = false;
+                    commentsAdapter.setAll(state, action.payload);
+                }
+            )
             .addCase(fetchCommentsByArticleId.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload as string;
             });
-    }
+    },
 });
 
 export const { reducer: articleDetailsCommentsReducer } = articleDetailsCommentsSlice;

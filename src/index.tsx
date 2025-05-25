@@ -13,12 +13,12 @@ if (!rootElement) {
 }
 const root = ReactDOM.createRoot(rootElement);
 
-root.render ( 
+root.render(
     <BrowserRouter>
         <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>
-                    <App/>
+                    <App />
                 </ThemeProvider>
             </ErrorBoundary>
         </StoreProvider>

@@ -5,25 +5,20 @@ import { StateSchema } from '../config/StateSchema';
 import { ReducersMapObject } from '@reduxjs/toolkit';
 
 interface StoreProviderProps {
-	children?: ReactNode;
-	initialState?: Partial<StateSchema>;
+    children?: ReactNode;
+    initialState?: Partial<StateSchema>;
     asyncReducers?: Partial<ReducersMapObject<StateSchema>>;
 }
 
 const StoreProvider = ({ children, initialState, asyncReducers }: StoreProviderProps) => {
-
     const storeRef = useRef(
         createReduxStore(
-            initialState as StateSchema, 
-            asyncReducers as ReducersMapObject<StateSchema>,
+            initialState as StateSchema,
+            asyncReducers as ReducersMapObject<StateSchema>
         )
     );
 
-    return (  
-        <Provider store={storeRef.current}>
-            {children}
-        </Provider>
-    );
+    return <Provider store={storeRef.current}>{children}</Provider>;
 };
 
 export default StoreProvider;

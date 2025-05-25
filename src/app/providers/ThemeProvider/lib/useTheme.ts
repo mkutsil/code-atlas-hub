@@ -1,12 +1,16 @@
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import {
+    LOCAL_STORAGE_THEME_KEY,
+    Theme,
+    ThemeContext,
+} from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { useContext } from 'react';
 
 interface UseThemeResult {
-	toggleTheme: () => void;
-	theme: Theme;
+    toggleTheme: () => void;
+    theme: Theme;
 }
 
-export const useTheme = () : UseThemeResult => {
+export const useTheme = (): UseThemeResult => {
     const { theme, setTheme } = useContext(ThemeContext);
     if (document && document.body) {
         document.body.className = theme;

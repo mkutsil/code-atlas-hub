@@ -9,7 +9,7 @@ const meta = {
     args: {
         width: '300px',
         height: '300px',
-    }
+    },
 } satisfies Meta<typeof Skeleton>;
 
 export default meta;
@@ -18,13 +18,12 @@ type Story = StoryObj<typeof meta>;
 export const Dark: Story = {};
 
 export const Light: Story = {
-    decorators: ThemeDecorator(Theme.LIGHT)
+    decorators: ThemeDecorator(Theme.LIGHT),
 };
 
 export const Circle: Story = {
     args: {
         border: '50%',
     },
-    decorators: ThemeDecorator(Theme.LIGHT)
+    decorators: ThemeDecorator(Theme.LIGHT),
 };
-

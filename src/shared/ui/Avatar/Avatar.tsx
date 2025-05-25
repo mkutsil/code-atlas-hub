@@ -13,23 +13,17 @@ interface AvatarProps {
     size?: AvatarSize;
     className?: string;
 }
- 
-const Avatar  = (props : AvatarProps) => {
-    const { 
-        src,
-        size = AvatarSize.MEDIUM, 
-        alt, 
-        className, 
-        ...otherProps
-    } = props;
-    return ( 
-        <img 
-            className={classNames(classes.avatar, {}, [ className, classes[size] ])} 
-            src={src} 
-            alt={alt} 
+
+const Avatar = (props: AvatarProps) => {
+    const { src, size = AvatarSize.MEDIUM, alt, className, ...otherProps } = props;
+    return (
+        <img
+            className={classNames(classes.avatar, {}, [className, classes[size]])}
+            src={src}
+            alt={alt}
             {...otherProps}
         />
     );
 };
- 
+
 export default Avatar;

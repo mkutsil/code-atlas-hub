@@ -1,10 +1,10 @@
 import Loader from 'shared/ui/Loader/Loader';
 import classes from './PageLoader.module.scss';
 
-const PageLoader = () => ( 
+const PageLoader = () => (
     <div className={classes.pageLoaderContainer}>
-        <Loader/>
-    </div> 
+        <Loader />
+    </div>
 );
- 
+
 export default PageLoader;
