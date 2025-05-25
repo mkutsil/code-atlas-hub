@@ -4,19 +4,19 @@
 @use 'themes/dark';
 
 body {
-	font: var(--font-m);
-	color: var(--primary-color);
+    font: var(--font-m);
+    color: var(--primary-color);
 }
 
 .app {
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	background: var(--bg-color);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: var(--bg-color);
 }
 
-.content-page { 
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
+.content-page {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }

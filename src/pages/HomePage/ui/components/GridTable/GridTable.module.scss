@@ -1,23 +1,24 @@
-
 .gridContainer {
-	width: 100%;
-  max-width: max-content;
-	display: grid;
-	border: 1px solid #000;
-	background: #000;
-  grid-template-columns: minmax(auto, 50px) minmax(auto, 200px) minmax(auto, 150px) minmax(auto, 120px)  minmax(auto, 200px) minmax(auto, 150px);
-	gap: 1px;
+    width: 100%;
+    max-width: max-content;
+    display: grid;
+    border: 1px solid #000;
+    background: #000;
+    grid-template-columns:
+        minmax(auto, 50px) minmax(auto, 200px) minmax(auto, 150px)
+        minmax(auto, 120px) minmax(auto, 200px) minmax(auto, 150px);
+    gap: 1px;
 
-	.headerGrid {
-		background: #d6a9a9;
-	}
+    .headerGrid {
+        background: #d6a9a9;
+    }
 
-	div {
-		padding: 5px;
-		background-color: #e0d3d3;
-  	font-weight: bold;
-		white-space: nowrap; 
-  	overflow: hidden; 
-  	text-overflow: ellipsis;
-	}
+    div {
+        padding: 5px;
+        background-color: #e0d3d3;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }

@@ -1,15 +1,15 @@
 .articleListContainer {
-	display: flex;
+    display: flex;
 }
 
 .grid {
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
 }
 
-.list { 
-	width: 100%;
-	flex-direction: column;
-	gap: 38px;
+.list {
+    width: 100%;
+    flex-direction: column;
+    gap: 38px;
 }

@@ -8,9 +8,9 @@ import path from 'path';
 
 const config: Config = {
     // A set of global variables that need to be available in all test environments
-    globals: { 
-        'IS_DEV' : true,
-        'API_URL': '',
+    globals: {
+        IS_DEV: true,
+        API_URL: '',
     },
 
     preset: 'ts-jest',
@@ -29,41 +29,26 @@ const config: Config = {
     rootDir: '../../',
 
     // The glob patterns Jest uses to detect test files
-    testMatch: [ '<rootDir>/src/**/*.(spec|test).[tj]s?(x)' ],
+    testMatch: ['<rootDir>/src/**/*.(spec|test).[tj]s?(x)'],
 
     // The test environment that will be used for testing
     testEnvironment: 'jsdom',
 
     // Automatically clear mock calls, instances, contexts and results before every test
     clearMocks: true,
- 
+
     // An array of regexp pattern strings used to skip coverage collection
-    coveragePathIgnorePatterns: [
-        '/node_modules/'
-    ],
+    coveragePathIgnorePatterns: ['/node_modules/'],
 
     // An array of directory names to be searched recursively up from the requiring module's location
-    moduleDirectories: [
-        'node_modules'
-    ],
+    moduleDirectories: ['node_modules'],
 
-    modulePaths: [
-        '<rootDir>src',
-    ],
+    modulePaths: ['<rootDir>src'],
 
-    setupFilesAfterEnv: [ '<rootDir>config/jest/setupTest.ts' ],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
 
     // An array of file extensions your modules use
-    moduleFileExtensions: [
-        'js',
-        'mjs',
-        'cjs',
-        'jsx',
-        'ts',
-        'tsx',
-        'json',
-        'node'
-    ],
+    moduleFileExtensions: ['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json', 'node'],
 
     // All imported modules in your tests should be mocked automatically
     // automock: false,

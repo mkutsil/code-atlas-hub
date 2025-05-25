@@ -4,36 +4,29 @@ import { useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/User';
 
 interface SidebarItemsListProps {
-	collapsed: boolean
+    collapsed: boolean;
 }
- 
+
 const SidebarItemsList = (props: SidebarItemsListProps) => {
     const { collapsed } = props;
     const isAuth = useSelector(getUserAuthData);
 
-    const filteredSidebarItemsList = sidebarItemsList.filter((item) => {
+    const filteredSidebarItemsList = sidebarItemsList.filter(item => {
         if (item.authOnly) {
             return isAuth;
         }
         return true;
-    }
-    );
+    });
 
-    return ( 
+    return (
         <>
             {filteredSidebarItemsList.map(({ path, text, Icon }) => (
-                <NavigationButton
-                    key={path}
-                    label={text}
-                    to={path}
-                    isCollapsed={collapsed}
-                >
+                <NavigationButton key={path} label={text} to={path} isCollapsed={collapsed}>
                     <Icon />
                 </NavigationButton>
             ))}
         </>
-
-	 );
+    );
 };
- 
+
 export default SidebarItemsList;

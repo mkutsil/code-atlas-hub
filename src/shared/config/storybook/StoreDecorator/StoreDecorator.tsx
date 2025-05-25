@@ -4,21 +4,18 @@ import { loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
 import { profileReducer } from 'entities/Profile';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
-const defaultAsyncReducers: ReducersList  = {
+const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
-    profile: profileReducer
+    profile: profileReducer,
 };
 
-export const StoreDecorator = (
-    state:Partial<StateSchema>,
-    asyncReducers?: ReducersList
-) => {
+export const StoreDecorator = (state: Partial<StateSchema>, asyncReducers?: ReducersList) => {
     const Decorator = (StoryComponent: () => ReactElement) => (
-        <StoreProvider 
-            initialState={state} 
+        <StoreProvider
+            initialState={state}
             asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}
         >
-            <StoryComponent/>
+            <StoryComponent />
         </StoreProvider>
     );
 

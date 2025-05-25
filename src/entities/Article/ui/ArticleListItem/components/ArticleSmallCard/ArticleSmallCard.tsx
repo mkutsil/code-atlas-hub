@@ -7,50 +7,36 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import AppLink from 'shared/ui/AppLink/AppLink';
 
 interface ArticleSmallCardProps {
-	id: string;
-	image: string;
-	views: number;
-	title: string;
-	type: string[];
-	createdAt: string;
-	className?: string;
+    id: string;
+    image: string;
+    views: number;
+    title: string;
+    type: string[];
+    createdAt: string;
+    className?: string;
 }
- 
+
 const ArticleSmallCard = (props: ArticleSmallCardProps) => {
-    const {
-        id,
-        image,
-        views,
-        title,
-        type,
-        createdAt,
-        className
-    } = props;
-	
+    const { id, image, views, title, type, createdAt, className } = props;
+
     return (
-        <AppLink 
-            to={`${RoutePath.article_details}${id}`} 
-        >
-            <Card className={classNames(classes.container, {}, [ className ])}>
+        <AppLink to={`${RoutePath.article_details}${id}`}>
+            <Card className={classNames(classes.container, {}, [className])}>
                 <>
-                    <Text className={classes.createdAtText} text={createdAt}/>
-   
-                    <img 
-                        className={classes.image} 
-                        src={image}
-                        alt={title} 
-                    />
- 
+                    <Text className={classes.createdAtText} text={createdAt} />
+
+                    <img className={classes.image} src={image} alt={title} />
+
                     <div className={classes.infoContainer}>
-                        <Text className={classes.typeText} text={type.join(', ')}/>
+                        <Text className={classes.typeText} text={type.join(', ')} />
 
                         <div className={classes.viewsContainer}>
-                            <Eye/>  
-                            <Text text={String(views)}/>
+                            <Eye />
+                            <Text text={String(views)} />
                         </div>
                     </div>
 
-                    <Text 
+                    <Text
                         className={classes.titleText}
                         titleMarginBottom={false}
                         title={title}
@@ -61,5 +47,5 @@ const ArticleSmallCard = (props: ArticleSmallCardProps) => {
         </AppLink>
     );
 };
- 
+
 export default ArticleSmallCard;

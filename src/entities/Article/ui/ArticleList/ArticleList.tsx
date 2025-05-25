@@ -6,58 +6,42 @@ import ArticleBigCardSkeleton from '../ArticleListItem/components/ArticleBigCard
 import ArticleSmallCardSkeleton from '../ArticleListItem/components/ArticleSmallCard/ArticleSmallCardSkeleton';
 
 interface ArticleListProps {
-	articles: Article[];
-	isLoading?: boolean;
-	view?: ArticleView;
-	className?: string;
+    articles: Article[];
+    isLoading?: boolean;
+    view?: ArticleView;
+    className?: string;
 }
- 
-export const ArticleList = (props : ArticleListProps) => {
-    const { 
-        articles, 
-        isLoading, 
-        view = ArticleView.SMALL,
-        className,
-		 } = props;
+
+export const ArticleList = (props: ArticleListProps) => {
+    const { articles, isLoading, view = ArticleView.SMALL, className } = props;
 
     const renderArticle = (article: Article) => (
-        <ArticleListItem 
-            key={article.id}
-            article={article} 
-            view={view} 
-        />
+        <ArticleListItem key={article.id} article={article} view={view} />
     );
 
     const isSmallArticleCard = view === ArticleView.SMALL;
 
-    const renderArticleSkeleton = () => new Array(8)
-        .fill(0)
-        .map((_, index) => isSmallArticleCard ? 
-            (
-                <ArticleSmallCardSkeleton 
-                    key={index} />
-            )
-            : 
-            (
-                <ArticleBigCardSkeleton 
-                    key={index}
-                />
-            )
-        );
+    const renderArticleSkeleton = () =>
+        new Array(8)
+            .fill(0)
+            .map((_, index) =>
+                isSmallArticleCard ? (
+                    <ArticleSmallCardSkeleton key={index} />
+                ) : (
+                    <ArticleBigCardSkeleton key={index} />
+                )
+            );
 
     const mods: Mods = {
         [classes.grid]: view === ArticleView.SMALL,
         [classes.list]: view === ArticleView.BIG,
     };
-	
-    return ( 
-        <div className={classNames(classes.articleListContainer, mods, [ className ])}>
-            {articles.length > 0 &&
-                articles.map(renderArticle)
-            }
+
+    return (
+        <div className={classNames(classes.articleListContainer, mods, [className])}>
+            {articles.length > 0 && articles.map(renderArticle)}
 
             {isLoading && renderArticleSkeleton()}
         </div>
     );
 };
- 

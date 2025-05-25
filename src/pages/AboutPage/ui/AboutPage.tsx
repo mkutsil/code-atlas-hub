@@ -4,21 +4,17 @@ import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import Page from 'widgets/Page/Page';
 
 const AboutPage = () => {
-	
     const { t } = useTranslation();
-	
+
     return (
         <Page className={classes.aboutPage}>
             <h1>{t('title')}</h1>
-            <p>
-                {t('description.text')}
-            </p>
+            <p>{t('description.text')}</p>
 
             <span>{t('description.name')}</span>
 
             <div className={classes.card}>
                 <span>{t('description.name')}</span>
-
             </div>
 
             <div className={classes.buttonContainer}>

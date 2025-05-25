@@ -3,8 +3,8 @@ import { getCounterValue } from './getCounterValue';
 
 describe('getCounterValue.test', () => {
     test('get value', () => {
-        const state:Partial<StateSchema> = {
-            counter: { value: 10 }
+        const state: Partial<StateSchema> = {
+            counter: { value: 10 },
         };
 
         expect(getCounterValue(state as StateSchema)).toEqual(10);

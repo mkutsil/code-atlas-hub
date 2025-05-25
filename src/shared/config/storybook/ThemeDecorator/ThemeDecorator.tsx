@@ -5,7 +5,7 @@ export const ThemeDecorator = (theme: Theme) => {
     const Decorator = (StoryComponent: () => ReactElement) => (
         <ThemeProvider initialTheme={theme}>
             <div className={`app ${theme}`}>
-                <div className='content-page'>
+                <div className="content-page">
                     <StoryComponent />
                 </div>
             </div>

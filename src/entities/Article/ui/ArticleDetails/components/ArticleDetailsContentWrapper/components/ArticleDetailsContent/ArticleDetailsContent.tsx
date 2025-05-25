@@ -5,20 +5,20 @@ import ArticleImageBlockComponent from 'entities/Article/ui/ArticleImageBlockCom
 import ArticleTextBlockComponent from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 interface ArticleDetailsContentProps {
-		blocks: ArticleBlock[];	
+    blocks: ArticleBlock[];
 }
 
 const ArticleDetailsContent = ({ blocks }: ArticleDetailsContentProps) => {
     const renderBlock = (block: ArticleBlock) => {
         switch (block.type) {
-        case ArticleBlockType.CODE:
-            return <ArticleCodeBlockComponent key={block.id} code={block.code} />;
-        case ArticleBlockType.IMAGE:
-            return <ArticleImageBlockComponent key={block.id} {...block} />;
-        case ArticleBlockType.TEXT:
-            return <ArticleTextBlockComponent key={block.id} {...block} />;
-        default:
-            return null;
+            case ArticleBlockType.CODE:
+                return <ArticleCodeBlockComponent key={block.id} code={block.code} />;
+            case ArticleBlockType.IMAGE:
+                return <ArticleImageBlockComponent key={block.id} {...block} />;
+            case ArticleBlockType.TEXT:
+                return <ArticleTextBlockComponent key={block.id} {...block} />;
+            default:
+                return null;
         }
     };
 

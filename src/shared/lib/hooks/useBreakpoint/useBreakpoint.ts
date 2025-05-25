@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export const useBreakpoint = () => {
-    const [ breakpoints, setBreakpoints ] = useState({
+    const [breakpoints, setBreakpoints] = useState({
         isMobile: false,
         isTablet: false,
         isDesktop: true,

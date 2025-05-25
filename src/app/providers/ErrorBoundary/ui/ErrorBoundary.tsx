@@ -1,10 +1,10 @@
-import type { ErrorInfo, ReactNode  } from 'react';
+import type { ErrorInfo, ReactNode } from 'react';
 import { Component, Suspense } from 'react';
 import { PageError } from 'widgets/PageError';
 import { PageLoader } from 'widgets/PageLoader';
 
 type ErrorBoundaryProps = {
-  children: ReactNode;
+    children: ReactNode;
 };
 
 type ErrorBoundaryState = { hasError: boolean };
@@ -25,8 +25,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
     renderFallbackUI() {
         return (
-            <Suspense fallback={<PageLoader/>}>
-                <PageError/>
+            <Suspense fallback={<PageLoader />}>
+                <PageError />
             </Suspense>
         );
     }
@@ -41,4 +41,3 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 }
 
 export default ErrorBoundary;
-

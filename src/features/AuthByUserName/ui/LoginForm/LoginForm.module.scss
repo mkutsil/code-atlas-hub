@@ -1,23 +1,22 @@
-
-.formContainer{
-	width: 540px;
-	height: 379px;
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
+.formContainer {
+    width: 540px;
+    height: 379px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.formContentContainer{
-	width: 350px;
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	gap: 28px;
-	color: #67666E;
+.formContentContainer {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 28px;
+    color: #67666e;
 }
 
-.inputsContainer{
-	display: flex;	
-	flex-direction: column;
-	gap: 20px;
+.inputsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

@@ -8,11 +8,11 @@ import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
 
 export type AppRoutesProps = RouteProps & {
     authOnly?: boolean;
-}
+};
 
-export enum AppRouters { 
-	HOME = 'home',
-	ABOUT = 'about',
+export enum AppRouters {
+    HOME = 'home',
+    ABOUT = 'about',
     PROFILE = 'profile',
     ARTICLES = 'articles',
     ARTICLE_DETAILS = 'article_details',
@@ -25,35 +25,35 @@ export const RoutePath: Record<AppRouters, string> = {
     [AppRouters.PROFILE]: '/profile/',
     [AppRouters.ARTICLES]: '/articles',
     [AppRouters.ARTICLE_DETAILS]: '/articles/',
-    [AppRouters.NOT_FOUND]: '*'
+    [AppRouters.NOT_FOUND]: '*',
 };
 
 export const routerConfig: Record<AppRouters, AppRoutesProps> = {
-    [AppRouters.HOME] : {
+    [AppRouters.HOME]: {
         path: RoutePath.home,
-        element: <HomePage/>
+        element: <HomePage />,
     },
-    [AppRouters.ABOUT] : {
+    [AppRouters.ABOUT]: {
         path: RoutePath.about,
-        element: <AboutPage/>
+        element: <AboutPage />,
     },
-    [AppRouters.PROFILE] : { 
+    [AppRouters.PROFILE]: {
         path: `${RoutePath.profile}:id`,
-        element: <ProfilePage/>,
-        authOnly: true
+        element: <ProfilePage />,
+        authOnly: true,
     },
-    [AppRouters.ARTICLES] : { 
+    [AppRouters.ARTICLES]: {
         path: RoutePath.articles,
-        element: <ArticlesPage/>,
-        authOnly: true
+        element: <ArticlesPage />,
+        authOnly: true,
     },
-    [AppRouters.ARTICLE_DETAILS] : { 
+    [AppRouters.ARTICLE_DETAILS]: {
         path: `${RoutePath.article_details}:id`,
-        element: <ArticleDetailsPage/>,
-        authOnly: true
+        element: <ArticleDetailsPage />,
+        authOnly: true,
     },
-    [AppRouters.NOT_FOUND] : { 
+    [AppRouters.NOT_FOUND]: {
         path: RoutePath.not_found,
-        element: <NotFoundPage/>
+        element: <NotFoundPage />,
     },
 };

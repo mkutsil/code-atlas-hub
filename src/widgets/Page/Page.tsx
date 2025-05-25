@@ -11,27 +11,30 @@ import { StateSchema } from 'app/providers/StoreProvider';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 
 interface PageProps {
-	children: ReactNode;
-	className?: string;
-	onScrollEnd?: () => void;
+    children: ReactNode;
+    className?: string;
+    onScrollEnd?: () => void;
 }
- 
-const Page = (props : PageProps) => {
-	
+
+const Page = (props: PageProps) => {
     const { children, className, onScrollEnd } = props;
-	
-    const dispatch = useAppDispatch(); 
+
+    const dispatch = useAppDispatch();
     const { pathname } = useLocation();
     const wrapperRef = useRef<HTMLElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
 
-    const scrollPosition = useSelector((state:StateSchema) => getSaveScrollByPath(state, pathname));
+    const scrollPosition = useSelector((state: StateSchema) =>
+        getSaveScrollByPath(state, pathname)
+    );
 
     const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-        dispatch(scrollSaveActions.setScrollPosition({
-            position: e.currentTarget.scrollTop,
-            path: pathname
-        }));
+        dispatch(
+            scrollSaveActions.setScrollPosition({
+                position: e.currentTarget.scrollTop,
+                path: pathname,
+            })
+        );
     }, 1000);
 
     useInfiniteScroll({
@@ -44,18 +47,18 @@ const Page = (props : PageProps) => {
         if (wrapperRef.current) {
             wrapperRef.current.scrollTop = scrollPosition;
         }
-    }, [ scrollPosition ]);
-   
-    return ( 
-        <section 
+    }, [scrollPosition]);
+
+    return (
+        <section
             ref={wrapperRef}
-            className={classNames(classes.container, {}, [ className ])}
+            className={classNames(classes.container, {}, [className])}
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef}/>
+            <div ref={triggerRef} />
         </section>
-	 );
+    );
 };
- 
+
 export default Page;

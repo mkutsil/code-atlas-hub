@@ -3,11 +3,11 @@ import ArticleBigCard from './components/ArticleBigCard/ArticleBigCard';
 import ArticleSmallCard from './components/ArticleSmallCard/ArticleSmallCard';
 
 interface ArticleListItemProps {
-	article: Article;
-	view: ArticleView;
+    article: Article;
+    view: ArticleView;
 }
- 
-const ArticleListItem = (props : ArticleListItemProps) => {
+
+const ArticleListItem = (props: ArticleListItemProps) => {
     const { article, view } = props;
 
     const { id, image, views, title, description, type, createdAt, user } = article;
@@ -40,5 +40,5 @@ const ArticleListItem = (props : ArticleListItemProps) => {
         </>
     );
 };
- 
+
 export default ArticleListItem;

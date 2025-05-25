@@ -1,9 +1,9 @@
 import classes from './GridTable.module.scss';
 import { tableData } from './tableData';
 
-const GridTable = () => ( 
+const GridTable = () => (
     <>
-        <h1>Table</h1> 
+        <h1>Table</h1>
 
         <div className={classes.gridContainer}>
             {tableData.headers.map((tableItem, index) => (
@@ -11,15 +11,11 @@ const GridTable = () => (
                     {tableItem}
                 </div>
             ))}
-            {tableData.rows.flatMap((row) => 
-                row.map((cell, colIndex) => (
-                    <div key={`${cell} - ${colIndex}`}>
-                        {cell}
-                    </div>
-                ))
+            {tableData.rows.flatMap(row =>
+                row.map((cell, colIndex) => <div key={`${cell} - ${colIndex}`}>{cell}</div>)
             )}
         </div>
     </>
-	 );
- 
+);
+
 export default GridTable;

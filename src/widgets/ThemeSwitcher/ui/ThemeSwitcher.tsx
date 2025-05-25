@@ -4,10 +4,12 @@ import Button from 'shared/ui/Button/Button';
 
 const ThemeSwitcher = () => {
     const { toggleTheme } = useTheme();
-      
-    return ( 
-        <Button onClick={toggleTheme}><ThemeSwitcherIcon/></Button>
-	 );
+
+    return (
+        <Button onClick={toggleTheme}>
+            <ThemeSwitcherIcon />
+        </Button>
+    );
 };
- 
+
 export default ThemeSwitcher;

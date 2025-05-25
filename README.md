@@ -21,22 +21,24 @@ Before you begin, ensure you have met the following requirements:
 ## Installation
 
 1. Clone the repository:
-   ```sh
-   git clone git@github.com:mkutsil/code-atlas-hub.git
-   cd code-atlas-hub
-   ```
+
+    ```sh
+    git clone git@github.com:mkutsil/code-atlas-hub.git
+    cd code-atlas-hub
+    ```
 
 2. Install the dependencies:
-   ```sh
-   npm install
-   ```
+
+    ```sh
+    npm install
+    ```
 
 3. Set up environment variables:
     - Create a `.env` file in the root directory and add necessary environment variables. Refer to the `.env.example` file for the required variables.
     - Copy the example file to create your own `.env` file:
-      ```sh
-      cp .env.example .env
-      ```
+        ```sh
+        cp .env.example .env
+        ```
 
 ## Environment Variables
 
@@ -47,53 +49,53 @@ The project uses environment variables for configuration. An example file, `.env
 The following scripts are available in this project:
 
 - **Start the development server**:
-  ```sh
-  npm start
-  ```
+    ```sh
+    npm start
+    ```
 - **Build the project for production**:
-  ```sh
-  npm run build:prod
-  ```
+    ```sh
+    npm run build:prod
+    ```
 - **Build the project for development**:
-  ```sh
-  npm run build:dev
-  ```
+    ```sh
+    npm run build:dev
+    ```
 - **Run TypeScript linting**:
-  ```sh
-  npm run lint:ts
-  ```
+    ```sh
+    npm run lint:ts
+    ```
 - **Fix TypeScript linting errors**:
-  ```sh
-  npm run lint:ts:fix
-  ```
+    ```sh
+    npm run lint:ts:fix
+    ```
 - **Run SCSS linting**:
-  ```sh
-  npm run lint:scss
-  ```
+    ```sh
+    npm run lint:scss
+    ```
 - **Fix SCSS linting errors**:
-  ```sh
-  npm run lint:scss:fix
-  ```
+    ```sh
+    npm run lint:scss:fix
+    ```
 - **Run unit tests**:
-  ```sh
-  npm run test:unit
-  ```
+    ```sh
+    npm run test:unit
+    ```
 - **Run UI tests**:
-  ```sh
-  npm run test:ui
-  ```
+    ```sh
+    npm run test:ui
+    ```
 - **Approve UI test snapshots**:
-  ```sh
-  npm run test:ui:ok
-  ```
+    ```sh
+    npm run test:ui:ok
+    ```
 - **Run Storybook**:
-  ```sh
-  npm run storybook
-  ```
+    ```sh
+    npm run storybook
+    ```
 - **Build Storybook**:
-  ```sh
-  npm run storybook:build
-  ```
+    ```sh
+    npm run storybook:build
+    ```
 
 ## Project Structure
 

@@ -16,47 +16,45 @@ export const AddCommentForm = () => {
 
     const userData = useSelector(getUserAuthData);
 
-    const [ isLoading, setIsLoading ] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSubmit = (data: { text: string }) => {
-        if(isLoading) return; 
+        if (isLoading) return;
 
-        setIsLoading(true); 
-        dispatch(addCommentForArticle(data.text))
-        		 .then((result) => {
-        				 if (addCommentForArticle.fulfilled.match(result)) {
-        						 reset();
-                    setIsLoading(false);  
-        				 }
-            });
+        setIsLoading(true);
+        dispatch(addCommentForArticle(data.text)).then(result => {
+            if (addCommentForArticle.fulfilled.match(result)) {
+                reset();
+                setIsLoading(false);
+            }
+        });
+    };
 
-			 };
-	
     const {
         handleSubmit,
         control,
         reset,
         formState: { isDirty },
-    } = useForm<{text: string;}>({
+    } = useForm<{ text: string }>({
         defaultValues: { text: '' },
         resolver: yupResolver(AddCommentFormSchema),
     });
-			
-    return ( 
+
+    return (
         <form noValidate onSubmit={handleSubmit(onSubmit)}>
             <div className={classes.addCommentFormContainer}>
-                <Avatar 
-                    size={AvatarSize.SMALL} 
-                    src={ userData?.avatar || '' } 
+                <Avatar
+                    size={AvatarSize.SMALL}
+                    src={userData?.avatar || ''}
                     alt={userData?.userName || ''}
                 />
-								
+
                 <Controller
                     name="text"
-                    control={control}  
+                    control={control}
                     render={({ field, fieldState }) => (
                         <Input
-                            {...field} 
+                            {...field}
                             placeholder="Enter your comment"
                             isRequired={true}
                             error={fieldState?.error?.message}
@@ -66,7 +64,7 @@ export const AddCommentForm = () => {
 
                 <Button
                     theme={ThemeButton.CONTAINED}
-                    type='submit'
+                    type="submit"
                     disabled={false}
                     className={classes.sendButton}
                     isDisabled={!isDirty}
@@ -76,5 +74,5 @@ export const AddCommentForm = () => {
                 </Button>
             </div>
         </form>
-		 );};
- 
+    );
+};

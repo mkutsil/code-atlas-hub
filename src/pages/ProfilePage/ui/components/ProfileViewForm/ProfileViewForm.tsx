@@ -8,75 +8,38 @@ interface ProfileViewFormProps {
     profileData?: Profile;
     onChangeEditMode: (value: boolean) => void;
 }
- 
-const ProfileViewForm = (props : ProfileViewFormProps) => {
+
+const ProfileViewForm = (props: ProfileViewFormProps) => {
     const { profileData, onChangeEditMode } = props;
-    
+
     return (
         <div className={classes.profileViewContainer}>
             <div className={classes.profileCardWrapper}>
-
                 <div className={classes.profileCardLeftContent}>
-                    <Avatar 
-                        src={profileData?.avatar || ''}
-                        alt="Avatar"
-                        size={AvatarSize.LARGE}
-                    />
+                    <Avatar src={profileData?.avatar || ''} alt="Avatar" size={AvatarSize.LARGE} />
 
                     <div>
                         <span>
                             {profileData?.firstName} {profileData?.lastName}
                         </span>
-                                        
                     </div>
                 </div>
 
-                <Button 
-                    theme={ThemeButton.CONTAINED} 
-                    onClick={() => onChangeEditMode(false)}
-                >
+                <Button theme={ThemeButton.CONTAINED} onClick={() => onChangeEditMode(false)}>
                     Edit
                 </Button>
             </div>
             <div className={classes.viewInputsContainer}>
-                <Input 
-                    value={profileData?.firstName} 
-                    placeholder="First Name" 
-                    isViewMode 
-                />
-                <Input 
-                    value={profileData?.lastName} 
-                    placeholder="Last Name" 
-                    isViewMode 
-                />
-                <Input 
-                    value={profileData?.age.toString()} 
-                    placeholder="Age" 
-                    isViewMode 
-                />
-                <Input 
-                    value={profileData?.currency} 
-                    placeholder="Currency" 
-                    isViewMode
-                />
-                <Input 
-                    value={profileData?.country} 
-                    placeholder="Country" 
-                    isViewMode
-                />
-                <Input 
-                    value={profileData?.city}
-                    placeholder="City" 
-                    isViewMode 
-                />
-                <Input 
-                    value={profileData?.userName} 
-                    placeholder="User Name" 
-                    isViewMode 
-                />
+                <Input value={profileData?.firstName} placeholder="First Name" isViewMode />
+                <Input value={profileData?.lastName} placeholder="Last Name" isViewMode />
+                <Input value={profileData?.age.toString()} placeholder="Age" isViewMode />
+                <Input value={profileData?.currency} placeholder="Currency" isViewMode />
+                <Input value={profileData?.country} placeholder="Country" isViewMode />
+                <Input value={profileData?.city} placeholder="City" isViewMode />
+                <Input value={profileData?.userName} placeholder="User Name" isViewMode />
             </div>
         </div>
     );
 };
- 
+
 export default ProfileViewForm;

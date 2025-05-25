@@ -1,27 +1,27 @@
 .imageContainer {
- 	width: 100%;
-  height: 500px;
-  overflow: hidden;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
 
-	.articleImage {
-	width: 100%;
-  height: 100%;
-  object-fit: cover;
-	border-radius: 8px;
-	}
+    .articleImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
 }
 
 .articleTitle {
-	margin: 30px;
+    margin: 30px;
 }
 
-.articleInfo{
-	display: flex;
-	align-items: center;
-	gap: 8px;	
+.articleInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-	svg{
-		width: 16px;
-		height: 16px;
-	}
+    svg {
+        width: 16px;
+        height: 16px;
+    }
 }

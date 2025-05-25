@@ -7,8 +7,8 @@ const meta = {
     title: 'shared/ThemeSwitcher',
     component: AppLink,
     args: {
-        to: '/'
-    }
+        to: '/',
+    },
 } satisfies Meta<typeof AppLink>;
 
 export default meta;
@@ -16,14 +16,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Dark: Story = {
     args: {
-        children: 'Link'
+        children: 'Link',
     },
 };
 
 export const Light: Story = {
     args: {
-        children: 'Link'
+        children: 'Link',
     },
-    decorators: ThemeDecorator(Theme.LIGHT)
+    decorators: ThemeDecorator(Theme.LIGHT),
 };
-

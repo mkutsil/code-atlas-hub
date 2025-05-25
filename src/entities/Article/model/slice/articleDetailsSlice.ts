@@ -17,9 +17,9 @@ export const articleDetailsSlice = createSlice({
         //     state.readonly = action.payload;
         // },
     },
-    extraReducers: (builder) => {
+    extraReducers: builder => {
         builder
-            .addCase(fetchArticleById.pending, (state) => {
+            .addCase(fetchArticleById.pending, state => {
                 state.error = undefined;
                 state.isLoading = true;
             })
@@ -31,7 +31,7 @@ export const articleDetailsSlice = createSlice({
                 state.isLoading = false;
                 state.error = action.payload as string;
             });
-    }
+    },
 });
 
 export const { actions: articleDetailsActions } = articleDetailsSlice;

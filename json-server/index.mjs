@@ -10,11 +10,11 @@ const __dirname = path.dirname(__filename);
 const server = jsonServer.create();
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 
-server.use(jsonServer.defaults()); 
-server.use(jsonServer.bodyParser); 
+server.use(jsonServer.defaults());
+server.use(jsonServer.bodyParser);
 
 server.use(async (req, res, next) => {
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    await new Promise(resolve => setTimeout(resolve, 800));
     next();
 });
 
@@ -22,11 +22,11 @@ server.use((req, res, next) => {
     if (req.method === 'POST' && req.path === '/login') {
         return next();
     }
-    
+
     if (!req.headers.authorization) {
         return res.status(403).json({ message: 'AUTH ERROR' });
     }
-    
+
     next();
 });
 
@@ -48,13 +48,13 @@ server.post('/login', (req, res) => {
             SECRET_KEY,
             { expiresIn: '1h' }
         );
-        
+
         return res.json({
-            token, 
+            token,
             id: userFromDb.id,
             userName: userFromDb.userName,
             role: userFromDb.role,
-            avatar: userFromDb.avatar
+            avatar: userFromDb.avatar,
         });
     }
 

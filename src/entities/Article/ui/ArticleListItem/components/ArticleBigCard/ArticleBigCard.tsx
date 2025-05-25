@@ -12,21 +12,11 @@ import Avatar, { AvatarSize } from 'shared/ui/Avatar/Avatar';
 
 // TODO add onError props to images, create general image component
 interface ArticleBigCardProps extends Omit<Article, 'subtitle' | 'blocks'> {
-	className?: string;
+    className?: string;
 }
- 
+
 const ArticleBigCard = (props: ArticleBigCardProps) => {
-    const {
-        id,
-        image,
-        views,
-        title,
-        description,
-        type,
-        createdAt,
-        user,
-        className
-    } = props;
+    const { id, image, views, title, description, type, createdAt, user, className } = props;
 
     const { isMobile } = useBreakpoint();
 
@@ -35,85 +25,62 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
     const onButtonClick = () => {
         navigate(`${RoutePath.article_details}${id}`);
     };
-	
+
     return (
-        <Card 
-            key={id} 
-            className={classNames(classes.container, {}, [ className, classes.card ])}
-        >
+        <Card key={id} className={classNames(classes.container, {}, [className, classes.card])}>
             <>
                 <div className={classes.header}>
                     <div className={classes.headerLeftContent}>
                         <div className={classes.headerAuthorInfo}>
-                            <Avatar 
-                                src={user.avatar} 
-                                alt="author avatar"
-                                size={AvatarSize.SMALL}
-                            />
-                            <Text 
-                                size={isMobile ? TextSize.S : TextSize.M} 
-                                text={user.userName}
-                            />
+                            <Avatar src={user.avatar} alt="author avatar" size={AvatarSize.SMALL} />
+                            <Text size={isMobile ? TextSize.S : TextSize.M} text={user.userName} />
                         </div>
 
                         <div>
-                            <Text 
+                            <Text
                                 titleMarginBottom={false}
-                                size={isMobile ? TextSize.S : TextSize.M} 
+                                size={isMobile ? TextSize.S : TextSize.M}
                                 title={title}
                                 titleMaxLines={TextMaxLines.TWO}
                             />
 
-                            <Text 
-                                size={isMobile ? TextSize.S : TextSize.M} 
-                                className={classes.typeText} 
+                            <Text
+                                size={isMobile ? TextSize.S : TextSize.M}
+                                className={classes.typeText}
                                 text={type.join(', ')}
                                 textMaxLines={TextMaxLines.TWO}
-
                             />
                         </div>
                     </div>
-                    
-                    <Text 
-                        size={isMobile ? TextSize.S : TextSize.M} 
-                        className={classes.createdAtText} 
+
+                    <Text
+                        size={isMobile ? TextSize.S : TextSize.M}
+                        className={classes.createdAtText}
                         text={createdAt}
                     />
-
                 </div>
 
-                <img 
-                    className={classes.image} 
-                    src={image}
-                    alt={title}
-                />
+                <img className={classes.image} src={image} alt={title} />
 
-                <Text 
-                    size={isMobile ? TextSize.S : TextSize.M} 
-                    text={description} 
+                <Text
+                    size={isMobile ? TextSize.S : TextSize.M}
+                    text={description}
                     textMaxLines={TextMaxLines.THREE}
                 />
 
                 <div className={classes.infoContainer}>
-                    <Button 
-                        theme={ThemeButton.CONTAINED}
-                        onClick={onButtonClick}
-                    >
+                    <Button theme={ThemeButton.CONTAINED} onClick={onButtonClick}>
                         Reed more
                     </Button>
 
                     <div className={classes.viewsContainer}>
-                        <Eye/>  
-                        <Text 
-                            size={isMobile ? TextSize.S : TextSize.M} 
-                            text={String(views)}
-                        />
+                        <Eye />
+                        <Text size={isMobile ? TextSize.S : TextSize.M} text={String(views)} />
                     </div>
                 </div>
-
             </>
         </Card>
     );
 };
- 
+
 export default ArticleBigCard;

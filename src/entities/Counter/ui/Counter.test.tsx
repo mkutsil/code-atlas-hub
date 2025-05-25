@@ -4,32 +4,26 @@ import { Counter } from './Counter';
 
 describe('Counter.test', () => {
     test('render counter value title', () => {
-        componentRender(
-            <Counter/>, 
-            {
-                initialState: { counter: { value: 10 } }
-            });
+        componentRender(<Counter />, {
+            initialState: { counter: { value: 10 } },
+        });
 
         expect(screen.getByTestId('value-title')).toHaveTextContent('10');
     });
 
     test('increment button click', () => {
-        componentRender(
-            <Counter/>, 
-            {
-                initialState: { counter: { value: 10 } }
-            });
+        componentRender(<Counter />, {
+            initialState: { counter: { value: 10 } },
+        });
 
         fireEvent.click(screen.getByTestId('increment-button'));
         expect(screen.getByTestId('value-title')).toHaveTextContent('11');
     });
 
     test('decrement button click', () => {
-        componentRender(
-            <Counter/>, 
-            {
-                initialState: { counter: { value: 10 } }
-            });
+        componentRender(<Counter />, {
+            initialState: { counter: { value: 10 } },
+        });
 
         fireEvent.click(screen.getByTestId('decrement-button'));
         expect(screen.getByTestId('value-title')).toHaveTextContent('9');

@@ -7,9 +7,11 @@ const HomePage = () => (
     <Page className={classes.homePageContainer}>
         <h1>CodeAtlasHub</h1>
 
-        <div><BugButton/></div>
-       
-        <GridTable/>
+        <div>
+            <BugButton />
+        </div>
+
+        <GridTable />
     </Page>
 );
 

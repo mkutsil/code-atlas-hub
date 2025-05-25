@@ -6,7 +6,7 @@ const $api = axios.create({
 });
 
 $api.interceptors.request.use(
-    (config) => {
+    config => {
         const authData = localStorage.getItem(AUTH_DATA_KEY);
 
         if (authData) {
@@ -15,7 +15,7 @@ $api.interceptors.request.use(
 
         return config;
     },
-    (error) => Promise.reject(error)
+    error => Promise.reject(error)
 );
 
 export { $api };

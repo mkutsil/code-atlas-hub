@@ -2,9 +2,9 @@ import { InputHTMLAttributes, ChangeEvent } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import classes from './Input.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
 
-interface InputProps extends HTMLInputProps{
+interface InputProps extends HTMLInputProps {
     placeholder: string;
     value?: string | number;
     onChange?: (value: string) => void;
@@ -14,9 +14,9 @@ interface InputProps extends HTMLInputProps{
     error?: string;
     isViewMode?: boolean;
 }
-  
-const Input  = (props: InputProps) => {
-    const { 
+
+const Input = (props: InputProps) => {
+    const {
         placeholder,
         value,
         onChange,
@@ -32,27 +32,26 @@ const Input  = (props: InputProps) => {
         onChange?.(e.target.value);
     };
 
-    return ( 
-        <div className={classNames(classes.textField, { [classes.viewMode]: isViewMode }, [ customClassNames || '' ])}>
-            <input 
-                className={classes.input} 
+    return (
+        <div
+            className={classNames(classes.textField, { [classes.viewMode]: isViewMode }, [
+                customClassNames || '',
+            ])}
+        >
+            <input
+                className={classes.input}
                 value={value || ''}
                 onChange={onChangeHandler}
-                type={type} 
-                required={isRequired} 
-                {...otherProps} 
+                type={type}
+                required={isRequired}
+                {...otherProps}
             />
 
-            <label 
-                className={classes.placeholder}
-            >
-                {placeholder}
-            </label>
+            <label className={classes.placeholder}>{placeholder}</label>
 
-            {error && <span className={classes.error}>{error}</span>} 
+            {error && <span className={classes.error}>{error}</span>}
         </div>
-       
-	 );
+    );
 };
- 
+
 export default Input;

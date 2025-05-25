@@ -1,77 +1,77 @@
 .sidebar {
-	width: var(--sidebar-width);
-	height: calc(100vh);
-	background: var(--layout-bg-color);
-	transition: width 0.3s;
+    width: var(--sidebar-width);
+    height: calc(100vh);
+    background: var(--layout-bg-color);
+    transition: width 0.3s;
 }
- 
-.collapsed { 
-	width: var(--sidebar-width-collapsed);
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
 }
- 
-.logoWrapper { 
-	display: flex;
-	align-items: center;
-	transition: transform 0.3s ease-in-out;
- 
-	svg { 
-		width: 80px;
-		height: 80px;
-		min-width: 80px;
-		min-height: 80px;
-		fill: var(--logo-color);
-	}
 
-	.logoText {
-		font: var(--font-m);
-		font-weight: 700;
-		transition: display 0.3s ease-in-out;
-	}
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
 
-	.logoTextCollapsed {
-		transition: display 0.3s ease-in-out;
-		display: none;
-	}
+    svg {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        min-height: 80px;
+        fill: var(--logo-color);
+    }
+
+    .logoText {
+        font: var(--font-m);
+        font-weight: 700;
+        transition: display 0.3s ease-in-out;
+    }
+
+    .logoTextCollapsed {
+        transition: display 0.3s ease-in-out;
+        display: none;
+    }
 }
 
 .menuButton {
-	color: var(--secondary-color);
+    color: var(--secondary-color);
 
-	svg {
-		transition: transform 0.3s ease-in-out;
-	}
+    svg {
+        transition: transform 0.3s ease-in-out;
+    }
 
-	&:hover{
-		color: var(--primary-color);
-		}
-	
-		transition: color 0.3s ease-in-out;
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    transition: color 0.3s ease-in-out;
 }
 
 .menuButtonCollapsed {
-	svg {
-		transform: rotate(90deg);
-	}
+    svg {
+        transform: rotate(90deg);
+    }
 }
 
-.logoCollapsed { 
-	svg {
-		width: 80px; 
-		height: 80px;
-		fill: #021b7e;
-		transition: width 0.3s ease-in-out;
-	}
+.logoCollapsed {
+    svg {
+        width: 80px;
+        height: 80px;
+        fill: #021b7e;
+        transition: width 0.3s ease-in-out;
+    }
 }
-  
+
 .logo {
-	width: 100px;
-	border-radius: 50%;
-}  
- 
-.linkWrapper { 
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	gap: 50px;
-	margin-top: 45px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.linkWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 45px;
 }

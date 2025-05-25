@@ -5,25 +5,24 @@ import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { PageLoader } from 'widgets/PageLoader';
 import { useAppDispatch } from '../shared/lib/hooks/useAppDispatch';
-import {  userActions } from 'entities/User';
+import { userActions } from 'entities/User';
 
 const App = () => {
-    
     const dispatch = useAppDispatch();
 
     useEffect(() => {
         dispatch(userActions.initAuthData());
-    }, [ dispatch ]);
-    
+    }, [dispatch]);
+
     return (
         <div className={classNames('app')}>
-            <Suspense fallback={<PageLoader/>}>
-                <Sidebar/>
+            <Suspense fallback={<PageLoader />}>
+                <Sidebar />
                 <div className="content-page">
-                    <Navbar/>
-                    <AppRouter/>
+                    <Navbar />
+                    <AppRouter />
                 </div>
-            </Suspense>	
+            </Suspense>
         </div>
     );
 };

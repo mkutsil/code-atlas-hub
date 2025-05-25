@@ -1,33 +1,33 @@
 .skeleton {
-  position: relative;
-  border-radius: 4px;
-  box-shadow: 0 0 10px var(--skeleton-shadow);
-  background-color: var(--skeleton-color);
-  overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--skeleton-shadow);
+    background-color: var(--skeleton-color);
+    overflow: hidden;
 
-  &::after {
-  width: 150%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -150%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    color-mix(in srgb, var(--skeleton-color), black 10%),
-    transparent
-  );
-    content: '';
-  animation: shimmer 1s infinite;
-  }
+    &::after {
+        width: 150%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -150%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            color-mix(in srgb, var(--skeleton-color), black 10%),
+            transparent
+        );
+        content: '';
+        animation: shimmer 1s infinite;
+    }
 }
 
 @keyframes shimmer {
-  0% {
-    left: -150%;
-  }
+    0% {
+        left: -150%;
+    }
 
-  100% {
-    left: 100%;
-  }
+    100% {
+        left: 100%;
+    }
 }

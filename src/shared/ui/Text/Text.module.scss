@@ -1,142 +1,136 @@
 .textContainer {
-	color: var(--secondary-color);
-	
+    color: var(--secondary-color);
 
-	.title {
-		display: -webkit-box;
-		font-weight: 700 !important;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
+    .title {
+        display: -webkit-box;
+        font-weight: 700 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
 
-		&.titleAlignCenter {
-			text-align: center;
-		}
+        &.titleAlignCenter {
+            text-align: center;
+        }
 
-		&.titleAlignLeft {
-			text-align: left;
-		}
+        &.titleAlignLeft {
+            text-align: left;
+        }
 
-		&.titleAlignRight {
-			text-align: right;
-		}
+        &.titleAlignRight {
+            text-align: right;
+        }
 
-		&.clamp1 {
-			-webkit-line-clamp: 1;
-			line-clamp: 1;
-		}
-	
-		&.clamp2 {
-			-webkit-line-clamp: 2;
-			line-clamp: 2;
-		}
-	
-		&.clamp3 {
-			-webkit-line-clamp: 3;
-			line-clamp: 3;
-		}
-	
-		&.clamp4 {
-			-webkit-line-clamp: 4;
-			line-clamp: 4;
-		}
-	
-		&.clamp5 {
-			-webkit-line-clamp: 5;
-			line-clamp: 5;
-		}
-	
-		&.clamp6 {
-			-webkit-line-clamp: 6;
-			line-clamp: 6;
-		}
-	
-	}
+        &.clamp1 {
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+        }
 
-	.titleMarginBottom {
-		margin-bottom: 20px;
-	}
+        &.clamp2 {
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+        }
 
-	
+        &.clamp3 {
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+        }
 
-	.text {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-		
+        &.clamp4 {
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+        }
 
-		&.clamp1 {
-			-webkit-line-clamp: 1;
-			line-clamp: 1;
-		}
+        &.clamp5 {
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+        }
 
-		&.clamp2 {
-			-webkit-line-clamp: 2;
-			line-clamp: 2;
-		}
+        &.clamp6 {
+            -webkit-line-clamp: 6;
+            line-clamp: 6;
+        }
+    }
 
-		&.clamp3 {
-			-webkit-line-clamp: 3;
-			line-clamp: 3;
-		}
+    .titleMarginBottom {
+        margin-bottom: 20px;
+    }
 
-		&.clamp4 {
-			-webkit-line-clamp: 4;
-			line-clamp: 4;
-		}
+    .text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
 
-		&.clamp5 {
-			-webkit-line-clamp: 5;
-			line-clamp: 5;
-		}
+        &.clamp1 {
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+        }
 
-		&.clamp6 {
-			-webkit-line-clamp: 6;
-			line-clamp: 6;
-		}	
-	}
+        &.clamp2 {
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+        }
 
-	&.textSizeXs {
-		font: var(--font-xs);
+        &.clamp3 {
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+        }
 
-		.title {
-			font: var(--font-s);
-		}
-	}
+        &.clamp4 {
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+        }
 
-	&.textSizeS {
-		font: var(--font-s);
+        &.clamp5 {
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+        }
 
-		.title {
-			font: var(--font-m);
-		}
-	}
+        &.clamp6 {
+            -webkit-line-clamp: 6;
+            line-clamp: 6;
+        }
+    }
 
-	&.textSizeM {
-		font: var(--font-m);
+    &.textSizeXs {
+        font: var(--font-xs);
 
-		.title {
-			font: var(--font-l);
-		}
-	}
+        .title {
+            font: var(--font-s);
+        }
+    }
 
-	&.textSizeL {
-		font: var(--font-l);
+    &.textSizeS {
+        font: var(--font-s);
 
-		.title {
-			font: var(--font-xl);
-		}
-	}
+        .title {
+            font: var(--font-m);
+        }
+    }
 
+    &.textSizeM {
+        font: var(--font-m);
 
-	&.textAlignCenter {
-		text-align: center;
-	}
+        .title {
+            font: var(--font-l);
+        }
+    }
 
-	&.textAlignLeft {
-		text-align: left;
-	}	
+    &.textSizeL {
+        font: var(--font-l);
 
-	&.textAlignRight {
-		text-align: right;
-	}
-}	
+        .title {
+            font: var(--font-xl);
+        }
+    }
+
+    &.textAlignCenter {
+        text-align: center;
+    }
+
+    &.textAlignLeft {
+        text-align: left;
+    }
+
+    &.textAlignRight {
+        text-align: right;
+    }
+}

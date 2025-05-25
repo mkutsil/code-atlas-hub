@@ -10,15 +10,15 @@ export interface PutProfileDataProps {
 export const putProfileData = createAsyncThunk<Profile, PutProfileDataProps, ThunkConfig<string>>(
     'profile/putProfileData',
     async ({ profileData, profileId }, { extra, rejectWithValue }) => {
-        try{
+        try {
             const response = await extra.api.put<Profile>(`/profileFull/${profileId}`, profileData);
-            
+
             if (!response.data) {
                 throw new Error();
             }
 
-            return response.data; 
-        } catch (e){
+            return response.data;
+        } catch (e) {
             console.error(e);
             return rejectWithValue('error');
         }
