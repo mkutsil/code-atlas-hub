@@ -19,11 +19,13 @@
         "storybook": "storybook dev -p 6006 --config-dir=config/storybook",
         "storybook:build": "storybook build --config-dir=config/storybook",
         "prepare": "husky install",
-        "format": "prettier --write ."
+        "format:prettier": "prettier --write .",
+        "format:prettier:check": "prettier --check ."
     },
     "lint-staged": {
         "*.{ts,tsx,js,jsx}": [
-            "npm run lint:ts:fix"
+            "npm run lint:ts:fix",
+            "prettier --write"
         ],
         "*.scss": [
             "npm run lint:scss:fix"

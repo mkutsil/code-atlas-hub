@@ -6,7 +6,6 @@ CodeAtlasHub is a modular web application built with React and Webpack. The proj
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Environment Variables](#environment-variables)
 - [Scripts](#scripts)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
@@ -33,24 +32,13 @@ Before you begin, ensure you have met the following requirements:
     npm install
     ```
 
-3. Set up environment variables:
-    - Create a `.env` file in the root directory and add necessary environment variables. Refer to the `.env.example` file for the required variables.
-    - Copy the example file to create your own `.env` file:
-        ```sh
-        cp .env.example .env
-        ```
-
-## Environment Variables
-
-The project uses environment variables for configuration. An example file, `.env.example`, is provided to show the required variables. You should create a `.env` file in the root directory and set the appropriate values.
-
 ## Scripts
 
 The following scripts are available in this project:
 
 - **Start the development server**:
     ```sh
-    npm start
+    npm run start:dev
     ```
 - **Build the project for production**:
     ```sh
@@ -96,13 +84,21 @@ The following scripts are available in this project:
     ```sh
     npm run storybook:build
     ```
+- **Format all supported files with Prettier**:
+    ```sh
+    npm run format:prettier
+    ```
+- **Check formatting without applying changes**:
+    ```sh
+    npm run format:prettier:check
+    ```
 
 ## Project Structure
 
 The project follows a modular structure:
 
 ```
-codeatlashub/
+code-atlas-hub/
 ├── .github/               # GitHub configuration files
 ├── .loki/                 # UI regression test snapshots
 ├── .vscode/               # VS Code settings
@@ -119,6 +115,8 @@ codeatlashub/
 │   ├── index.tsx          # Entry point
 ├── storybook-static/      # Storybook build output
 ├── .gitignore             # Git ignore file
+├── .prettierrc            # Prettier configuration file
+├── .prettierignore        # Files/folders to ignore by Prettier
 ├── eslint.config.mjs      # ESLint configuration
 ├── package-lock.json      # npm lock file
 ├── package.json           # Project dependencies and scripts
@@ -126,7 +124,7 @@ codeatlashub/
 ├── stylelint.config.mjs   # Stylelint configuration
 ├── tsconfig.json          # TypeScript configuration
 ├── webpack.config.ts      # Webpack configuration
-```
+
 
 ## Technologies Used
 
@@ -143,3 +141,5 @@ This project is built using the following technologies:
 - **Jest**: For unit testing.
 - **Loki**: For UI regression testing.
 - **ESLint & Stylelint**: For code quality and styling standards.
+- **Prettier**: For automated code formatting to ensure consistent style across the project.
+```
