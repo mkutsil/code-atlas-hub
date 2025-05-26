@@ -10,7 +10,7 @@
         background-color: transparent;
         outline: none;
         appearance: none;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid var(--primary-color);
         transition: border-color 0.3s;
         color: var(--primary-color);
 
@@ -31,6 +31,7 @@
             top 0.3s,
             transform 0.3s,
             color 0.3s;
+        color: var(--primary-color);
     }
 
     .input:focus + .placeholder,
