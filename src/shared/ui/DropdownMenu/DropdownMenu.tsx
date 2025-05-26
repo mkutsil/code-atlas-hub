@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import classes from './DropdownMenu.module.scss';
-import { useState, ReactElement, useRef, useEffect } from 'react';
+import { useState, ReactElement, useRef } from 'react';
+import { useClickOutside } from 'shared/lib/hooks/useClickOutside/useClickOutside';
 
 type dropdownMenuConfigType = {
     label: string;
@@ -22,18 +23,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
         setIsOpen(prev => !prev);
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-                setIsOpen(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
+    useClickOutside(menuRef, () => setIsOpen(false));
 
     return (
         <div
