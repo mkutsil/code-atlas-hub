@@ -5,20 +5,21 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useClickOutside } from 'shared/lib/hooks/useClickOutside/useClickOutside';
 import Text, { TextMaxLines } from 'shared/ui/Text/Text';
 
-interface Option {
+export interface SelectOption<T extends string> {
     label: string;
-    value: string;
+    value: T;
 }
 
-interface SelectProps {
-    options: Option[];
-    value?: string | null;
-    onChange: (value: string) => void;
+interface SelectProps<T extends string> {
+    options: SelectOption<T>[];
+    value?: T | null;
+    onChange: (value: T) => void;
     placeholder?: string;
+    className?: string;
 }
 
-const Select = (props: SelectProps) => {
-    const { options, value, onChange, placeholder } = props;
+const Select = <T extends string>(props: SelectProps<T>) => {
+    const { options, value, onChange, placeholder, className } = props;
 
     const ref = useRef<HTMLDivElement>(null);
 
@@ -41,7 +42,7 @@ const Select = (props: SelectProps) => {
     useClickOutside(ref, () => setIsOpen(false));
 
     return (
-        <div className={classes.wrapper} ref={ref}>
+        <div className={classNames(classes.wrapper, {}, [className])} ref={ref}>
             <Text
                 text={placeholder}
                 textMaxLines={TextMaxLines.ONE}
