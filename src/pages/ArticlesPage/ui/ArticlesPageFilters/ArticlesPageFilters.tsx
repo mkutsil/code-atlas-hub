@@ -14,6 +14,7 @@ import Card from 'shared/ui/Card/Card';
 import Input from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
+import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 
 const ArticlesPageFilters = () => {
     const dispatch = useAppDispatch();
@@ -42,22 +43,24 @@ const ArticlesPageFilters = () => {
         dispatch(fetchArticlesList({ replace: true }));
     };
 
+    const debounceFetchData = useDebounce(fetchData, 500);
+
     const onChangeSelectSortValue = (value: ArticleSortField) => {
         dispatch(articlesPageAction.setSort(value));
         dispatch(articlesPageAction.setPage(1));
-        fetchData();
+        debounceFetchData();
     };
 
     const onChangeSelectOrderValue = (value: SortOrder) => {
         dispatch(articlesPageAction.setOrder(value));
         dispatch(articlesPageAction.setPage(1));
-        fetchData();
+        debounceFetchData();
     };
 
     const onChangSearchValue = (value: string) => {
         dispatch(articlesPageAction.setSearch(value));
         dispatch(articlesPageAction.setPage(1));
-        fetchData();
+        debounceFetchData();
     };
 
     return (
