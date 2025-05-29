@@ -4,6 +4,8 @@ import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginI18next from 'eslint-plugin-i18next';
 import pluginPrettier from 'eslint-plugin-prettier';
+import pluginUnusedImports from 'eslint-plugin-unused-imports';
+
 import configPrettier from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
@@ -28,6 +30,7 @@ export default [
             'react-hooks': pluginReactHooks,
             i18next: pluginI18next,
             prettier: pluginPrettier,
+            'unused-imports': pluginUnusedImports,
         },
         settings: {
             react: {
@@ -36,6 +39,17 @@ export default [
         },
         rules: {
             ...pluginReact.configs.flat.recommended.rules,
+
+            'unused-imports/no-unused-imports': 'warn',
+            'unused-imports/no-unused-vars': [
+                'warn',
+                {
+                    vars: 'all',
+                    varsIgnorePattern: '^_',
+                    args: 'after-used',
+                    argsIgnorePattern: '^_',
+                },
+            ],
 
             // ✅ Prettier formatting errors as ESLint errors
             'prettier/prettier': 'error',
