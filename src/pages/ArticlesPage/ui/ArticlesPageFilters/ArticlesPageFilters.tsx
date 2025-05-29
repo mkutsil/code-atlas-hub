@@ -6,6 +6,7 @@ import {
     getArticlesPageOrder,
     getArticlesPageSearch,
     getArticlesPageSort,
+    getArticlesPageType,
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import classes from './ArticlesPageFilters.module.scss';
@@ -15,6 +16,8 @@ import Input from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
+import Tabs, { TabItem } from 'shared/ui/Tabs/Tabs';
+import { ArticleType } from 'entities/Article/model/types/article';
 
 const ArticlesPageFilters = () => {
     const dispatch = useAppDispatch();
@@ -23,6 +26,7 @@ const ArticlesPageFilters = () => {
     const sort = useSelector(getArticlesPageSort);
     const order = useSelector(getArticlesPageOrder);
     const search = useSelector(getArticlesPageSearch);
+    const type = useSelector(getArticlesPageType);
 
     const onViewClick = (newView: ArticleView) => {
         dispatch(articlesPageAction.setView(newView));
@@ -63,29 +67,74 @@ const ArticlesPageFilters = () => {
         debounceFetchData();
     };
 
+    const articlesTabs = [
+        {
+            value: ArticleType.ART,
+            content: 'Art',
+        },
+        {
+            value: ArticleType.IT,
+            content: 'IT',
+        },
+        {
+            value: ArticleType.ECONOMICS,
+            content: 'ECONOMICS',
+        },
+        {
+            value: ArticleType.SCIENCE,
+            content: 'SCIENCE',
+        },
+        {
+            value: ArticleType.SPORT,
+            content: 'SPORT',
+        },
+        {
+            value: ArticleType.HEALTH,
+            content: 'HEALTH',
+        },
+        {
+            value: ArticleType.TRAVEL,
+            content: 'TRAVEL',
+        },
+    ];
+
+    const onTabClick = (tabItem: TabItem) => {
+        dispatch(articlesPageAction.setType(tabItem.value as ArticleType));
+        dispatch(articlesPageAction.setPage(1));
+        debounceFetchData();
+    };
+
     return (
         <div className={classes.container}>
-            <Select
-                className={classes.selectField}
-                placeholder="Article sort by"
-                value={sort}
-                options={selectSortOptions}
-                onChange={onChangeSelectSortValue}
-            />
+            <div className={classes.selectContainer}>
+                <Select
+                    className={classes.selectField}
+                    placeholder="Article sort by"
+                    value={sort}
+                    options={selectSortOptions}
+                    onChange={onChangeSelectSortValue}
+                />
 
-            <Select
-                className={classes.selectField}
-                placeholder="Article order by"
-                value={order}
-                options={selectOrderOptions}
-                onChange={onChangeSelectOrderValue}
-            />
+                <Select
+                    className={classes.selectField}
+                    placeholder="Article order by"
+                    value={order}
+                    options={selectOrderOptions}
+                    onChange={onChangeSelectOrderValue}
+                />
 
+                <ArticleViewSelector onViewClick={onViewClick} view={view} />
+            </div>
             <Card>
-                <Input value={search} placeholder="Search" onChange={onChangSearchValue} />
+                <Input
+                    customClassNames={classes.searchInput}
+                    value={search}
+                    placeholder="Search"
+                    onChange={onChangSearchValue}
+                />
             </Card>
 
-            <ArticleViewSelector onViewClick={onViewClick} view={view} />
+            <Tabs tabs={articlesTabs} value={type} onTabClick={onTabClick} />
         </div>
     );
 };

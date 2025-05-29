@@ -5,6 +5,7 @@ import { Article, ArticleSortField, ArticleView } from 'entities/Article';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
 import { ARTICLE_VIEW_KEY } from 'shared/const/localstorage';
 import { SortOrder } from 'shared/types';
+import { ArticleType } from 'entities/Article';
 const articlesAdapter = createEntityAdapter<Article>();
 
 const initialArticlesPageState = articlesAdapter.getInitialState<ArticlesPageSchema>({
@@ -20,6 +21,7 @@ const initialArticlesPageState = articlesAdapter.getInitialState<ArticlesPageSch
     sort: ArticleSortField.CREATED,
     search: '',
     order: 'asc',
+    type: ArticleType.ECONOMICS,
 });
 
 export const getArticles = articlesAdapter.getSelectors<StateSchema>(
@@ -46,6 +48,9 @@ export const articlesPageSlice = createSlice({
         setSearch: (state, action: PayloadAction<string>) => {
             state.search = action.payload;
         },
+        setType: (state, action: PayloadAction<ArticleType>) => {
+            state.type = action.payload;
+        },
         initState: state => {
             const view = localStorage.getItem(ARTICLE_VIEW_KEY) as ArticleView;
             state.view = view;
@@ -65,7 +70,7 @@ export const articlesPageSlice = createSlice({
             })
             .addCase(fetchArticlesList.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.hasMore = action.payload.length > 0;
+                state.hasMore = action.payload.length >= state.limit;
 
                 if (action.meta.arg.replace) {
                     articlesAdapter.setAll(state, action.payload);

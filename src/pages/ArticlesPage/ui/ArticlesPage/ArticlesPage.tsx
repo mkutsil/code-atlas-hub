@@ -17,6 +17,7 @@ import Page from 'widgets/Page/Page';
 import { fetchNextArticlePage } from '../../model/services/fetchNextArticlePage/fetchNextArticlePage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import ArticlesPageFilters from '../ArticlesPageFilters/ArticlesPageFilters';
+import { useSearchParams } from 'react-router-dom';
 
 const reducers: ReducersList = {
     articlesPage: articlesPageReducer,
@@ -29,6 +30,7 @@ const ArticlesPage = () => {
     const error = useSelector(getArticlesPageError);
     const view = useSelector(getArticlesPageView);
 
+    const [searchParams] = useSearchParams();
     const articles = useSelector(getArticles.selectAll);
 
     const onLoadNextPart = () => {
@@ -36,8 +38,8 @@ const ArticlesPage = () => {
     };
 
     useEffect(() => {
-        dispatch(initArticlesPage());
-    }, [dispatch]);
+        dispatch(initArticlesPage(searchParams));
+    }, [dispatch, searchParams]);
 
     if (error) return <Text title="Error" size={TextSize.L} />;
 

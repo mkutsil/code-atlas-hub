@@ -4,7 +4,7 @@ import classes from './ArticleList.module.scss';
 import ArticleListItem from '../ArticleListItem/ArticleListItem';
 import ArticleBigCardSkeleton from '../ArticleListItem/components/ArticleBigCard/ArticleBigCardSkeleton';
 import ArticleSmallCardSkeleton from '../ArticleListItem/components/ArticleSmallCard/ArticleSmallCardSkeleton';
-
+import Text, { TextAlign, TextSize } from 'shared/ui/Text/Text';
 interface ArticleListProps {
     articles: Article[];
     isLoading?: boolean;
@@ -37,6 +37,11 @@ export const ArticleList = (props: ArticleListProps) => {
         [classes.list]: view === ArticleView.BIG,
     };
 
+    if (!isLoading && !articles.length) {
+        return (
+            <Text title={'Articles not found'} size={TextSize.L} titleAlign={TextAlign.CENTER} />
+        );
+    }
     return (
         <div className={classNames(classes.articleListContainer, mods, [className])}>
             {articles.length > 0 && articles.map(renderArticle)}
