@@ -1,0 +1,21 @@
+.container {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto 32px;
+
+    .selectContainer {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .selectField {
+            width: 200px;
+        }
+    }
+
+    .searchInput {
+        width: 520px;
+    }
+}
