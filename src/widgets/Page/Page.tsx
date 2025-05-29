@@ -6,7 +6,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { scrollSaveActions } from 'widgets/ScrollSave';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getSaveScroll, getSaveScrollByPath } from 'widgets/ScrollSave/module/selectors/scrollSave';
+import { getSaveScrollByPath } from 'widgets/ScrollSave/module/selectors/scrollSave';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 
