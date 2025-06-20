@@ -13,14 +13,15 @@ interface ArticleSmallCardProps {
     title: string;
     type: string[];
     createdAt: string;
+    isOpenInNewTab?: boolean;
     className?: string;
 }
 
 const ArticleSmallCard = (props: ArticleSmallCardProps) => {
-    const { id, image, views, title, type, createdAt, className } = props;
+    const { id, image, views, title, type, createdAt, isOpenInNewTab = false, className } = props;
 
     return (
-        <AppLink to={`${RoutePath.article_details}${id}`}>
+        <AppLink to={`${RoutePath.article_details}${id}`} isOpenInNewTab={isOpenInNewTab}>
             <Card className={classNames(classes.container, {}, [className])}>
                 <>
                     <Text className={classes.createdAtText} text={createdAt} />

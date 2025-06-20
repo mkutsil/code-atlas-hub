@@ -5,10 +5,11 @@ import ArticleSmallCard from './components/ArticleSmallCard/ArticleSmallCard';
 interface ArticleListItemProps {
     article: Article;
     view: ArticleView;
+    isOpenArticleInNewTab?: boolean;
 }
 
 const ArticleListItem = (props: ArticleListItemProps) => {
-    const { article, view } = props;
+    const { article, view, isOpenArticleInNewTab = false } = props;
 
     const { id, image, views, title, description, type, createdAt, user } = article;
 
@@ -24,6 +25,7 @@ const ArticleListItem = (props: ArticleListItemProps) => {
                     title={title}
                     type={type}
                     createdAt={createdAt}
+                    isOpenInNewTab={isOpenArticleInNewTab}
                 />
             ) : (
                 <ArticleBigCard
@@ -35,6 +37,7 @@ const ArticleListItem = (props: ArticleListItemProps) => {
                     type={type}
                     createdAt={createdAt}
                     user={user}
+                    isOpenInNewTab={isOpenArticleInNewTab}
                 />
             )}
         </>

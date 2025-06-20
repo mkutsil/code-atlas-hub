@@ -9,14 +9,26 @@ interface ArticleListProps {
     articles: Article[];
     isLoading?: boolean;
     view?: ArticleView;
+    isOpenArticleInNewTab?: boolean;
     className?: string;
 }
 
 export const ArticleList = (props: ArticleListProps) => {
-    const { articles, isLoading, view = ArticleView.SMALL, className } = props;
+    const {
+        articles,
+        isLoading,
+        view = ArticleView.SMALL,
+        isOpenArticleInNewTab = false,
+        className,
+    } = props;
 
     const renderArticle = (article: Article) => (
-        <ArticleListItem key={article.id} article={article} view={view} />
+        <ArticleListItem
+            key={article.id}
+            article={article}
+            view={view}
+            isOpenArticleInNewTab={isOpenArticleInNewTab}
+        />
     );
 
     const isSmallArticleCard = view === ArticleView.SMALL;

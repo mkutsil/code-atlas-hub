@@ -1,5 +1,5 @@
 import classes from './ArticleDetailsPage.module.scss';
-import { ArticleDetails } from 'entities/Article';
+import { ArticleDetails, ArticleList } from 'entities/Article';
 import { CommentList } from 'entities/Comment';
 import { useNavigate, useParams } from 'react-router-dom';
 import DynamicModuleLoader, {
@@ -20,9 +20,16 @@ import Page from 'widgets/Page/Page';
 import Button from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { MoveLeft } from 'lucide-react';
+import {
+    articleDetailsRecommendationsReducer,
+    getArticleRecommendations,
+} from '../model/slices/articleDetailsRecommendationsSlice';
+import { getArticleRecommendationsIsLoading } from '../model/selectors/recommendations';
+import { fetchArticlesRecommendations } from '../model/services/fetchArticlesRecommendations/fetchArticlesRecommendations';
 
 const reducers: ReducersList = {
     articleDetailsComments: articleDetailsCommentsReducer,
+    articleDetailsRecommendations: articleDetailsRecommendationsReducer,
 };
 
 const ArticleDetailsPage = () => {
@@ -33,6 +40,8 @@ const ArticleDetailsPage = () => {
 
     const isCommentsLoading = useSelector(getArticleCommentsIsLoading);
 
+    const isRecommendsLoading = useSelector(getArticleRecommendationsIsLoading);
+    const recommendations = useSelector(getArticleRecommendations.selectAll);
     if (!id) {
         <div className={classes.articleDetailsPage}>
             <h1>Стаття не знайдена</h1>
@@ -46,6 +55,7 @@ const ArticleDetailsPage = () => {
     useEffect(() => {
         if (id) {
             dispatch(fetchCommentsByArticleId(id));
+            dispatch(fetchArticlesRecommendations());
         }
     }, [dispatch, id]);
 
@@ -59,6 +69,13 @@ const ArticleDetailsPage = () => {
                 <Text title="Comments:" />
                 <AddCommentForm />
                 <CommentList comments={comments} isLoading={isCommentsLoading} />
+                <Text title="Recommendations:" />
+                <ArticleList
+                    articles={recommendations}
+                    isLoading={isRecommendsLoading}
+                    isOpenArticleInNewTab
+                    className={classes.recommendationsList}
+                />
             </Page>
         </DynamicModuleLoader>
     );

@@ -4,4 +4,10 @@
     .button {
         color: var(--primary-color);
     }
+
+    .recommendationsList {
+        flex-wrap: nowrap;
+        justify-content: start;
+        overflow-x: auto;
+    }
 }

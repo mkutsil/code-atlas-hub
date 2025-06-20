@@ -11,15 +11,26 @@ export enum AppLinkTheme {
 interface AppLinkProps extends LinkProps {
     className?: string;
     theme?: AppLinkTheme;
+    isOpenInNewTab?: boolean;
 }
 
 const AppLink: FC<AppLinkProps> = props => {
-    const { to, className, children, theme = AppLinkTheme.PRIMARY, ...otherProps } = props;
+    const {
+        to,
+        className,
+        children,
+        theme = AppLinkTheme.PRIMARY,
+        isOpenInNewTab = false,
+        ...otherProps
+    } = props;
+
+    const linkTarget = isOpenInNewTab ? '_blank' : '_self';
 
     return (
         <Link
             to={to}
             className={classNames(`${classes.appLink}`, {}, [className, classes[theme]])}
+            target={linkTarget}
             {...otherProps}
         >
             {children}
