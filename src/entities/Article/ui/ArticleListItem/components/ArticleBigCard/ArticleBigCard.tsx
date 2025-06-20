@@ -4,27 +4,33 @@ import classes from './ArticleBigCard.module.scss';
 import Text, { TextMaxLines, TextSize } from 'shared/ui/Text/Text';
 import { Eye } from 'lucide-react';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
-import { useNavigate } from 'react-router-dom';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { useBreakpoint } from 'shared/lib/hooks/useBreakpoint/useBreakpoint';
 import { Article } from 'entities/Article/model/types/article';
 import Avatar, { AvatarSize } from 'shared/ui/Avatar/Avatar';
+import AppLink from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 // TODO add onError props to images, create general image component
 interface ArticleBigCardProps extends Omit<Article, 'subtitle' | 'blocks'> {
     className?: string;
+    isOpenInNewTab?: boolean;
 }
 
 const ArticleBigCard = (props: ArticleBigCardProps) => {
-    const { id, image, views, title, description, type, createdAt, user, className } = props;
+    const {
+        id,
+        image,
+        views,
+        title,
+        description,
+        type,
+        createdAt,
+        user,
+        isOpenInNewTab = false,
+        className,
+    } = props;
 
     const { isMobile } = useBreakpoint();
-
-    const navigate = useNavigate();
-
-    const onButtonClick = () => {
-        navigate(`${RoutePath.article_details}${id}`);
-    };
 
     return (
         <Card key={id} className={classNames(classes.container, {}, [className, classes.card])}>
@@ -69,9 +75,12 @@ const ArticleBigCard = (props: ArticleBigCardProps) => {
                 />
 
                 <div className={classes.infoContainer}>
-                    <Button theme={ThemeButton.CONTAINED} onClick={onButtonClick}>
-                        Reed more
-                    </Button>
+                    <AppLink
+                        to={`${RoutePath.article_details}${id}`}
+                        isOpenInNewTab={isOpenInNewTab}
+                    >
+                        <Button theme={ThemeButton.CONTAINED}>Reed more</Button>
+                    </AppLink>
 
                     <div className={classes.viewsContainer}>
                         <Eye />
