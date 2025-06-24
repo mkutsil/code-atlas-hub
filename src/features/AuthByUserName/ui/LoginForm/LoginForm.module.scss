@@ -3,14 +3,24 @@
     height: 379px;
     display: flex;
     justify-content: space-between;
+    padding: 20px;
     flex-direction: column;
+
+    @media (width <= 800px) {
+        max-width: 400px;
+    }
+
+    @media (width <= 600px) {
+        max-width: 320px;
+    }
 }
 
 .formContentContainer {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     display: flex;
-    flex-direction: column;
     margin: auto;
+    flex-direction: column;
     gap: 28px;
     color: #67666e;
 }

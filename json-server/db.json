@@ -23,6 +23,18 @@
             "userId": "1",
             "text": "dawdawdwa",
             "id": "j7KM0YI"
+        },
+        {
+            "articleId": "2",
+            "userId": "1750705000543",
+            "text": "dwadwadwadwa",
+            "id": "nSxmu7q"
+        },
+        {
+            "articleId": "2",
+            "userId": "1750694232231",
+            "text": "dawdwadwa",
+            "id": "eO9ykUh"
         }
     ],
     "users": [
@@ -46,6 +58,36 @@
             "password": "1111",
             "role": "USER",
             "avatar": "https://lh6.googleusercontent.com/proxy/ZLGihPRfkkerdJBqfRKKFRWQcXDCfMMuuK_6_IDH6Mfhu0VI3Du2L9eOTiz0yKsIftOesQQnj0whQCZFudjFH-cXgBKnebrpknuWtjKkDcRC5Ik"
+        },
+        {
+            "id": "1750694232231",
+            "email": "mkutsil.dev@gmail.com",
+            "userName": "Mykola Kutsil",
+            "firstName": "Mykola",
+            "lastName": "Kutsil",
+            "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIlq7fZz1A87V6nOR2dKP_5vReNdyNEteEib5eOM5Yl_q9gRA=s96-c",
+            "googleId": "112784793679474824501",
+            "role": "user"
+        },
+        {
+            "id": "1750705000543",
+            "email": "mukola.kutsil22@gmail.com",
+            "userName": "Микола Куціль",
+            "firstName": "Микола",
+            "lastName": "Куціль",
+            "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJeRIqGdWSh3f9c7PEch1jnqNy62GLong0xA-GpYqTN1egQxVcU=s96-c",
+            "googleId": "114781212777108170314",
+            "role": "user"
+        },
+        {
+            "id": "1750707728275",
+            "email": "mykola.kutsil@pnu.edu.ua",
+            "userName": "Микола Куціль",
+            "firstName": "Микола",
+            "lastName": "Куціль",
+            "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK79KifMrHlSZaS8b20g1z0RCZDhFx3TELl5XChEMoDlN3_wbZD=s96-c",
+            "googleId": "109010098663574765024",
+            "role": "user"
         }
     ],
     "profileFull": [
@@ -81,6 +123,26 @@
             "age": 20,
             "lastName": "Paren",
             "firstName": "Tom"
+        },
+        {
+            "id": "1750705000543",
+            "email": "mukola.kutsil22@gmail.com",
+            "userName": "Микола Куціль",
+            "firstName": "Микола",
+            "lastName": "Куціль",
+            "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJeRIqGdWSh3f9c7PEch1jnqNy62GLong0xA-GpYqTN1egQxVcU=s96-c",
+            "googleId": "114781212777108170314",
+            "role": "user"
+        },
+        {
+            "id": "1750707728275",
+            "email": "mykola.kutsil@pnu.edu.ua",
+            "userName": "Микола Куціль",
+            "firstName": "Микола",
+            "lastName": "Куціль",
+            "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK79KifMrHlSZaS8b20g1z0RCZDhFx3TELl5XChEMoDlN3_wbZD=s96-c",
+            "googleId": "109010098663574765024",
+            "role": "user"
         }
     ],
     "articles": [

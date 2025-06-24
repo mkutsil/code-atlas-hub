@@ -1,0 +1,33 @@
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { User, userActions } from 'entities/User';
+import { AUTH_DATA_KEY } from 'shared/const/localstorage';
+import { ThunkConfig } from 'app/providers/StoreProvider';
+
+interface loginByGoogleProps {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    token: any;
+}
+
+export const loginByGoogle = createAsyncThunk<User, loginByGoogleProps, ThunkConfig<string>>(
+    'login/loginByUserName',
+    async (authData, { extra, dispatch, rejectWithValue }) => {
+        try {
+            const response = await extra.api.post<User>('/google-login', authData);
+
+            if (!response.data) {
+                throw new Error();
+            }
+
+            localStorage.setItem(AUTH_DATA_KEY, JSON.stringify(response.data));
+
+            dispatch(userActions.setAuthData(response.data));
+
+            // extra.navigate?.('/profile');
+
+            return response.data;
+        } catch (e) {
+            console.error(e);
+            return rejectWithValue('error');
+        }
+    }
+);

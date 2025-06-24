@@ -30,13 +30,13 @@ const ProfileViewForm = (props: ProfileViewFormProps) => {
                 </Button>
             </div>
             <div className={classes.viewInputsContainer}>
-                <Input value={profileData?.firstName} placeholder="First Name" isViewMode />
-                <Input value={profileData?.lastName} placeholder="Last Name" isViewMode />
-                <Input value={profileData?.age.toString()} placeholder="Age" isViewMode />
-                <Input value={profileData?.currency} placeholder="Currency" isViewMode />
-                <Input value={profileData?.country} placeholder="Country" isViewMode />
-                <Input value={profileData?.city} placeholder="City" isViewMode />
-                <Input value={profileData?.userName} placeholder="User Name" isViewMode />
+                <Input value={profileData?.firstName || '-'} placeholder="First Name" isViewMode />
+                <Input value={profileData?.lastName || '-'} placeholder="Last Name" isViewMode />
+                <Input value={profileData?.age?.toString() || '-'} placeholder="Age" isViewMode />
+                <Input value={profileData?.currency || '-'} placeholder="Currency" isViewMode />
+                <Input value={profileData?.country || '-'} placeholder="Country" isViewMode />
+                <Input value={profileData?.city || '-'} placeholder="City" isViewMode />
+                <Input value={profileData?.userName || '-'} placeholder="User Name" isViewMode />
             </div>
         </div>
     );
