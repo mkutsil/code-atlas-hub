@@ -1,754 +1,921 @@
 {
-    "comments": [
+  "comments": [
+    {
+      "id": "1",
+      "text": "Quos et voluptatum praesentium molestiae et dolor corporis labore excepturi. Sapiente molestias culpa est totam voluptas laudantium adipisci. Nihil commodi voluptates. Rerum et possimus et natus inventore magni necessitatibus.",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "text": "Facilis autem consequatur non minus dolorem repudiandae. A non qui velit repellendus non et.",
+      "articleId": "1",
+      "userId": "2"
+    },
+    {
+      "id": "3",
+      "text": "Hic quia ullam dolorem nihil optio quia odio. Aut vitae perferendis quia at quia voluptatibus quo. Delectus unde non nostrum accusamus ut blanditiis. Maiores consequatur ut fugit incidunt ipsam eaque voluptatem est. Qui sed sequi corporis.",
+      "articleId": "1",
+      "userId": "3"
+    },
+    {
+      "articleId": "0",
+      "userId": "1",
+      "text": "dawdawdwa",
+      "id": "j7KM0YI"
+    },
+    {
+      "articleId": "2",
+      "userId": "1750705000543",
+      "text": "dwadwadwadwa",
+      "id": "nSxmu7q"
+    },
+    {
+      "articleId": "2",
+      "userId": "1750694232231",
+      "text": "dawdwadwa",
+      "id": "eO9ykUh"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "userName": "mkutsil.dev@gmail.com",
+      "password": "123",
+      "role": "ADMIN",
+      "avatar": "https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
+    },
+    {
+      "id": "2",
+      "userName": "mukola.kutsil22@gmail.com",
+      "password": "1111",
+      "role": "USER",
+      "avatar": "https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_hybrid&w=740"
+    },
+    {
+      "id": "3",
+      "userName": "dev@gmail.com",
+      "password": "1111",
+      "role": "USER",
+      "avatar": "https://lh6.googleusercontent.com/proxy/ZLGihPRfkkerdJBqfRKKFRWQcXDCfMMuuK_6_IDH6Mfhu0VI3Du2L9eOTiz0yKsIftOesQQnj0whQCZFudjFH-cXgBKnebrpknuWtjKkDcRC5Ik"
+    },
+    {
+      "id": "1750694232231",
+      "email": "mkutsil.dev@gmail.com",
+      "userName": "Mykola Kutsil",
+      "firstName": "Mykola",
+      "lastName": "Kutsil",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIlq7fZz1A87V6nOR2dKP_5vReNdyNEteEib5eOM5Yl_q9gRA=s96-c",
+      "googleId": "112784793679474824501",
+      "role": "user"
+    },
+    {
+      "id": "1750705000543",
+      "email": "mukola.kutsil22@gmail.com",
+      "userName": "Микола Куціль",
+      "firstName": "Микола",
+      "lastName": "Куціль",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJeRIqGdWSh3f9c7PEch1jnqNy62GLong0xA-GpYqTN1egQxVcU=s96-c",
+      "googleId": "114781212777108170314",
+      "role": "user"
+    },
+    {
+      "id": "1750707728275",
+      "email": "mykola.kutsil@pnu.edu.ua",
+      "userName": "Микола Куціль",
+      "firstName": "Микола",
+      "lastName": "Куціль",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK79KifMrHlSZaS8b20g1z0RCZDhFx3TELl5XChEMoDlN3_wbZD=s96-c",
+      "googleId": "109010098663574765024",
+      "role": "user"
+    }
+  ],
+  "profileFull": [
+    {
+      "id": "1",
+      "avatar": "https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png",
+      "userName": "admin",
+      "city": "Kyiv",
+      "country": "Ukraine",
+      "currency": "UAH",
+      "age": 25,
+      "lastName": "Kutsil",
+      "firstName": "Mykola"
+    },
+    {
+      "id": "2",
+      "avatar": "https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_hybrid&w=740",
+      "userName": "user",
+      "city": "Kyiv",
+      "country": "Ukraine",
+      "currency": "UAH",
+      "age": 25,
+      "lastName": "User",
+      "firstName": "New"
+    },
+    {
+      "id": "3",
+      "avatar": "https://lh6.googleusercontent.com/proxy/ZLGihPRfkkerdJBqfRKKFRWQcXDCfMMuuK_6_IDH6Mfhu0VI3Du2L9eOTiz0yKsIftOesQQnj0whQCZFudjFH-cXgBKnebrpknuWtjKkDcRC5Ik",
+      "userName": "Tom",
+      "city": "Dolyna",
+      "country": "Ukraine",
+      "currency": "UAH",
+      "age": 20,
+      "lastName": "Paren",
+      "firstName": "Tom"
+    },
+    {
+      "id": "1750705000543",
+      "email": "mukola.kutsil22@gmail.com",
+      "userName": "Микола Куціль",
+      "firstName": "Микола",
+      "lastName": "Куціль",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJeRIqGdWSh3f9c7PEch1jnqNy62GLong0xA-GpYqTN1egQxVcU=s96-c",
+      "googleId": "114781212777108170314",
+      "role": "user"
+    },
+    {
+      "id": "1750707728275",
+      "email": "mykola.kutsil@pnu.edu.ua",
+      "userName": "Микола Куціль",
+      "firstName": "Микола",
+      "lastName": "Куціль",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK79KifMrHlSZaS8b20g1z0RCZDhFx3TELl5XChEMoDlN3_wbZD=s96-c",
+      "googleId": "109010098663574765024",
+      "role": "user"
+    }
+  ],
+  "articles": [
+    {
+      "id": "0",
+      "title": "Autem aliquid cum veritatis.",
+      "subtitle": "Content of article 1",
+      "description": "Elit occaecat velit velit anim labore eu amet enim ea. Ad incididunt eu sint anim et ex enim consequat occaecat veniam. Aute do fugiat fugiat eu deserunt. Aute voluptate consequat anim ullamco consectetur. Aute magna dolore proident cupidatat elit ea esse consectetur.",
+      "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 100,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT",
+        "Science"
+      ],
+      "userId": "1",
+      "blocks": [
         {
-            "id": "1",
-            "text": "Quos et voluptatum praesentium molestiae et dolor corporis labore excepturi. Sapiente molestias culpa est totam voluptas laudantium adipisci. Nihil commodi voluptates. Rerum et possimus et natus inventore magni necessitatibus.",
-            "articleId": "1",
-            "userId": "1"
+          "id": "1",
+          "type": "TEXT",
+          "title": "Quas voluptates eveniet eligendi magni eaque.",
+          "paragraphs": [
+            "Elit occaecat velit velit anim labore eu amet enim ea. Ad incididunt eu sint anim et ex enim consequat occaecat veniam. Aute do fugiat fugiat eu deserunt. Aute voluptate consequat anim ullamco consectetur. Aute magna dolore proident cupidatat elit ea esse consectetur.",
+            "Proident reprehenderit qui dolor adipisicing anim sint aute nisi culpa aliqua cupidatat. Velit ipsum eiusmod est cupidatat consectetur amet. Do fugiat et ea veniam commodo sunt nostrud duis laborum irure commodo incididunt."
+          ]
         },
         {
-            "id": "2",
-            "text": "Facilis autem consequatur non minus dolorem repudiandae. A non qui velit repellendus non et.",
-            "articleId": "1",
-            "userId": "2"
+          "id": "2",
+          "type": "CODE",
+          "code": "console.log('Hello, world!')"
         },
         {
-            "id": "3",
-            "text": "Hic quia ullam dolorem nihil optio quia odio. Aut vitae perferendis quia at quia voluptatibus quo. Delectus unde non nostrum accusamus ut blanditiis. Maiores consequatur ut fugit incidunt ipsam eaque voluptatem est. Qui sed sequi corporis.",
-            "articleId": "1",
-            "userId": "3"
+          "id": "3",
+          "type": "TEXT",
+          "title": "Pariatur repellendus delectus id non ex molestias velit.",
+          "paragraphs": [
+            "Fugiat ut laboris sint veniam. Tempor amet occaecat quis ea nostrud pariatur consectetur esse proident. Ad aute eiusmod occaecat nulla. Velit officia adipisicing velit proident occaecat excepteur mollit. Labore deserunt commodo ad ad proident labore tempor ex dolor commodo Lorem aliquip tempor. Esse sit do velit in magna commodo nisi sit.",
+            "Velit velit eu sit aute eiusmod mollit non. Irure eu officia esse exercitation ad ex tempor. Labore culpa occaecat excepteur duis occaecat. Dolor velit aliqua duis aliqua cillum excepteur in nisi cillum consectetur nulla. Laboris id officia cupidatat elit."
+          ]
         },
         {
-            "articleId": "0",
-            "userId": "1",
-            "text": "dawdawdwa",
-            "id": "j7KM0YI"
+          "id": "4",
+          "type": "IMAGE",
+          "src": "https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg",
+          "alt": "Image description",
+          "title": "Cumque et quo reiciendis laboriosam rerum at aspernatur qui repellendus."
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Quas voluptates eveniet eligendi magni eaque.",
+          "paragraphs": [
+            "Elit occaecat velit velit anim labore eu amet enim ea. Ad incididunt eu sint anim et ex enim consequat occaecat veniam. Aute do fugiat fugiat eu deserunt. Aute voluptate consequat anim ullamco consectetur. Aute magna dolore proident cupidatat elit ea esse consectetur.",
+            "Proident reprehenderit qui dolor adipisicing anim sint aute nisi culpa aliqua cupidatat. Velit ipsum eiusmod est cupidatat consectetur amet. Do fugiat et ea veniam commodo sunt nostrud duis laborum irure commodo incididunt."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "if(isLoading) {\n        content = (\n            <div className={classes.skeletonContainer}>\n                <Skeleton \n                    width=\\\"200px\\\"\n                    height=\\\"200px\\\"\n                    border=\\\"50%\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"100px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"50px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"50px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"600px\\\"\n                />\n            </div>\n        );\n    } else if (error) {\n        content = <h1>Error</h1>;\n    }"
+        },
+        {
+          "id": "7",
+          "type": "TEXT",
+          "title": "Pariatur repellendus delectus id non ex molestias velit.",
+          "paragraphs": [
+            "Fugiat ut laboris sint veniam. Tempor amet occaecat quis ea nostrud pariatur consectetur esse proident. Ad aute eiusmod occaecat nulla. Velit officia adipisicing velit proident occaecat excepteur mollit. Labore deserunt commodo ad ad proident labore tempor ex dolor commodo Lorem aliquip tempor. Esse sit do velit in magna commodo nisi sit.",
+            "Velit velit eu sit aute eiusmod mollit non. Irure eu officia esse exercitation ad ex tempor. Labore culpa occaecat excepteur duis occaecat. Dolor velit aliqua duis aliqua cillum excepteur in nisi cillum consectetur nulla. Laboris id officia cupidatat elit."
+          ]
         }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "userName": "mkutsil.dev@gmail.com",
-            "password": "123",
-            "role": "ADMIN",
-            "avatar": "https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
-        },
-        {
-            "id": "2",
-            "userName": "mukola.kutsil22@gmail.com",
-            "password": "1111",
-            "role": "USER",
-            "avatar": "https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_hybrid&w=740"
-        },
-        {
-            "id": "3",
-            "userName": "dev@gmail.com",
-            "password": "1111",
-            "role": "USER",
-            "avatar": "https://lh6.googleusercontent.com/proxy/ZLGihPRfkkerdJBqfRKKFRWQcXDCfMMuuK_6_IDH6Mfhu0VI3Du2L9eOTiz0yKsIftOesQQnj0whQCZFudjFH-cXgBKnebrpknuWtjKkDcRC5Ik"
-        }
-    ],
-    "profileFull": [
-        {
-            "id": "1",
-            "avatar": "https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png",
-            "userName": "admin",
-            "city": "Kyiv",
-            "country": "Ukraine",
-            "currency": "UAH",
-            "age": 25,
-            "lastName": "Kutsil",
-            "firstName": "Mykola"
-        },
-        {
-            "id": "2",
-            "avatar": "https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_hybrid&w=740",
-            "userName": "user",
-            "city": "Kyiv",
-            "country": "Ukraine",
-            "currency": "UAH",
-            "age": 25,
-            "lastName": "User",
-            "firstName": "New"
-        },
-        {
-            "id": "3",
-            "avatar": "https://lh6.googleusercontent.com/proxy/ZLGihPRfkkerdJBqfRKKFRWQcXDCfMMuuK_6_IDH6Mfhu0VI3Du2L9eOTiz0yKsIftOesQQnj0whQCZFudjFH-cXgBKnebrpknuWtjKkDcRC5Ik",
-            "userName": "Tom",
-            "city": "Dolyna",
-            "country": "Ukraine",
-            "currency": "UAH",
-            "age": 20,
-            "lastName": "Paren",
-            "firstName": "Tom"
-        }
-    ],
-    "articles": [
-        {
-            "id": "0",
-            "title": "Autem aliquid cum veritatis.",
-            "subtitle": "Content of article 1",
-            "description": "Elit occaecat velit velit anim labore eu amet enim ea. Ad incididunt eu sint anim et ex enim consequat occaecat veniam. Aute do fugiat fugiat eu deserunt. Aute voluptate consequat anim ullamco consectetur. Aute magna dolore proident cupidatat elit ea esse consectetur.",
-            "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 100,
-            "createdAt": "26.02.2025",
-            "type": ["IT", "Science"],
-            "userId": "1",
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "Quas voluptates eveniet eligendi magni eaque.",
-                    "paragraphs": [
-                        "Elit occaecat velit velit anim labore eu amet enim ea. Ad incididunt eu sint anim et ex enim consequat occaecat veniam. Aute do fugiat fugiat eu deserunt. Aute voluptate consequat anim ullamco consectetur. Aute magna dolore proident cupidatat elit ea esse consectetur.",
-                        "Proident reprehenderit qui dolor adipisicing anim sint aute nisi culpa aliqua cupidatat. Velit ipsum eiusmod est cupidatat consectetur amet. Do fugiat et ea veniam commodo sunt nostrud duis laborum irure commodo incididunt."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "CODE",
-                    "code": "console.log('Hello, world!')"
-                },
-                {
-                    "id": "3",
-                    "type": "TEXT",
-                    "title": "Pariatur repellendus delectus id non ex molestias velit.",
-                    "paragraphs": [
-                        "Fugiat ut laboris sint veniam. Tempor amet occaecat quis ea nostrud pariatur consectetur esse proident. Ad aute eiusmod occaecat nulla. Velit officia adipisicing velit proident occaecat excepteur mollit. Labore deserunt commodo ad ad proident labore tempor ex dolor commodo Lorem aliquip tempor. Esse sit do velit in magna commodo nisi sit.",
-                        "Velit velit eu sit aute eiusmod mollit non. Irure eu officia esse exercitation ad ex tempor. Labore culpa occaecat excepteur duis occaecat. Dolor velit aliqua duis aliqua cillum excepteur in nisi cillum consectetur nulla. Laboris id officia cupidatat elit."
-                    ]
-                },
-                {
-                    "id": "4",
-                    "type": "IMAGE",
-                    "src": "https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg",
-                    "alt": "Image description",
-                    "title": "Cumque et quo reiciendis laboriosam rerum at aspernatur qui repellendus."
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "title": "Quas voluptates eveniet eligendi magni eaque.",
-                    "paragraphs": [
-                        "Elit occaecat velit velit anim labore eu amet enim ea. Ad incididunt eu sint anim et ex enim consequat occaecat veniam. Aute do fugiat fugiat eu deserunt. Aute voluptate consequat anim ullamco consectetur. Aute magna dolore proident cupidatat elit ea esse consectetur.",
-                        "Proident reprehenderit qui dolor adipisicing anim sint aute nisi culpa aliqua cupidatat. Velit ipsum eiusmod est cupidatat consectetur amet. Do fugiat et ea veniam commodo sunt nostrud duis laborum irure commodo incididunt."
-                    ]
-                },
-                {
-                    "id": "6",
-                    "type": "CODE",
-                    "code": "if(isLoading) {\n        content = (\n            <div className={classes.skeletonContainer}>\n                <Skeleton \n                    width=\\\"200px\\\"\n                    height=\\\"200px\\\"\n                    border=\\\"50%\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"100px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"50px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"50px\\\"\n                />\n\n                <Skeleton \n                    width=\\\"100%\\\"\n                    height=\\\"600px\\\"\n                />\n            </div>\n        );\n    } else if (error) {\n        content = <h1>Error</h1>;\n    }"
-                },
-                {
-                    "id": "7",
-                    "type": "TEXT",
-                    "title": "Pariatur repellendus delectus id non ex molestias velit.",
-                    "paragraphs": [
-                        "Fugiat ut laboris sint veniam. Tempor amet occaecat quis ea nostrud pariatur consectetur esse proident. Ad aute eiusmod occaecat nulla. Velit officia adipisicing velit proident occaecat excepteur mollit. Labore deserunt commodo ad ad proident labore tempor ex dolor commodo Lorem aliquip tempor. Esse sit do velit in magna commodo nisi sit.",
-                        "Velit velit eu sit aute eiusmod mollit non. Irure eu officia esse exercitation ad ex tempor. Labore culpa occaecat excepteur duis occaecat. Dolor velit aliqua duis aliqua cillum excepteur in nisi cillum consectetur nulla. Laboris id officia cupidatat elit."
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "1",
-            "title": "Exploring the Quantum Realm",
-            "subtitle": "Understanding quantum mechanics",
-            "description": "Occaecat cupidatat aliquip fugiat sunt sit sint veniam laboris est fugiat. Exercitation qui sint veniam tempor aliquip proident est. Duis sunt do reprehenderit aliquip. Velit occaecat cillum do enim tempor veniam sunt. Reprehenderit irure elit commodo laboris minim occaecat commodo mollit cupidatat est laborum aliqua. Ea id quis dolore duis. Consequat tempor fugiat est culpa est eu aute adipisicing proident.",
-            "image": "https://plus.unsplash.com/premium_photo-1686685571688-e2a2d9035811?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 101,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "2",
-            "title": "AI in Everyday Life",
-            "subtitle": "The rise of intelligent assistants",
-            "description": "Do aliquip qui deserunt adipisicing dolore magna laborum ex consectetur amet quis. Dolore commodo do esse id esse. Excepteur non irure enim sit pariatur sit est veniam.",
-            "image": "https://images.unsplash.com/photo-1491466424936-e304919aada7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 230,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "3",
-            "title": "The Secrets of Dark Matter",
-            "subtitle": "Unseen but influential",
-            "description": "Laborum est velit nisi laboris amet tempor. Et Lorem minim pariatur quis est minim enim. Ex esse est sit dolor exercitation duis adipisicing amet sit aute. Cupidatat labore elit irure mollit adipisicing voluptate commodo eu sint. Qui laboris proident occaecat ea ad sunt sint eiusmod enim cillum velit incididunt. Adipisicing sit deserunt ut commodo. Irure nisi qui velit Lorem nostrud minim est proident incididunt.",
-            "image": "https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 150,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "4",
-            "title": "Building Scalable Web Apps",
-            "subtitle": "Best practices in 2025",
-            "description": "Aliquip et minim do anim culpa commodo sit non tempor officia aliquip. Laborum eu exercitation reprehenderit fugiat anim ipsum cillum ad amet veniam elit. Et ea magna commodo deserunt excepteur Lorem dolor minim deserunt. Ut tempor nisi ad aliquip.",
-            "image": "https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 198,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "5",
-            "title": "CRISPR and Gene Editing",
-            "subtitle": "Rewriting life",
-            "description": "Commodo reprehenderit qui laboris pariatur adipisicing consequat magna. Consequat consectetur eiusmod laborum exercitation culpa eiusmod nisi. Sit magna velit consectetur est duis Lorem Lorem voluptate nostrud aute nulla aliqua enim.",
-            "image": "https://images.unsplash.com/photo-1482784160316-6eb046863ece?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 300,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "6",
-            "title": "Cybersecurity Threats in 2025",
-            "subtitle": "Are we safe?",
-            "description": "Et aliqua enim culpa proident. Adipisicing voluptate fugiat commodo laboris nisi duis laboris amet aliquip magna amet anim amet culpa. Commodo cupidatat duis mollit est laborum quis esse reprehenderit id. Ipsum excepteur commodo consectetur consequat consectetur eiusmod. Do fugiat nisi irure ipsum proident. Irure sint amet ipsum non ea. Sunt aute ex esse consectetur fugiat excepteur sit adipisicing consectetur nulla est officia aute est.",
-            "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 180,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "7",
-            "title": "The Future of Renewable Energy",
-            "subtitle": "Powering tomorrow",
-            "description": "Eu ex commodo consequat nisi reprehenderit voluptate occaecat deserunt dolore. Dolore nostrud aliquip voluptate sunt proident sunt in. Reprehenderit sit et labore magna. Lorem mollit sit id culpa fugiat id. Do tempor ex deserunt deserunt est tempor deserunt cillum magna laboris sint.",
-            "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 220,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "8",
-            "title": "React 20: What’s New?",
-            "subtitle": "The future of UI development",
-            "description": "Aliqua est aliquip do laboris adipisicing enim incididunt labore ex in tempor sint labore. Quis ut magna quis duis occaecat pariatur. Tempor ea velit exercitation nisi laborum aute nulla sunt duis excepteur aliqua irure amet. Incididunt anim labore sint laboris.",
-            "image": "https://images.unsplash.com/photo-1475598322381-f1b499717dda?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 260,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "9",
-            "title": "Mars Colonization Plans",
-            "subtitle": "Living on the Red Planet",
-            "description": "Irure nostrud esse sint ipsum. Cupidatat adipisicing occaecat commodo esse sit ut incididunt ipsum sint id ex officia. Voluptate esse cupidatat veniam sit tempor cillum.Veniam amet officia ad amet culpa ullamco proident eu in eu esse ex est aute. Consequat velit laborum adipisicing ipsum laborum elit. Nisi deserunt nostrud anim consequat enim nostrud enim aliqua anim laborum velit.",
-            "image": "https://images.unsplash.com/photo-1466853817435-05b43fe45b39?q=80&w=1999&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 310,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "10",
-            "title": "Serverless Architectures Explained",
-            "subtitle": "Scalability without the hassle",
-            "description": "Eu ea cupidatat nisi nostrud do adipisicing cillum minim veniam enim sit nulla velit. In enim reprehenderit velit commodo dolore ut duis laboris dolor enim deserunt nostrud fugiat. Anim velit proident deserunt commodo veniam incididunt non ex do reprehenderit pariatur voluptate est aliquip. Ad consequat anim adipisicing excepteur velit. Consequat occaecat ullamco et qui. Laboris cillum aliquip tempor id occaecat culpa ad non incididunt exercitation aliqua.",
-            "image": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 172,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "11",
-            "title": "Understanding the Human Brain",
-            "subtitle": "Neuroscience for everyone",
-            "description": "Nisi id tempor proident elit dolore deserunt cillum ad eiusmod pariatur adipisicing non. Nisi elit ut excepteur laborum laboris fugiat enim. Cillum anim adipisicing ad commodo aliquip dolore Lorem nulla ad. Incididunt eiusmod minim ut reprehenderit ad nulla officia consequat. Culpa ullamco elit velit tempor dolor. Deserunt ullamco ea deserunt incididunt velit enim cupidatat qui mollit. Magna irure consequat nisi laborum minim irure consectetur qui irure pariatur laborum sit.",
-            "image": "https://images.unsplash.com/photo-1466854076813-4aa9ac0fc347?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 270,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "12",
-            "title": "Web3 and the Decentralized Web",
-            "subtitle": "Hype or revolution?",
-            "description": "Elit velit cillum eu veniam exercitation. Occaecat ea irure aliqua non amet veniam velit fugiat quis ea et elit nisi consectetur. Nulla duis id mollit dolor eiusmod deserunt do pariatur magna ad commodo. Esse ad nulla aliqua culpa deserunt ipsum occaecat velit reprehenderit culpa voluptate adipisicing ex. Consectetur ea incididunt cillum occaecat Lorem deserunt esse amet sint enim cupidatat elit nisi Lorem. Amet proident laborum dolor eu deserunt anim aute aliquip enim nulla Lorem. Duis voluptate excepteur ex minim ut sit sit nisi cupidatat anim dolore ad.",
-            "image": "https://images.unsplash.com/photo-1508144753681-9986d4df99b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 199,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "13",
-            "title": "Climate Change: Where Are We Now?",
-            "subtitle": "A scientific overview",
-            "description": "Deserunt id qui nisi eu aliqua do elit. Commodo proident in in aute est. Minim Lorem dolore culpa minim in non velit cupidatat ipsum aute quis eiusmod officia. Fugiat cupidatat fugiat excepteur velit eiusmod voluptate sint occaecat sint excepteur. Occaecat veniam amet qui reprehenderit consectetur qui nostrud deserunt. Officia sunt amet proident ut quis pariatur duis excepteur.",
-            "image": "https://images.unsplash.com/photo-1431440869543-efaf3388c585?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 345,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "14",
-            "title": "TypeScript vs JavaScript in 2025",
-            "subtitle": "Should you switch?",
-            "description": "Sunt enim nisi minim deserunt aliqua ut Lorem cupidatat in velit. Proident Lorem irure laboris anim labore exercitation enim non minim cupidatat anim ullamco nisi exercitation. Veniam cillum est dolor anim culpa duis labore officia. Consequat pariatur labore aliqua anim cupidatat aute id eiusmod commodo labore adipisicing officia. Et reprehenderit excepteur tempor excepteur et proident est aliqua amet veniam dolor esse dolor non. Enim sunt sunt quis ex tempor sint irure consequat aliquip id non pariatur. Excepteur do adipisicing consectetur sint adipisicing pariatur mollit laboris aliqua enim officia amet.",
-            "image": "https://plus.unsplash.com/premium_photo-1675805798786-67b84bb46a71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 185,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "15",
-            "title": "The Ocean’s Hidden Ecosystems",
-            "subtitle": "Deep dive into biodiversity",
-            "description": "Veniam laborum deserunt labore voluptate voluptate ex ut nostrud in pariatur cupidatat anim elit magna. Magna elit duis occaecat ex aliquip cillum voluptate elit dolor duis amet. Lorem incididunt minim veniam laboris ad cillum. Officia cillum reprehenderit ipsum Lorem irure id minim ad adipisicing. Tempor nostrud laborum fugiat minim quis culpa. Labore dolor adipisicing do fugiat enim consequat.",
-            "image": "https://images.unsplash.com/photo-1505699261378-c372af38134c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 290,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "16",
-            "title": "Mastering Node.js in 2025",
-            "subtitle": "Efficient backend development",
-            "description": "Officia fugiat ad amet sint laboris qui cillum sunt elit minim est minim culpa ea. Est fugiat non reprehenderit deserunt aute qui labore ipsum consectetur sint ipsum in. Eiusmod est culpa laborum occaecat culpa consectetur cupidatat esse sit deserunt id mollit mollit. Ut consequat esse irure exercitation excepteur magna deserunt do non non. Eiusmod et ex id culpa consectetur quis adipisicing laborum ut.",
-            "image": "https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 210,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "17",
-            "title": "Genetic Engineering Ethics",
-            "subtitle": "How far is too far?",
-            "description": "Eiusmod ipsum excepteur fugiat cupidatat officia magna adipisicing labore sit. Cillum enim est quis laborum dolor. Fugiat ullamco minim pariatur anim veniam officia aliquip exercitation non amet veniam ex. Duis anim fugiat sit nulla cupidatat in veniam. Culpa laborum eiusmod sit enim minim.",
-            "image": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 175,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "18",
-            "title": "Docker and Containerization",
-            "subtitle": "Why developers still love it",
-            "description": "Labore tempor voluptate in dolore magna Lorem do pariatur. Ipsum elit mollit elit qui nostrud ad non aliquip. Adipisicing fugiat excepteur id elit. Mollit pariatur cillum incididunt amet commodo ad occaecat adipisicing ipsum est elit.",
-            "image": "https://images.unsplash.com/photo-1500073584060-670c36a703f1?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 243,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "19",
-            "title": "The Truth About Time Travel",
-            "subtitle": "Just sci-fi or something more?",
-            "description": "Reprehenderit fugiat aliqua labore Lorem dolore duis anim pariatur aute. Ut occaecat Lorem ea cillum commodo dolore. Eiusmod duis laboris dolor eiusmod enim Lorem non. Mollit laborum labore quis commodo veniam culpa aliqua occaecat qui do ut id esse minim.",
-            "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 275,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "20",
-            "title": "Svelte vs React: 2025 Edition",
-            "subtitle": "Battle of frameworks",
-            "description": "Aute id sint in aliqua deserunt. Ad sunt nulla exercitation exercitation ex excepteur. Do deserunt sit id tempor duis incididunt ex sunt incididunt occaecat quis. Adipisicing eiusmod dolor non mollit sunt elit Lorem laborum incididunt. Sunt et velit pariatur id culpa irure enim cupidatat consequat sit sunt irure. Dolor non ad ullamco tempor deserunt culpa ad ad labore.",
-            "image": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 195,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "21",
-            "title": "Inside the Human Genome",
-            "subtitle": "How DNA shapes us",
-            "description": "The human genome is a vast and intricate map that defines our biology. Every strand of DNA carries instructions passed down through generations. Recent advances in gene sequencing have made it easier to identify genetic markers for disease. Scientists are beginning to understand how certain genes influence behavior and health outcomes. With CRISPR and similar technologies, targeted edits to DNA are now possible. This opens up both therapeutic opportunities and ethical dilemmas. Could we eliminate genetic diseases before birth? What are the implications of designing genetic traits? The more we learn, the more complex the questions become. Yet the hope remains: understanding the genome could unlock the next era of personalized medicine.",
-            "image": "https://images.unsplash.com/photo-1507187632231-5beb21a654a2?q=80&w=2101&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 300,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "22",
-            "title": "The State of JavaScript 2025",
-            "subtitle": "What developers need to know",
-            "description": "JavaScript continues to evolve at a breakneck pace. With the growing popularity of TypeScript, many developers have shifted to writing statically typed code. New ECMAScript proposals are being adopted more quickly thanks to modern tooling. Frameworks like Next.js and SvelteKit are reshaping the way we build full-stack apps. The rise of edge computing and serverless platforms has also impacted JavaScript’s runtime environments. Node.js is no longer the only player — Deno and Bun are rapidly gaining ground. Asynchronous programming patterns have improved with native `async/await`, yet challenges around error handling persist. Meanwhile, bundlers and compilers like Vite have improved developer experience drastically. Staying updated is critical, but also overwhelming. JavaScript in 2025 is powerful — but not simple.",
-            "image": "https://images.unsplash.com/photo-1443428018053-13da55589fed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 421,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "23",
-            "title": "Revolution in Renewable Tech",
-            "subtitle": "Harnessing clean energy",
-            "description": "The energy industry is experiencing a fundamental shift. Solar panels are now more efficient and affordable than ever. Wind farms are expanding both on land and offshore, producing large quantities of clean power. Breakthroughs in battery storage are allowing excess energy to be saved and used during peak demand. Innovations in smart grid technology have also improved distribution and minimized waste. Meanwhile, fusion energy is becoming a tangible reality, not just theoretical promise. Countries are setting aggressive net-zero carbon goals, and tech is helping make them achievable. Consumers are playing a role too, installing home systems and adopting electric vehicles. Governments and private companies are collaborating more closely than ever. The future is looking greener with each new advancement.",
-            "image": "https://images.unsplash.com/photo-1490237014491-822aee911b99?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 355,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "24",
-            "title": "Mastering React Performance",
-            "subtitle": "Tips for faster apps",
-            "description": "React is a powerful library, but performance bottlenecks can still arise. Knowing when to use `useMemo`, `useCallback`, and `React.memo` is crucial. Component re-renders are often the primary source of slowdown. Developers should avoid unnecessary state in the parent component tree. Lazy loading and code splitting with Suspense also help improve time-to-interactive. Tools like the React DevTools Profiler give visibility into render behavior. It's also important to avoid large, deeply nested trees of components unless necessary. Optimizing images and reducing bundle size can greatly improve perceived performance. React 18’s concurrent features have introduced new ways to schedule rendering. Overall, thoughtful design paired with careful profiling can yield blazing-fast UIs.",
-            "image": "https://images.unsplash.com/photo-1487252015168-776961549aca?q=80&w=2045&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 270,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "25",
-            "title": "The Science of Sleep",
-            "subtitle": "Why rest is essential",
-            "description": "Sleep is often overlooked but crucial to overall health. During sleep, the body repairs tissue and the brain consolidates memories. Poor sleep can lead to a range of health issues including heart disease, obesity, and cognitive decline. Scientists have discovered distinct stages of sleep, including REM and deep sleep. Each serves a unique function for both physical and mental restoration. Blue light from screens has been shown to disrupt circadian rhythms, making it harder to fall asleep. Stress and caffeine are also common disruptors. Apps and wearables are being used to track sleep quality more accurately. Sleep research is even influencing workplace productivity and education policy. It’s clear that sleep isn't a luxury — it's a biological necessity.",
-            "image": "https://images.unsplash.com/photo-1490365728022-deae76380607?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 194,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "26",
-            "title": "The Case for Progressive Web Apps",
-            "subtitle": "PWAs vs Native Apps",
-            "description": "Progressive Web Apps (PWAs) are reshaping mobile development. They offer a native-like experience through the web browser. Features like offline access, push notifications, and installable interfaces are now widely supported. Companies like Twitter and Pinterest have adopted PWAs with great success. Unlike native apps, PWAs require no app store deployment. They reduce maintenance overhead and reach a wider audience. Security is handled via HTTPS, and updates are seamless. PWAs also score high on accessibility and load speed. For startups and content platforms, PWAs are often the smarter choice. As web APIs continue to evolve, PWAs might even replace native apps for many use cases.",
-            "image": "https://images.unsplash.com/photo-1469521669194-babb45599def?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 312,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "27",
-            "title": "Ocean Currents and Climate",
-            "subtitle": "How seas shape our world",
-            "description": "Ocean currents play a critical role in regulating Earth's climate. Warm currents like the Gulf Stream bring tropical heat to northern regions. Cold currents along the west coasts of continents can cool surrounding areas significantly. These movements affect not just temperature, but rainfall and wind patterns globally. Disruptions in these currents can lead to severe weather events. Climate change has begun to alter these natural flows. Melting ice caps are introducing more freshwater into the oceans, impacting salinity. Marine life is also affected as ecosystems rely on predictable current systems. Monitoring ocean temperatures has become vital for forecasting climate trends. Understanding the ocean is essential for understanding the future of our planet.",
-            "image": "https://plus.unsplash.com/premium_photo-1665311513708-b776bf14821a?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 167,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "28",
-            "title": "Why UX Design Matters",
-            "subtitle": "Crafting user-centric products",
-            "description": "User Experience (UX) design is not just about looks — it’s about how a product feels to use. A well-designed interface guides users intuitively through a task. Poor UX leads to frustration, abandonment, and lower engagement. Designers use research and testing to align features with user needs. Prototypes help refine ideas before committing to code. Accessibility and inclusivity are now core parts of the UX process. UX writing and microcopy also influence how people interact with digital systems. Collaboration between designers, developers, and stakeholders is key. Tools like Figma and Storybook have streamlined workflows. In today’s competitive market, great UX is often what sets a product apart.",
-            "image": "https://images.unsplash.com/photo-1464254786740-b97e5420c299?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 298,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "29",
-            "title": "Understanding Antimatter",
-            "subtitle": "The mirror of the universe",
-            "description": "Antimatter is one of the most fascinating phenomena in physics. For every particle, there exists an antiparticle with opposite charge. When matter and antimatter meet, they annihilate in a burst of energy. Scientists believe equal amounts of matter and antimatter should have formed after the Big Bang. Yet our universe is dominated by matter. Understanding this imbalance is one of cosmology’s biggest mysteries. Antimatter is already used in medical imaging techniques like PET scans. Research is ongoing into how antimatter might be harnessed for propulsion or energy. CERN continues to lead the way in antimatter experiments. One day, it could unlock answers about the universe itself.",
-            "image": "https://images.unsplash.com/photo-1450849608880-6f787542c88a?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 240,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "30",
-            "title": "Building Modern APIs",
-            "subtitle": "REST, GraphQL, and beyond",
-            "description": "APIs are the backbone of modern software systems. RESTful APIs have been the standard for over a decade. More recently, GraphQL has gained traction for its flexibility and efficiency. Developers now consider design-first approaches using tools like Swagger and Postman. Security remains paramount — with OAuth, API keys, and rate limiting in use. Documentation is crucial and often automated alongside code. Developers are also exploring newer paradigms like gRPC and event-driven APIs. Testing tools like Insomnia and integration suites are essential in CI/CD pipelines. APIs must be scalable and well-monitored. With APIs connecting everything from IoT to finance, building them well is mission-critical.",
-            "image": "https://images.unsplash.com/photo-1430876988766-1be68caef0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 322,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "31",
-            "title": "Artificial Intelligence in Medicine",
-            "subtitle": "AI’s impact on diagnosis and treatment",
-            "description": "AI is revolutionizing how healthcare is delivered. Algorithms can now detect patterns in medical imaging that escape the human eye. Predictive models are helping identify at-risk patients before symptoms arise. Virtual assistants and chatbots improve patient engagement and reduce admin workload. Personalized treatment plans are being developed using machine learning on historical patient data. AI is also streamlining drug discovery by simulating molecule interactions. Ethical concerns remain, especially regarding bias in datasets. Regulatory bodies are working to keep up with these rapid changes. While AI won’t replace doctors, it will enhance their capabilities. The future of medicine is both digital and intelligent.",
-            "image": "https://images.unsplash.com/photo-1459909633680-206dc5c67abb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 380,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "32",
-            "title": "TypeScript for Large Projects",
-            "subtitle": "Why type safety matters",
-            "description": "TypeScript adds static typing to JavaScript, making code more predictable and easier to debug. In large projects, this reduces runtime errors and improves collaboration. With IDE support, TypeScript improves developer productivity through auto-complete and refactoring tools. Type definitions serve as documentation for teams. Type narrowing and union types allow flexible yet safe structures. Migrating from JavaScript can be gradual, using JSDoc or partial conversions. Most major libraries now ship with TypeScript types, making integration smoother. Teams adopting TypeScript report faster onboarding for new developers. While there’s a learning curve, the long-term benefits are substantial. It’s not just a language — it’s a safety net.",
-            "image": "https://images.unsplash.com/photo-1500754088824-ce0582cfe45f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 341,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "33",
-            "title": "Mars Colonization: Are We Ready?",
-            "subtitle": "The next frontier",
-            "description": "Human settlement on Mars has moved from sci-fi to real possibility. SpaceX and NASA are actively developing the technology to make it happen. Challenges include radiation exposure, low gravity, and harsh living conditions. Terraforming Mars remains theoretical, so early colonies will rely on enclosed habitats. Supply chains from Earth are long and expensive. Advances in 3D printing could help build infrastructure from Martian materials. Psychological effects of isolation and confinement are a major concern. Solar power and nuclear energy will likely power early settlements. Robotic missions are already testing equipment and scouting landing sites. The dream of a second home for humanity may soon become reality.",
-            "image": "https://images.unsplash.com/photo-1510279770292-4b34de9f5c23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 412,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "34",
-            "title": "The Rise of Edge Computing",
-            "subtitle": "Computing at the edge of networks",
-            "description": "Edge computing moves data processing closer to where it's generated. This reduces latency and improves responsiveness for real-time applications. IoT devices benefit greatly, enabling faster decision-making without relying on central servers. Autonomous vehicles and drones use edge computing to process sensor data instantly. It's also critical for smart factories and industrial automation. Cloud providers are now offering edge services through micro data centers. Security at the edge is a concern, requiring new protection strategies. Combining edge with AI opens new possibilities like real-time object detection. Developers need to rethink architectures for distributed systems. Edge is not replacing the cloud — it's complementing it.",
-            "image": "https://plus.unsplash.com/premium_photo-1675370609769-8ce1ef2ec114?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 261,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "35",
-            "title": "Biodiversity Crisis: A Global Concern",
-            "subtitle": "Losing species, losing balance",
-            "description": "Earth is undergoing a mass extinction event, largely due to human activity. Deforestation, pollution, and climate change are driving thousands of species to extinction. Biodiversity ensures ecosystem stability and resilience. It supports agriculture, medicine, and even clean water. Conservation efforts include protected areas, breeding programs, and legislation. Rewilding projects aim to restore natural balance in degraded ecosystems. Indigenous knowledge plays a crucial role in conservation. Technology like drones and satellite monitoring aid in tracking endangered species. Global cooperation is essential to slow biodiversity loss. Protecting nature is not just ethical — it’s survival.",
-            "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 197,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "36",
-            "title": "The Developer’s Toolbox 2025",
-            "subtitle": "Must-have tools and trends",
-            "description": "Modern developers have access to an incredible range of tools. Vite has become the default for fast builds and dev environments. GitHub Copilot assists with code suggestions, boosting productivity. ESLint and Prettier ensure code quality and consistency. React Query simplifies data fetching and caching. Storybook is key for building and testing UI components in isolation. Monorepos using Nx or Turborepo improve large-scale project structure. Containerization with Docker remains critical for consistent environments. CI/CD pipelines using GitHub Actions or GitLab CI automate deployments. Choosing the right tools saves time and fosters maintainable codebases. The toolbox keeps evolving — stay sharp.",
-            "image": "https://images.unsplash.com/photo-1504006833117-8886a355efbf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 350,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "37",
-            "title": "Quantum Computers Explained",
-            "subtitle": "Breaking classical limits",
-            "description": "Quantum computers leverage the principles of quantum mechanics to perform complex calculations. Unlike classical bits, quantum bits (qubits) can exist in multiple states simultaneously. This allows quantum systems to process information in parallel. Algorithms like Shor’s and Grover’s have demonstrated speed advantages. However, qubits are highly sensitive to noise, requiring error correction strategies. Quantum supremacy remains a hotly debated topic. Major tech companies and governments are investing heavily in this frontier. Use cases include cryptography, materials science, and complex simulations. Quantum software frameworks like Qiskit are helping developers explore this space. While not mainstream yet, the quantum era is approaching.",
-            "image": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 288,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "38",
-            "title": "Design Systems: One Source of Truth",
-            "subtitle": "Scalable design in practice",
-            "description": "Design systems provide consistency across digital products. They include reusable components, styles, and documentation. Tools like Figma and Storybook help maintain visual alignment. Tokens standardize colors, spacing, and typography. A well-maintained design system reduces design debt and speeds up development. Cross-functional collaboration ensures systems meet both UX and engineering needs. Component libraries can be distributed as NPM packages for reuse. Governance is key — without it, systems can fragment. Adoption requires education and internal champions. Design systems empower teams to scale while staying on-brand.",
-            "image": "https://plus.unsplash.com/premium_photo-1675096510364-9763614dfc81?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 220,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "39",
-            "title": "The Ethics of AI",
-            "subtitle": "Who decides what’s fair?",
-            "description": "AI systems are increasingly making decisions that affect people’s lives. From job applications to loan approvals, algorithms hold real power. Bias in training data can lead to unfair outcomes. Transparency is essential to ensure accountability. Some advocate for AI audits and ethical review boards. Others emphasize the need for diverse teams building AI. Regulations like the EU AI Act aim to provide oversight. There’s also debate over autonomous weapons and AI surveillance. Ethical AI isn’t just a technical challenge — it’s a societal one. Building trust in AI starts with building it responsibly.",
-            "image": "https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 311,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "40",
-            "title": "Next-Gen Frontend Frameworks",
-            "subtitle": "What’s beyond React and Vue?",
-            "description": "Frontend development continues to evolve rapidly. Frameworks like Solid.js and Qwik are redefining performance benchmarks. Fine-grained reactivity and partial hydration are gaining traction. Resumability is becoming a key concept for minimizing JS on the client. Server components in React are also changing how we architect apps. These trends push developers toward hybrid rendering strategies. Tooling like Vite and esbuild keep builds fast and efficient. Component islands and streaming are solving long-standing performance issues. The future is SSR-first with just-in-time interactivity. Keeping up means embracing change without chasing hype.",
-            "image": "https://images.unsplash.com/photo-1479030160180-b1860951d696?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 359,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "41",
-            "title": "Neural Interfaces: Merging Mind and Machine",
-            "subtitle": "The future of brain-computer interaction",
-            "description": "Neural interfaces are enabling direct communication between the brain and external devices. Companies like Neuralink are pioneering implants that can assist individuals with paralysis. Brain signals can now be decoded in real-time, allowing control of robotic limbs. Ethical concerns include privacy of thoughts and consent. Long-term safety of implants remains under study. Non-invasive methods like EEG are improving in precision. This technology may eventually enhance cognition and memory. Regulatory frameworks must adapt to such revolutionary advancements. Brain-machine integration blurs the line between human and machine. The implications for accessibility and human potential are profound.",
-            "image": "https://images.unsplash.com/photo-1501791187590-9ef2612ba1eb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 245,
-            "createdAt": "26.02.2025",
-            "type": ["Science", "IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "42",
-            "title": "Augmented Reality in Education",
-            "subtitle": "Learning in 3D spaces",
-            "description": "Augmented reality (AR) is transforming education by making content more interactive. Students can explore historical events or biological systems in 3D. AR apps provide immersive experiences for better engagement. It supports experiential learning, which improves retention. Teachers can use AR to visualize abstract concepts like molecules or planets. Challenges include access to hardware and reliable internet. Content creation for AR is still relatively niche. As headsets become cheaper, adoption will likely increase. AR also fosters collaborative learning in virtual environments. It bridges the gap between imagination and reality in the classroom.",
-            "image": "https://plus.unsplash.com/premium_photo-1676638154798-904c8f6282d6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 198,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "43",
-            "title": "Sustainable Tech Development",
-            "subtitle": "Green code and clean energy",
-            "description": "Sustainability is becoming a core principle in tech. From data center efficiency to low-carbon cloud solutions, companies are rethinking their footprint. Green coding practices aim to reduce CPU cycles and memory waste. Tools now exist to measure energy use of software during execution. Renewable energy is powering more server farms globally. Developers are encouraged to reduce unnecessary animations or large bundle sizes. Circular economy principles apply to hardware reuse and recycling. Education in sustainable design is growing across bootcamps and universities. The push toward net-zero requires all sectors to align. Technology can both cause and solve environmental issues.",
-            "image": "https://images.unsplash.com/photo-1504288145234-919e7bbc6d19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 157,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "44",
-            "title": "Genetic Engineering Advances",
-            "subtitle": "Editing life with precision",
-            "description": "CRISPR-Cas9 has revolutionized genetic engineering. Scientists can now modify DNA with unprecedented accuracy. Gene therapy is being explored to treat inherited diseases. There are efforts to engineer crops for resilience and nutrition. Ethical debates rage over designer babies and human enhancement. Gene drives could eliminate disease-carrying pests but carry ecological risks. Regulation varies globally, creating complex legal environments. Biotech startups are rapidly advancing tools for genome analysis. Precision medicine is tailoring treatments based on genetic profiles. This field holds immense promise but requires careful oversight.",
-            "image": "https://images.unsplash.com/photo-1501696461415-6bd6660c6742?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 209,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "45",
-            "title": "How Remote Work is Reshaping Cities",
-            "subtitle": "From commute to community",
-            "description": "The rise of remote work is transforming urban planning. Workers are moving from cities to smaller towns. Co-working spaces are popping up in suburban areas. Local economies are adapting to new work-life patterns. Internet infrastructure is critical for remote productivity. Companies are rethinking office space needs, reducing costs. Environmental impact has decreased due to less commuting. Urban housing prices are fluctuating with migration trends. Policies are being updated to support hybrid workers. Work is no longer a place — it’s an activity.",
-            "image": "https://plus.unsplash.com/premium_photo-1673338358415-a36382fe7078?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 288,
-            "createdAt": "26.02.2025",
-            "type": ["IT", "Science"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "46",
-            "title": "Cybersecurity in the Age of AI",
-            "subtitle": "Fighting bots with bots",
-            "description": "AI is both a weapon and a shield in cybersecurity. Machine learning detects anomalies faster than traditional rules. Threat actors use AI to generate phishing content and evade detection. Behavioral analysis is becoming essential in fraud prevention. Zero-trust architectures are gaining popularity in enterprise settings. Deepfake detection tools are emerging to combat misinformation. Governments are investing heavily in cyber defense AI. Explainability remains a challenge for AI-driven security decisions. The arms race between attackers and defenders is accelerating. Cyber resilience is now a boardroom topic, not just an IT issue.",
-            "image": "https://images.unsplash.com/photo-1460574283810-2aab119d8511?q=80&w=2063&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 322,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "47",
-            "title": "Biomimicry in Modern Engineering",
-            "subtitle": "Learning from nature’s designs",
-            "description": "Engineers are increasingly turning to nature for inspiration. Biomimicry has led to innovations like sharkskin swimsuits and self-cleaning surfaces. Structures mimicking honeycombs offer strength with minimal materials. Robotics borrows from animal movement for agility and efficiency. Lotus leaf-inspired coatings repel water and dirt. The field spans architecture, materials science, and product design. Nature’s solutions are optimized through evolution over millions of years. Sustainable design benefits from nature’s efficiency. Education programs are now teaching biomimicry principles. Innovation often starts by observing the natural world.",
-            "image": "https://images.unsplash.com/photo-1496347646636-ea47f7d6b37b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 184,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "1",
-            "blocks": []
-        },
-        {
-            "id": "48",
-            "title": "Decentralized Internet: Web3 Potential",
-            "subtitle": "Ownership and control reimagined",
-            "description": "Web3 proposes a decentralized model for the internet. Blockchain underpins data ownership and identity management. Users regain control over their personal information. dApps run without centralized servers, reducing censorship. Cryptocurrencies fuel microtransactions and incentivized behavior. NFTs represent digital ownership, expanding beyond art. Critics highlight scalability, environmental concerns, and speculative hype. DAOs provide governance mechanisms through token voting. Education is key to demystifying Web3 for mass adoption. The dream is a fairer, user-first digital ecosystem.",
-            "image": "https://images.unsplash.com/photo-1473800447596-01729482b8eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 297,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "3",
-            "blocks": []
-        },
-        {
-            "id": "49",
-            "title": "Space Telescopes: Eyes on the Universe",
-            "subtitle": "Beyond Hubble and into the unknown",
-            "description": "Space telescopes offer a clearer view of the universe. Free from Earth's atmosphere, they capture distant galaxies and black holes. The James Webb Space Telescope has surpassed expectations. Infrared sensors reveal the birth of stars and planetary atmospheres. Data from telescopes helps refine models of cosmic evolution. Space missions require years of planning and global collaboration. Maintenance is impossible, so reliability is critical. Observations feed machine learning models for faster classification. Future telescopes may detect life signatures on exoplanets. Our cosmic perspective keeps expanding.",
-            "image": "https://plus.unsplash.com/premium_photo-1677646871407-eda14a1cf7f9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 330,
-            "createdAt": "26.02.2025",
-            "type": ["Science"],
-            "userId": "2",
-            "blocks": []
-        },
-        {
-            "id": "50",
-            "title": "Serverless Architecture: Less is More",
-            "subtitle": "Scaling without servers",
-            "description": "Serverless computing allows developers to run code without managing infrastructure. Platforms like AWS Lambda and Cloudflare Workers offer pay-as-you-go pricing. It simplifies deployment and reduces ops overhead. Cold starts and execution time limits remain concerns. Serverless functions scale automatically with traffic. They’re ideal for APIs, webhooks, and background jobs. Infrastructure as Code integrates well with serverless stacks. Observability tools are improving, easing debugging. Event-driven design is crucial for efficient workflows. Going serverless means focusing more on business logic, less on boilerplate.",
-            "image": "https://images.unsplash.com/photo-1494935362342-566c6d6e75b5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "views": 301,
-            "createdAt": "26.02.2025",
-            "type": ["IT"],
-            "userId": "1",
-            "blocks": []
-        }
-    ]
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Exploring the Quantum Realm",
+      "subtitle": "Understanding quantum mechanics",
+      "description": "Occaecat cupidatat aliquip fugiat sunt sit sint veniam laboris est fugiat. Exercitation qui sint veniam tempor aliquip proident est. Duis sunt do reprehenderit aliquip. Velit occaecat cillum do enim tempor veniam sunt. Reprehenderit irure elit commodo laboris minim occaecat commodo mollit cupidatat est laborum aliqua. Ea id quis dolore duis. Consequat tempor fugiat est culpa est eu aute adipisicing proident.",
+      "image": "https://plus.unsplash.com/premium_photo-1686685571688-e2a2d9035811?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 101,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "2",
+      "title": "AI in Everyday Life",
+      "subtitle": "The rise of intelligent assistants",
+      "description": "Do aliquip qui deserunt adipisicing dolore magna laborum ex consectetur amet quis. Dolore commodo do esse id esse. Excepteur non irure enim sit pariatur sit est veniam.",
+      "image": "https://images.unsplash.com/photo-1491466424936-e304919aada7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 230,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "3",
+      "title": "The Secrets of Dark Matter",
+      "subtitle": "Unseen but influential",
+      "description": "Laborum est velit nisi laboris amet tempor. Et Lorem minim pariatur quis est minim enim. Ex esse est sit dolor exercitation duis adipisicing amet sit aute. Cupidatat labore elit irure mollit adipisicing voluptate commodo eu sint. Qui laboris proident occaecat ea ad sunt sint eiusmod enim cillum velit incididunt. Adipisicing sit deserunt ut commodo. Irure nisi qui velit Lorem nostrud minim est proident incididunt.",
+      "image": "https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 150,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "4",
+      "title": "Building Scalable Web Apps",
+      "subtitle": "Best practices in 2025",
+      "description": "Aliquip et minim do anim culpa commodo sit non tempor officia aliquip. Laborum eu exercitation reprehenderit fugiat anim ipsum cillum ad amet veniam elit. Et ea magna commodo deserunt excepteur Lorem dolor minim deserunt. Ut tempor nisi ad aliquip.",
+      "image": "https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 198,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "5",
+      "title": "CRISPR and Gene Editing",
+      "subtitle": "Rewriting life",
+      "description": "Commodo reprehenderit qui laboris pariatur adipisicing consequat magna. Consequat consectetur eiusmod laborum exercitation culpa eiusmod nisi. Sit magna velit consectetur est duis Lorem Lorem voluptate nostrud aute nulla aliqua enim.",
+      "image": "https://images.unsplash.com/photo-1482784160316-6eb046863ece?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 300,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "6",
+      "title": "Cybersecurity Threats in 2025",
+      "subtitle": "Are we safe?",
+      "description": "Et aliqua enim culpa proident. Adipisicing voluptate fugiat commodo laboris nisi duis laboris amet aliquip magna amet anim amet culpa. Commodo cupidatat duis mollit est laborum quis esse reprehenderit id. Ipsum excepteur commodo consectetur consequat consectetur eiusmod. Do fugiat nisi irure ipsum proident. Irure sint amet ipsum non ea. Sunt aute ex esse consectetur fugiat excepteur sit adipisicing consectetur nulla est officia aute est.",
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 180,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "7",
+      "title": "The Future of Renewable Energy",
+      "subtitle": "Powering tomorrow",
+      "description": "Eu ex commodo consequat nisi reprehenderit voluptate occaecat deserunt dolore. Dolore nostrud aliquip voluptate sunt proident sunt in. Reprehenderit sit et labore magna. Lorem mollit sit id culpa fugiat id. Do tempor ex deserunt deserunt est tempor deserunt cillum magna laboris sint.",
+      "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 220,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "8",
+      "title": "React 20: What’s New?",
+      "subtitle": "The future of UI development",
+      "description": "Aliqua est aliquip do laboris adipisicing enim incididunt labore ex in tempor sint labore. Quis ut magna quis duis occaecat pariatur. Tempor ea velit exercitation nisi laborum aute nulla sunt duis excepteur aliqua irure amet. Incididunt anim labore sint laboris.",
+      "image": "https://images.unsplash.com/photo-1475598322381-f1b499717dda?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 260,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "9",
+      "title": "Mars Colonization Plans",
+      "subtitle": "Living on the Red Planet",
+      "description": "Irure nostrud esse sint ipsum. Cupidatat adipisicing occaecat commodo esse sit ut incididunt ipsum sint id ex officia. Voluptate esse cupidatat veniam sit tempor cillum.Veniam amet officia ad amet culpa ullamco proident eu in eu esse ex est aute. Consequat velit laborum adipisicing ipsum laborum elit. Nisi deserunt nostrud anim consequat enim nostrud enim aliqua anim laborum velit.",
+      "image": "https://images.unsplash.com/photo-1466853817435-05b43fe45b39?q=80&w=1999&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 310,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "10",
+      "title": "Serverless Architectures Explained",
+      "subtitle": "Scalability without the hassle",
+      "description": "Eu ea cupidatat nisi nostrud do adipisicing cillum minim veniam enim sit nulla velit. In enim reprehenderit velit commodo dolore ut duis laboris dolor enim deserunt nostrud fugiat. Anim velit proident deserunt commodo veniam incididunt non ex do reprehenderit pariatur voluptate est aliquip. Ad consequat anim adipisicing excepteur velit. Consequat occaecat ullamco et qui. Laboris cillum aliquip tempor id occaecat culpa ad non incididunt exercitation aliqua.",
+      "image": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 172,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "11",
+      "title": "Understanding the Human Brain",
+      "subtitle": "Neuroscience for everyone",
+      "description": "Nisi id tempor proident elit dolore deserunt cillum ad eiusmod pariatur adipisicing non. Nisi elit ut excepteur laborum laboris fugiat enim. Cillum anim adipisicing ad commodo aliquip dolore Lorem nulla ad. Incididunt eiusmod minim ut reprehenderit ad nulla officia consequat. Culpa ullamco elit velit tempor dolor. Deserunt ullamco ea deserunt incididunt velit enim cupidatat qui mollit. Magna irure consequat nisi laborum minim irure consectetur qui irure pariatur laborum sit.",
+      "image": "https://images.unsplash.com/photo-1466854076813-4aa9ac0fc347?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 270,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "12",
+      "title": "Web3 and the Decentralized Web",
+      "subtitle": "Hype or revolution?",
+      "description": "Elit velit cillum eu veniam exercitation. Occaecat ea irure aliqua non amet veniam velit fugiat quis ea et elit nisi consectetur. Nulla duis id mollit dolor eiusmod deserunt do pariatur magna ad commodo. Esse ad nulla aliqua culpa deserunt ipsum occaecat velit reprehenderit culpa voluptate adipisicing ex. Consectetur ea incididunt cillum occaecat Lorem deserunt esse amet sint enim cupidatat elit nisi Lorem. Amet proident laborum dolor eu deserunt anim aute aliquip enim nulla Lorem. Duis voluptate excepteur ex minim ut sit sit nisi cupidatat anim dolore ad.",
+      "image": "https://images.unsplash.com/photo-1508144753681-9986d4df99b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 199,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "13",
+      "title": "Climate Change: Where Are We Now?",
+      "subtitle": "A scientific overview",
+      "description": "Deserunt id qui nisi eu aliqua do elit. Commodo proident in in aute est. Minim Lorem dolore culpa minim in non velit cupidatat ipsum aute quis eiusmod officia. Fugiat cupidatat fugiat excepteur velit eiusmod voluptate sint occaecat sint excepteur. Occaecat veniam amet qui reprehenderit consectetur qui nostrud deserunt. Officia sunt amet proident ut quis pariatur duis excepteur.",
+      "image": "https://images.unsplash.com/photo-1431440869543-efaf3388c585?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 345,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "14",
+      "title": "TypeScript vs JavaScript in 2025",
+      "subtitle": "Should you switch?",
+      "description": "Sunt enim nisi minim deserunt aliqua ut Lorem cupidatat in velit. Proident Lorem irure laboris anim labore exercitation enim non minim cupidatat anim ullamco nisi exercitation. Veniam cillum est dolor anim culpa duis labore officia. Consequat pariatur labore aliqua anim cupidatat aute id eiusmod commodo labore adipisicing officia. Et reprehenderit excepteur tempor excepteur et proident est aliqua amet veniam dolor esse dolor non. Enim sunt sunt quis ex tempor sint irure consequat aliquip id non pariatur. Excepteur do adipisicing consectetur sint adipisicing pariatur mollit laboris aliqua enim officia amet.",
+      "image": "https://plus.unsplash.com/premium_photo-1675805798786-67b84bb46a71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 185,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "15",
+      "title": "The Ocean’s Hidden Ecosystems",
+      "subtitle": "Deep dive into biodiversity",
+      "description": "Veniam laborum deserunt labore voluptate voluptate ex ut nostrud in pariatur cupidatat anim elit magna. Magna elit duis occaecat ex aliquip cillum voluptate elit dolor duis amet. Lorem incididunt minim veniam laboris ad cillum. Officia cillum reprehenderit ipsum Lorem irure id minim ad adipisicing. Tempor nostrud laborum fugiat minim quis culpa. Labore dolor adipisicing do fugiat enim consequat.",
+      "image": "https://images.unsplash.com/photo-1505699261378-c372af38134c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 290,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "16",
+      "title": "Mastering Node.js in 2025",
+      "subtitle": "Efficient backend development",
+      "description": "Officia fugiat ad amet sint laboris qui cillum sunt elit minim est minim culpa ea. Est fugiat non reprehenderit deserunt aute qui labore ipsum consectetur sint ipsum in. Eiusmod est culpa laborum occaecat culpa consectetur cupidatat esse sit deserunt id mollit mollit. Ut consequat esse irure exercitation excepteur magna deserunt do non non. Eiusmod et ex id culpa consectetur quis adipisicing laborum ut.",
+      "image": "https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 210,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "17",
+      "title": "Genetic Engineering Ethics",
+      "subtitle": "How far is too far?",
+      "description": "Eiusmod ipsum excepteur fugiat cupidatat officia magna adipisicing labore sit. Cillum enim est quis laborum dolor. Fugiat ullamco minim pariatur anim veniam officia aliquip exercitation non amet veniam ex. Duis anim fugiat sit nulla cupidatat in veniam. Culpa laborum eiusmod sit enim minim.",
+      "image": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 175,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "18",
+      "title": "Docker and Containerization",
+      "subtitle": "Why developers still love it",
+      "description": "Labore tempor voluptate in dolore magna Lorem do pariatur. Ipsum elit mollit elit qui nostrud ad non aliquip. Adipisicing fugiat excepteur id elit. Mollit pariatur cillum incididunt amet commodo ad occaecat adipisicing ipsum est elit.",
+      "image": "https://images.unsplash.com/photo-1500073584060-670c36a703f1?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 243,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "19",
+      "title": "The Truth About Time Travel",
+      "subtitle": "Just sci-fi or something more?",
+      "description": "Reprehenderit fugiat aliqua labore Lorem dolore duis anim pariatur aute. Ut occaecat Lorem ea cillum commodo dolore. Eiusmod duis laboris dolor eiusmod enim Lorem non. Mollit laborum labore quis commodo veniam culpa aliqua occaecat qui do ut id esse minim.",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 275,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "20",
+      "title": "Svelte vs React: 2025 Edition",
+      "subtitle": "Battle of frameworks",
+      "description": "Aute id sint in aliqua deserunt. Ad sunt nulla exercitation exercitation ex excepteur. Do deserunt sit id tempor duis incididunt ex sunt incididunt occaecat quis. Adipisicing eiusmod dolor non mollit sunt elit Lorem laborum incididunt. Sunt et velit pariatur id culpa irure enim cupidatat consequat sit sunt irure. Dolor non ad ullamco tempor deserunt culpa ad ad labore.",
+      "image": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 195,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "21",
+      "title": "Inside the Human Genome",
+      "subtitle": "How DNA shapes us",
+      "description": "The human genome is a vast and intricate map that defines our biology. Every strand of DNA carries instructions passed down through generations. Recent advances in gene sequencing have made it easier to identify genetic markers for disease. Scientists are beginning to understand how certain genes influence behavior and health outcomes. With CRISPR and similar technologies, targeted edits to DNA are now possible. This opens up both therapeutic opportunities and ethical dilemmas. Could we eliminate genetic diseases before birth? What are the implications of designing genetic traits? The more we learn, the more complex the questions become. Yet the hope remains: understanding the genome could unlock the next era of personalized medicine.",
+      "image": "https://images.unsplash.com/photo-1507187632231-5beb21a654a2?q=80&w=2101&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 300,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "22",
+      "title": "The State of JavaScript 2025",
+      "subtitle": "What developers need to know",
+      "description": "JavaScript continues to evolve at a breakneck pace. With the growing popularity of TypeScript, many developers have shifted to writing statically typed code. New ECMAScript proposals are being adopted more quickly thanks to modern tooling. Frameworks like Next.js and SvelteKit are reshaping the way we build full-stack apps. The rise of edge computing and serverless platforms has also impacted JavaScript’s runtime environments. Node.js is no longer the only player — Deno and Bun are rapidly gaining ground. Asynchronous programming patterns have improved with native `async/await`, yet challenges around error handling persist. Meanwhile, bundlers and compilers like Vite have improved developer experience drastically. Staying updated is critical, but also overwhelming. JavaScript in 2025 is powerful — but not simple.",
+      "image": "https://images.unsplash.com/photo-1443428018053-13da55589fed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 421,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "23",
+      "title": "Revolution in Renewable Tech",
+      "subtitle": "Harnessing clean energy",
+      "description": "The energy industry is experiencing a fundamental shift. Solar panels are now more efficient and affordable than ever. Wind farms are expanding both on land and offshore, producing large quantities of clean power. Breakthroughs in battery storage are allowing excess energy to be saved and used during peak demand. Innovations in smart grid technology have also improved distribution and minimized waste. Meanwhile, fusion energy is becoming a tangible reality, not just theoretical promise. Countries are setting aggressive net-zero carbon goals, and tech is helping make them achievable. Consumers are playing a role too, installing home systems and adopting electric vehicles. Governments and private companies are collaborating more closely than ever. The future is looking greener with each new advancement.",
+      "image": "https://images.unsplash.com/photo-1490237014491-822aee911b99?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 355,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "24",
+      "title": "Mastering React Performance",
+      "subtitle": "Tips for faster apps",
+      "description": "React is a powerful library, but performance bottlenecks can still arise. Knowing when to use `useMemo`, `useCallback`, and `React.memo` is crucial. Component re-renders are often the primary source of slowdown. Developers should avoid unnecessary state in the parent component tree. Lazy loading and code splitting with Suspense also help improve time-to-interactive. Tools like the React DevTools Profiler give visibility into render behavior. It's also important to avoid large, deeply nested trees of components unless necessary. Optimizing images and reducing bundle size can greatly improve perceived performance. React 18’s concurrent features have introduced new ways to schedule rendering. Overall, thoughtful design paired with careful profiling can yield blazing-fast UIs.",
+      "image": "https://images.unsplash.com/photo-1487252015168-776961549aca?q=80&w=2045&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 270,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "25",
+      "title": "The Science of Sleep",
+      "subtitle": "Why rest is essential",
+      "description": "Sleep is often overlooked but crucial to overall health. During sleep, the body repairs tissue and the brain consolidates memories. Poor sleep can lead to a range of health issues including heart disease, obesity, and cognitive decline. Scientists have discovered distinct stages of sleep, including REM and deep sleep. Each serves a unique function for both physical and mental restoration. Blue light from screens has been shown to disrupt circadian rhythms, making it harder to fall asleep. Stress and caffeine are also common disruptors. Apps and wearables are being used to track sleep quality more accurately. Sleep research is even influencing workplace productivity and education policy. It’s clear that sleep isn't a luxury — it's a biological necessity.",
+      "image": "https://images.unsplash.com/photo-1490365728022-deae76380607?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 194,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "26",
+      "title": "The Case for Progressive Web Apps",
+      "subtitle": "PWAs vs Native Apps",
+      "description": "Progressive Web Apps (PWAs) are reshaping mobile development. They offer a native-like experience through the web browser. Features like offline access, push notifications, and installable interfaces are now widely supported. Companies like Twitter and Pinterest have adopted PWAs with great success. Unlike native apps, PWAs require no app store deployment. They reduce maintenance overhead and reach a wider audience. Security is handled via HTTPS, and updates are seamless. PWAs also score high on accessibility and load speed. For startups and content platforms, PWAs are often the smarter choice. As web APIs continue to evolve, PWAs might even replace native apps for many use cases.",
+      "image": "https://images.unsplash.com/photo-1469521669194-babb45599def?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 312,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "27",
+      "title": "Ocean Currents and Climate",
+      "subtitle": "How seas shape our world",
+      "description": "Ocean currents play a critical role in regulating Earth's climate. Warm currents like the Gulf Stream bring tropical heat to northern regions. Cold currents along the west coasts of continents can cool surrounding areas significantly. These movements affect not just temperature, but rainfall and wind patterns globally. Disruptions in these currents can lead to severe weather events. Climate change has begun to alter these natural flows. Melting ice caps are introducing more freshwater into the oceans, impacting salinity. Marine life is also affected as ecosystems rely on predictable current systems. Monitoring ocean temperatures has become vital for forecasting climate trends. Understanding the ocean is essential for understanding the future of our planet.",
+      "image": "https://plus.unsplash.com/premium_photo-1665311513708-b776bf14821a?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 167,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "28",
+      "title": "Why UX Design Matters",
+      "subtitle": "Crafting user-centric products",
+      "description": "User Experience (UX) design is not just about looks — it’s about how a product feels to use. A well-designed interface guides users intuitively through a task. Poor UX leads to frustration, abandonment, and lower engagement. Designers use research and testing to align features with user needs. Prototypes help refine ideas before committing to code. Accessibility and inclusivity are now core parts of the UX process. UX writing and microcopy also influence how people interact with digital systems. Collaboration between designers, developers, and stakeholders is key. Tools like Figma and Storybook have streamlined workflows. In today’s competitive market, great UX is often what sets a product apart.",
+      "image": "https://images.unsplash.com/photo-1464254786740-b97e5420c299?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 298,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "29",
+      "title": "Understanding Antimatter",
+      "subtitle": "The mirror of the universe",
+      "description": "Antimatter is one of the most fascinating phenomena in physics. For every particle, there exists an antiparticle with opposite charge. When matter and antimatter meet, they annihilate in a burst of energy. Scientists believe equal amounts of matter and antimatter should have formed after the Big Bang. Yet our universe is dominated by matter. Understanding this imbalance is one of cosmology’s biggest mysteries. Antimatter is already used in medical imaging techniques like PET scans. Research is ongoing into how antimatter might be harnessed for propulsion or energy. CERN continues to lead the way in antimatter experiments. One day, it could unlock answers about the universe itself.",
+      "image": "https://images.unsplash.com/photo-1450849608880-6f787542c88a?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 240,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "30",
+      "title": "Building Modern APIs",
+      "subtitle": "REST, GraphQL, and beyond",
+      "description": "APIs are the backbone of modern software systems. RESTful APIs have been the standard for over a decade. More recently, GraphQL has gained traction for its flexibility and efficiency. Developers now consider design-first approaches using tools like Swagger and Postman. Security remains paramount — with OAuth, API keys, and rate limiting in use. Documentation is crucial and often automated alongside code. Developers are also exploring newer paradigms like gRPC and event-driven APIs. Testing tools like Insomnia and integration suites are essential in CI/CD pipelines. APIs must be scalable and well-monitored. With APIs connecting everything from IoT to finance, building them well is mission-critical.",
+      "image": "https://images.unsplash.com/photo-1430876988766-1be68caef0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 322,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "31",
+      "title": "Artificial Intelligence in Medicine",
+      "subtitle": "AI’s impact on diagnosis and treatment",
+      "description": "AI is revolutionizing how healthcare is delivered. Algorithms can now detect patterns in medical imaging that escape the human eye. Predictive models are helping identify at-risk patients before symptoms arise. Virtual assistants and chatbots improve patient engagement and reduce admin workload. Personalized treatment plans are being developed using machine learning on historical patient data. AI is also streamlining drug discovery by simulating molecule interactions. Ethical concerns remain, especially regarding bias in datasets. Regulatory bodies are working to keep up with these rapid changes. While AI won’t replace doctors, it will enhance their capabilities. The future of medicine is both digital and intelligent.",
+      "image": "https://images.unsplash.com/photo-1459909633680-206dc5c67abb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 380,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "32",
+      "title": "TypeScript for Large Projects",
+      "subtitle": "Why type safety matters",
+      "description": "TypeScript adds static typing to JavaScript, making code more predictable and easier to debug. In large projects, this reduces runtime errors and improves collaboration. With IDE support, TypeScript improves developer productivity through auto-complete and refactoring tools. Type definitions serve as documentation for teams. Type narrowing and union types allow flexible yet safe structures. Migrating from JavaScript can be gradual, using JSDoc or partial conversions. Most major libraries now ship with TypeScript types, making integration smoother. Teams adopting TypeScript report faster onboarding for new developers. While there’s a learning curve, the long-term benefits are substantial. It’s not just a language — it’s a safety net.",
+      "image": "https://images.unsplash.com/photo-1500754088824-ce0582cfe45f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 341,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "33",
+      "title": "Mars Colonization: Are We Ready?",
+      "subtitle": "The next frontier",
+      "description": "Human settlement on Mars has moved from sci-fi to real possibility. SpaceX and NASA are actively developing the technology to make it happen. Challenges include radiation exposure, low gravity, and harsh living conditions. Terraforming Mars remains theoretical, so early colonies will rely on enclosed habitats. Supply chains from Earth are long and expensive. Advances in 3D printing could help build infrastructure from Martian materials. Psychological effects of isolation and confinement are a major concern. Solar power and nuclear energy will likely power early settlements. Robotic missions are already testing equipment and scouting landing sites. The dream of a second home for humanity may soon become reality.",
+      "image": "https://images.unsplash.com/photo-1510279770292-4b34de9f5c23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 412,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "34",
+      "title": "The Rise of Edge Computing",
+      "subtitle": "Computing at the edge of networks",
+      "description": "Edge computing moves data processing closer to where it's generated. This reduces latency and improves responsiveness for real-time applications. IoT devices benefit greatly, enabling faster decision-making without relying on central servers. Autonomous vehicles and drones use edge computing to process sensor data instantly. It's also critical for smart factories and industrial automation. Cloud providers are now offering edge services through micro data centers. Security at the edge is a concern, requiring new protection strategies. Combining edge with AI opens new possibilities like real-time object detection. Developers need to rethink architectures for distributed systems. Edge is not replacing the cloud — it's complementing it.",
+      "image": "https://plus.unsplash.com/premium_photo-1675370609769-8ce1ef2ec114?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 261,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "35",
+      "title": "Biodiversity Crisis: A Global Concern",
+      "subtitle": "Losing species, losing balance",
+      "description": "Earth is undergoing a mass extinction event, largely due to human activity. Deforestation, pollution, and climate change are driving thousands of species to extinction. Biodiversity ensures ecosystem stability and resilience. It supports agriculture, medicine, and even clean water. Conservation efforts include protected areas, breeding programs, and legislation. Rewilding projects aim to restore natural balance in degraded ecosystems. Indigenous knowledge plays a crucial role in conservation. Technology like drones and satellite monitoring aid in tracking endangered species. Global cooperation is essential to slow biodiversity loss. Protecting nature is not just ethical — it’s survival.",
+      "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 197,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "36",
+      "title": "The Developer’s Toolbox 2025",
+      "subtitle": "Must-have tools and trends",
+      "description": "Modern developers have access to an incredible range of tools. Vite has become the default for fast builds and dev environments. GitHub Copilot assists with code suggestions, boosting productivity. ESLint and Prettier ensure code quality and consistency. React Query simplifies data fetching and caching. Storybook is key for building and testing UI components in isolation. Monorepos using Nx or Turborepo improve large-scale project structure. Containerization with Docker remains critical for consistent environments. CI/CD pipelines using GitHub Actions or GitLab CI automate deployments. Choosing the right tools saves time and fosters maintainable codebases. The toolbox keeps evolving — stay sharp.",
+      "image": "https://images.unsplash.com/photo-1504006833117-8886a355efbf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 350,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "37",
+      "title": "Quantum Computers Explained",
+      "subtitle": "Breaking classical limits",
+      "description": "Quantum computers leverage the principles of quantum mechanics to perform complex calculations. Unlike classical bits, quantum bits (qubits) can exist in multiple states simultaneously. This allows quantum systems to process information in parallel. Algorithms like Shor’s and Grover’s have demonstrated speed advantages. However, qubits are highly sensitive to noise, requiring error correction strategies. Quantum supremacy remains a hotly debated topic. Major tech companies and governments are investing heavily in this frontier. Use cases include cryptography, materials science, and complex simulations. Quantum software frameworks like Qiskit are helping developers explore this space. While not mainstream yet, the quantum era is approaching.",
+      "image": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 288,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "38",
+      "title": "Design Systems: One Source of Truth",
+      "subtitle": "Scalable design in practice",
+      "description": "Design systems provide consistency across digital products. They include reusable components, styles, and documentation. Tools like Figma and Storybook help maintain visual alignment. Tokens standardize colors, spacing, and typography. A well-maintained design system reduces design debt and speeds up development. Cross-functional collaboration ensures systems meet both UX and engineering needs. Component libraries can be distributed as NPM packages for reuse. Governance is key — without it, systems can fragment. Adoption requires education and internal champions. Design systems empower teams to scale while staying on-brand.",
+      "image": "https://plus.unsplash.com/premium_photo-1675096510364-9763614dfc81?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 220,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "39",
+      "title": "The Ethics of AI",
+      "subtitle": "Who decides what’s fair?",
+      "description": "AI systems are increasingly making decisions that affect people’s lives. From job applications to loan approvals, algorithms hold real power. Bias in training data can lead to unfair outcomes. Transparency is essential to ensure accountability. Some advocate for AI audits and ethical review boards. Others emphasize the need for diverse teams building AI. Regulations like the EU AI Act aim to provide oversight. There’s also debate over autonomous weapons and AI surveillance. Ethical AI isn’t just a technical challenge — it’s a societal one. Building trust in AI starts with building it responsibly.",
+      "image": "https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 311,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "40",
+      "title": "Next-Gen Frontend Frameworks",
+      "subtitle": "What’s beyond React and Vue?",
+      "description": "Frontend development continues to evolve rapidly. Frameworks like Solid.js and Qwik are redefining performance benchmarks. Fine-grained reactivity and partial hydration are gaining traction. Resumability is becoming a key concept for minimizing JS on the client. Server components in React are also changing how we architect apps. These trends push developers toward hybrid rendering strategies. Tooling like Vite and esbuild keep builds fast and efficient. Component islands and streaming are solving long-standing performance issues. The future is SSR-first with just-in-time interactivity. Keeping up means embracing change without chasing hype.",
+      "image": "https://images.unsplash.com/photo-1479030160180-b1860951d696?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 359,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "41",
+      "title": "Neural Interfaces: Merging Mind and Machine",
+      "subtitle": "The future of brain-computer interaction",
+      "description": "Neural interfaces are enabling direct communication between the brain and external devices. Companies like Neuralink are pioneering implants that can assist individuals with paralysis. Brain signals can now be decoded in real-time, allowing control of robotic limbs. Ethical concerns include privacy of thoughts and consent. Long-term safety of implants remains under study. Non-invasive methods like EEG are improving in precision. This technology may eventually enhance cognition and memory. Regulatory frameworks must adapt to such revolutionary advancements. Brain-machine integration blurs the line between human and machine. The implications for accessibility and human potential are profound.",
+      "image": "https://images.unsplash.com/photo-1501791187590-9ef2612ba1eb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 245,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science",
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "42",
+      "title": "Augmented Reality in Education",
+      "subtitle": "Learning in 3D spaces",
+      "description": "Augmented reality (AR) is transforming education by making content more interactive. Students can explore historical events or biological systems in 3D. AR apps provide immersive experiences for better engagement. It supports experiential learning, which improves retention. Teachers can use AR to visualize abstract concepts like molecules or planets. Challenges include access to hardware and reliable internet. Content creation for AR is still relatively niche. As headsets become cheaper, adoption will likely increase. AR also fosters collaborative learning in virtual environments. It bridges the gap between imagination and reality in the classroom.",
+      "image": "https://plus.unsplash.com/premium_photo-1676638154798-904c8f6282d6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 198,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "43",
+      "title": "Sustainable Tech Development",
+      "subtitle": "Green code and clean energy",
+      "description": "Sustainability is becoming a core principle in tech. From data center efficiency to low-carbon cloud solutions, companies are rethinking their footprint. Green coding practices aim to reduce CPU cycles and memory waste. Tools now exist to measure energy use of software during execution. Renewable energy is powering more server farms globally. Developers are encouraged to reduce unnecessary animations or large bundle sizes. Circular economy principles apply to hardware reuse and recycling. Education in sustainable design is growing across bootcamps and universities. The push toward net-zero requires all sectors to align. Technology can both cause and solve environmental issues.",
+      "image": "https://images.unsplash.com/photo-1504288145234-919e7bbc6d19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 157,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "44",
+      "title": "Genetic Engineering Advances",
+      "subtitle": "Editing life with precision",
+      "description": "CRISPR-Cas9 has revolutionized genetic engineering. Scientists can now modify DNA with unprecedented accuracy. Gene therapy is being explored to treat inherited diseases. There are efforts to engineer crops for resilience and nutrition. Ethical debates rage over designer babies and human enhancement. Gene drives could eliminate disease-carrying pests but carry ecological risks. Regulation varies globally, creating complex legal environments. Biotech startups are rapidly advancing tools for genome analysis. Precision medicine is tailoring treatments based on genetic profiles. This field holds immense promise but requires careful oversight.",
+      "image": "https://images.unsplash.com/photo-1501696461415-6bd6660c6742?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 209,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "45",
+      "title": "How Remote Work is Reshaping Cities",
+      "subtitle": "From commute to community",
+      "description": "The rise of remote work is transforming urban planning. Workers are moving from cities to smaller towns. Co-working spaces are popping up in suburban areas. Local economies are adapting to new work-life patterns. Internet infrastructure is critical for remote productivity. Companies are rethinking office space needs, reducing costs. Environmental impact has decreased due to less commuting. Urban housing prices are fluctuating with migration trends. Policies are being updated to support hybrid workers. Work is no longer a place — it’s an activity.",
+      "image": "https://plus.unsplash.com/premium_photo-1673338358415-a36382fe7078?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 288,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT",
+        "Science"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "46",
+      "title": "Cybersecurity in the Age of AI",
+      "subtitle": "Fighting bots with bots",
+      "description": "AI is both a weapon and a shield in cybersecurity. Machine learning detects anomalies faster than traditional rules. Threat actors use AI to generate phishing content and evade detection. Behavioral analysis is becoming essential in fraud prevention. Zero-trust architectures are gaining popularity in enterprise settings. Deepfake detection tools are emerging to combat misinformation. Governments are investing heavily in cyber defense AI. Explainability remains a challenge for AI-driven security decisions. The arms race between attackers and defenders is accelerating. Cyber resilience is now a boardroom topic, not just an IT issue.",
+      "image": "https://images.unsplash.com/photo-1460574283810-2aab119d8511?q=80&w=2063&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 322,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "47",
+      "title": "Biomimicry in Modern Engineering",
+      "subtitle": "Learning from nature’s designs",
+      "description": "Engineers are increasingly turning to nature for inspiration. Biomimicry has led to innovations like sharkskin swimsuits and self-cleaning surfaces. Structures mimicking honeycombs offer strength with minimal materials. Robotics borrows from animal movement for agility and efficiency. Lotus leaf-inspired coatings repel water and dirt. The field spans architecture, materials science, and product design. Nature’s solutions are optimized through evolution over millions of years. Sustainable design benefits from nature’s efficiency. Education programs are now teaching biomimicry principles. Innovation often starts by observing the natural world.",
+      "image": "https://images.unsplash.com/photo-1496347646636-ea47f7d6b37b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 184,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "1",
+      "blocks": []
+    },
+    {
+      "id": "48",
+      "title": "Decentralized Internet: Web3 Potential",
+      "subtitle": "Ownership and control reimagined",
+      "description": "Web3 proposes a decentralized model for the internet. Blockchain underpins data ownership and identity management. Users regain control over their personal information. dApps run without centralized servers, reducing censorship. Cryptocurrencies fuel microtransactions and incentivized behavior. NFTs represent digital ownership, expanding beyond art. Critics highlight scalability, environmental concerns, and speculative hype. DAOs provide governance mechanisms through token voting. Education is key to demystifying Web3 for mass adoption. The dream is a fairer, user-first digital ecosystem.",
+      "image": "https://images.unsplash.com/photo-1473800447596-01729482b8eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 297,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "3",
+      "blocks": []
+    },
+    {
+      "id": "49",
+      "title": "Space Telescopes: Eyes on the Universe",
+      "subtitle": "Beyond Hubble and into the unknown",
+      "description": "Space telescopes offer a clearer view of the universe. Free from Earth's atmosphere, they capture distant galaxies and black holes. The James Webb Space Telescope has surpassed expectations. Infrared sensors reveal the birth of stars and planetary atmospheres. Data from telescopes helps refine models of cosmic evolution. Space missions require years of planning and global collaboration. Maintenance is impossible, so reliability is critical. Observations feed machine learning models for faster classification. Future telescopes may detect life signatures on exoplanets. Our cosmic perspective keeps expanding.",
+      "image": "https://plus.unsplash.com/premium_photo-1677646871407-eda14a1cf7f9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 330,
+      "createdAt": "26.02.2025",
+      "type": [
+        "Science"
+      ],
+      "userId": "2",
+      "blocks": []
+    },
+    {
+      "id": "50",
+      "title": "Serverless Architecture: Less is More",
+      "subtitle": "Scaling without servers",
+      "description": "Serverless computing allows developers to run code without managing infrastructure. Platforms like AWS Lambda and Cloudflare Workers offer pay-as-you-go pricing. It simplifies deployment and reduces ops overhead. Cold starts and execution time limits remain concerns. Serverless functions scale automatically with traffic. They’re ideal for APIs, webhooks, and background jobs. Infrastructure as Code integrates well with serverless stacks. Observability tools are improving, easing debugging. Event-driven design is crucial for efficient workflows. Going serverless means focusing more on business logic, less on boilerplate.",
+      "image": "https://images.unsplash.com/photo-1494935362342-566c6d6e75b5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "views": 301,
+      "createdAt": "26.02.2025",
+      "type": [
+        "IT"
+      ],
+      "userId": "1",
+      "blocks": []
+    }
+  ]
 }
